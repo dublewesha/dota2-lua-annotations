@@ -2,7 +2,7 @@
     "name": "dota2-lua-annotations",
     "displayName": "Dota2 Lua Annotations",
     "description": "Dota2 lua api annotations for lua-language-server",
-    "version": "1.1.4",
+    "version": "1.1.5",
     "license": "MIT",
     "publisher": "robincode",
     "icon": "logo.png",
@@ -42,8 +42,9 @@
         "dump": "ts-node dump/dump.ts"
     },
     "devDependencies": {
-        "@moddota/dota-data": "^0.33.0",
+        "@moddota/dota-data": "^0.47.2",
         "@types/node": "^18.16.3",
+        "@vscode/vsce": "^3.9.2",
         "@types/vscode": "^1.77.0",
         "axios": "^1.4.0",
         "octokit": "^2.0.14",

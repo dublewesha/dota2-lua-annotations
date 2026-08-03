@@ -19,11 +19,6 @@ function CSceneEntity:Cancel() end
 ---@return float
 function CSceneEntity:EstimateLength() end
 
---- Get the camera.  
---- Env: only in `server`
----@return handle
-function CSceneEntity:FindCamera() end
-
 --- Given an entity reference, such as !target, get actual entity from scene object.  
 --- Env: only in `server`
 ---@param arg1 string
@@ -39,13 +34,6 @@ function CSceneEntity:IsPaused() end
 --- Env: only in `server`
 ---@return bool
 function CSceneEntity:IsPlayingBack() end
-
---- Given a dummy scene name and a vcd string, load the scene.  
---- Env: only in `server`
----@param arg1 string
----@param arg2 string
----@return bool
-function CSceneEntity:LoadSceneFromString(arg1, arg2) end
 
 --- Removes a team (by index) from the broadcast list.  
 --- Env: only in `server`

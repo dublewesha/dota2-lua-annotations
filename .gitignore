@@ -1,3 +1,19 @@
-node_modules
+node_modules/
+out/
+dist/
+*.tsbuildinfo
+
+# Generated annotations
+Dota2-Library/gen/
+
+# Packaged VS Code extensions
+*.vsix
+
+# Logs and local metadata
 *.log
-out
+.vscode/
+.vs/
+
+# Keep pnpm as the source of truth for dependencies
+package-lock.json
+

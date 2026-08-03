@@ -11,9 +11,9 @@ function CTakeDamageInfo:AddDamage(addAmount) end
 
 ---   
 --- Env: only in `server`
----@param bitsDamageType int
+---@param damageType int
 ---@return nil
-function CTakeDamageInfo:AddDamageType(bitsDamageType) end
+function CTakeDamageInfo:AddDamageType(damageType) end
 
 ---   
 --- Env: only in `server`
@@ -47,7 +47,7 @@ function CTakeDamageInfo:GetDamagePosition() end
 
 ---   
 --- Env: only in `server`
----@return int
+---@return DAMAGE_TYPES
 function CTakeDamageInfo:GetDamageType() end
 
 ---   
@@ -67,9 +67,14 @@ function CTakeDamageInfo:GetReportedPosition() end
 
 ---   
 --- Env: only in `server`
----@param bitsToTest int
+---@return float
+function CTakeDamageInfo:GetTotalledDamage() end
+
+---   
+--- Env: only in `server`
+---@param damageType int
 ---@return bool
-function CTakeDamageInfo:HasDamageType(bitsToTest) end
+function CTakeDamageInfo:HasDamageType(damageType) end
 
 ---   
 --- Env: only in `server`
@@ -115,9 +120,9 @@ function CTakeDamageInfo:SetDamagePosition(damagePosition) end
 
 ---   
 --- Env: only in `server`
----@param bitsDamageType int
+---@param damageType int
 ---@return nil
-function CTakeDamageInfo:SetDamageType(bitsDamageType) end
+function CTakeDamageInfo:SetDamageType(damageType) end
 
 ---   
 --- Env: only in `server`

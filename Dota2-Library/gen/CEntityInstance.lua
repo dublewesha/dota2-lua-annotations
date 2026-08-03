@@ -71,7 +71,7 @@ function CEntityInstance:GetEntityIndex() end
 ---@return int
 function CEntityInstance:GetIntAttr(arg1) end
 
----   
+--- Get the entity name.  
 --- Env: `server` or `client`
 ---@return string
 function CEntityInstance:GetName() end

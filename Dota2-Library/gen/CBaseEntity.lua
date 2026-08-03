@@ -340,13 +340,6 @@ function CBaseEntity:Kill() end
 ---@return CBaseEntity
 function CBaseEntity:NextMovePeer() end
 
---- Takes duration, value for a temporary override.  
---- Env: only in `server`
----@param duration float
----@param friction float
----@return nil
-function CBaseEntity:OverrideFriction(duration, friction) end
-
 --- Precache a sound for later playing.  
 --- Env: only in `server`
 ---@param soundname string
@@ -515,7 +508,7 @@ function CBaseEntity:SetTeam(teamNum) end
 --- Set a think function on this entity. Uses `CBaseEntity:SetContextThink` internally.  
 --- Note: optional parameters can be given in any order.  
 --- Env: `server` or `client`
----@param functionName string|fun(entity: CBaseEntity): float|nil|string
+---@param functionName fun(entity: CBaseEntity): float|nil|string
 ---@param context table|nil
 ---@param contextName string|nil
 ---@param initialDelay float|nil

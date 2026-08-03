@@ -20,11 +20,11 @@ function CEntities:FindAllByClassname(className) end
 --- Find entities by class name within a radius.  
 --- Env: only in `server`
 ---@generic T : CBaseEntity
----@param className string
+---@param arg1 string
 ---@param location Vector
----@param radius float
+---@param arg3 float
 ---@return T[]
-function CEntities:FindAllByClassnameWithin(className, location, radius) end
+function CEntities:FindAllByClassnameWithin(arg1, location, arg3) end
 
 --- Find entities by model name.  
 --- Env: only in `server`
@@ -43,11 +43,11 @@ function CEntities:FindAllByName(name) end
 --- Find entities by name within a radius.  
 --- Env: only in `server`
 ---@generic T : CBaseEntity
----@param name string
+---@param arg1 string
 ---@param location Vector
----@param radius float
+---@param arg3 float
 ---@return T[]
-function CEntities:FindAllByNameWithin(name, location, radius) end
+function CEntities:FindAllByNameWithin(arg1, location, arg3) end
 
 --- Find entities by targetname.  
 --- Env: only in `server`
@@ -60,9 +60,9 @@ function CEntities:FindAllByTarget(target) end
 --- Env: only in `server`
 ---@generic T : CBaseEntity
 ---@param location Vector
----@param radius float
+---@param arg2 float
 ---@return T[]
-function CEntities:FindAllInSphere(location, radius) end
+function CEntities:FindAllInSphere(location, arg2) end
 
 --- Find entities by class name. Pass 'null' to start an iteration, or reference to a previously found entity to continue a search.  
 --- Env: only in `server`
@@ -75,21 +75,21 @@ function CEntities:FindByClassname(previous, className) end
 --- Find entities by class name nearest to a point.  
 --- Env: only in `server`
 ---@generic T : CBaseEntity
----@param className string
+---@param arg1 string
 ---@param location Vector
----@param radius float
+---@param arg3 float
 ---@return T|nil
-function CEntities:FindByClassnameNearest(className, location, radius) end
+function CEntities:FindByClassnameNearest(arg1, location, arg3) end
 
 --- Find entities by class name within a radius. Pass 'null' to start an iteration, or reference to a previously found entity to continue a search.  
 --- Env: only in `server`
 ---@generic T : CBaseEntity
----@param previous CBaseEntity|nil
----@param className string
+---@param arg1 handle
+---@param arg2 string
 ---@param location Vector
----@param radius float
+---@param arg4 float
 ---@return T|nil
-function CEntities:FindByClassnameWithin(previous, className, location, radius) end
+function CEntities:FindByClassnameWithin(arg1, arg2, location, arg4) end
 
 --- Find entities by model name. Pass 'null' to start an iteration, or reference to a previously found entity to continue a search.  
 --- Env: only in `server`
@@ -102,12 +102,12 @@ function CEntities:FindByModel(previous, modelName) end
 --- Find entities by model name within a radius. Pass 'null' to start an iteration, or reference to a previously found entity to continue a search.  
 --- Env: only in `server`
 ---@generic T : CBaseEntity
----@param previous CBaseEntity|nil
----@param modelName string
+---@param arg1 handle
+---@param arg2 string
 ---@param location Vector
----@param radius float
+---@param arg4 float
 ---@return T|nil
-function CEntities:FindByModelWithin(previous, modelName, location, radius) end
+function CEntities:FindByModelWithin(arg1, arg2, location, arg4) end
 
 --- Find entities by name. Pass 'null' to start an iteration, or reference to a previously found entity to continue a search.  
 --- Env: only in `server`
@@ -120,21 +120,21 @@ function CEntities:FindByName(previous, name) end
 --- Find entities by name nearest to a point.  
 --- Env: only in `server`
 ---@generic T : CBaseEntity
----@param name string
+---@param arg1 string
 ---@param location Vector
----@param radius float
+---@param arg3 float
 ---@return T|nil
-function CEntities:FindByNameNearest(name, location, radius) end
+function CEntities:FindByNameNearest(arg1, location, arg3) end
 
 --- Find entities by name within a radius. Pass 'null' to start an iteration, or reference to a previously found entity to continue a search.  
 --- Env: only in `server`
 ---@generic T : CBaseEntity
----@param previous CBaseEntity|nil
----@param name string
+---@param arg1 handle
+---@param arg2 string
 ---@param location Vector
----@param radius float
+---@param arg4 float
 ---@return T|nil
-function CEntities:FindByNameWithin(previous, name, location, radius) end
+function CEntities:FindByNameWithin(arg1, arg2, location, arg4) end
 
 --- Find entities by targetname. Pass 'null' to start an iteration, or reference to a previously found entity to continue a search.  
 --- Env: only in `server`
@@ -147,11 +147,11 @@ function CEntities:FindByTarget(previous, target) end
 --- Find entities within a radius. Pass 'null' to start an iteration, or reference to a previously found entity to continue a search.  
 --- Env: only in `server`
 ---@generic T : CBaseEntity
----@param previous CBaseEntity|nil
+---@param arg1 handle
 ---@param location Vector
----@param radius float
+---@param arg3 float
 ---@return T|nil
-function CEntities:FindInSphere(previous, location, radius) end
+function CEntities:FindInSphere(arg1, location, arg3) end
 
 --- Begin an iteration over the list of entities.  
 --- Env: `server` or `client`

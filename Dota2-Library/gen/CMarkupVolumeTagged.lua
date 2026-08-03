@@ -5,7 +5,7 @@ _G.CMarkupVolumeTagged = {}
 
 --- Does this volume have the given tag.  
 --- Env: only in `server`
----@param tagName string
+---@param tagName unknown
 ---@return bool
 function CMarkupVolumeTagged:HasTag(tagName) end
 

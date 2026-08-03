@@ -136,6 +136,11 @@ function CDOTA_Buff:IsDebuff() end
 ---@return bool
 function CDOTA_Buff:IsHexDebuff() end
 
+--- Has underlying C++ entity object been deleted?  
+--- Env: `server` or `client`
+---@return bool
+function CDOTA_Buff:IsNull() end
+
 ---   
 --- Env: `server` or `client`
 ---@return bool

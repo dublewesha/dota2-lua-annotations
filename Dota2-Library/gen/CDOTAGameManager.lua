@@ -15,6 +15,12 @@ function CDOTAGameManager:GetHeroDataByName_Script(heroName) end
 ---@return int
 function CDOTAGameManager:GetHeroIDByName(heroName) end
 
+--- Get the localization token for the given hero ID.  
+--- Env: `server` or `client`
+---@param arg1 int
+---@return string
+function CDOTAGameManager:GetHeroLocTokenByID(arg1) end
+
 --- Get the hero name given a hero ID.  
 --- Env: `server` or `client`
 ---@param heroId int

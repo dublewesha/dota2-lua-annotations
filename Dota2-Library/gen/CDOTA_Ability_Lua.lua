@@ -80,6 +80,12 @@ function CDOTA_Ability_Lua:GetCastRangeBonus(target, pseudoCastRange) end
 ---@return GameActivity_t
 function CDOTA_Ability_Lua:GetChannelAnimation() end
 
+--- Return health cost per second of channeling at the given level (-1 is current).  
+--- Env: `server` or `client`
+---@param level int
+---@return int
+function CDOTA_Ability_Lua:GetChannelledHealthCostPerSecond(level) end
+
 --- Return mana cost at the given level per second while channeling (-1 is current).  
 --- Env: `server` or `client`
 ---@param level int
@@ -142,6 +148,12 @@ function CDOTA_Ability_Lua:GetEffectiveCastRange(location, target) end
 ---@param level int
 ---@return int
 function CDOTA_Ability_Lua:GetGoldCost(level) end
+
+--- Return health cost at the given level (-1 is current).  
+--- Env: `server` or `client`
+---@param level int
+---@return int
+function CDOTA_Ability_Lua:GetHealthCost(level) end
 
 --- Returns the name of the modifier applied passively by this ability.  
 --- Env: only in `server`
@@ -336,6 +348,11 @@ function CDOTA_Ability_Lua:OnUpgrade() end
 --- Env: only in `server`
 ---@return bool
 function CDOTA_Ability_Lua:OtherAbilitiesAlwaysInterruptChanneling() end
+
+--- Return if an ability and its modifiers should pierce debuff immunity.  
+--- Env: `server` or `client`
+---@return bool
+function CDOTA_Ability_Lua:PiercesDebuffImmunity() end
 
 --- Returns true if this ability will generate magic stick charges for nearby enemies.  
 --- Env: only in `server`

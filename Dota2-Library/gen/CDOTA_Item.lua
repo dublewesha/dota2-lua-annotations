@@ -74,6 +74,11 @@ function CDOTA_Item:GetShareability() end
 function CDOTA_Item:GetValuelessCharges() end
 
 ---   
+--- Env: only in `server`
+---@return bool
+function CDOTA_Item:IsActiveNeutral() end
+
+---   
 --- Env: `server` or `client`
 ---@return bool
 function CDOTA_Item:IsAlertableItem() end
@@ -123,11 +128,6 @@ function CDOTA_Item:IsKillable() end
 ---@return bool
 function CDOTA_Item:IsMuted() end
 
----   
---- Env: only in `server`
----@return bool
-function CDOTA_Item:IsNeutralDrop() end
-
 --- Is this a permanent item?  
 --- Env: `server` or `client`
 ---@return bool
@@ -164,7 +164,7 @@ function CDOTA_Item:IsStackable() end
 ---@param height float
 ---@param duration float
 ---@param endPoint Vector
----@param teleportOwner handle
+---@param teleportOwner CDOTA_BaseNPC_Hero|nil
 ---@return nil
 function CDOTA_Item:LaunchLoot(autoUse, height, duration, endPoint, teleportOwner) end
 
@@ -289,8 +289,9 @@ function CDOTA_Item:SetStacksWithOtherOwners(stacksWithOtherOwners) end
 
 ---   
 --- Env: only in `server`
+---@param delayRemove float
 ---@return nil
-function CDOTA_Item:SpendCharge() end
+function CDOTA_Item:SpendCharge(delayRemove) end
 
 ---   
 --- Env: only in `server`

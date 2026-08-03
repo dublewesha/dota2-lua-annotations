@@ -503,6 +503,12 @@ function CDOTABaseGameMode:SetCustomRadiantScore(score) end
 ---@return nil
 function CDOTABaseGameMode:SetCustomScanCooldown(cooldown) end
 
+--- Set a custom max charges for team Scan ability.  
+--- Env: only in `server`
+---@param maxCharges int
+---@return nil
+function CDOTABaseGameMode:SetCustomScanMaxCharges(maxCharges) end
+
 --- Set the effect used as a custom weather effect, when units are on non-default terrain, in this mode.  
 --- Env: only in `server`
 ---@param effectName string
@@ -583,6 +589,12 @@ function CDOTABaseGameMode:SetFixedRespawnTime(fixedRespawnTime) end
 ---@param disabled bool
 ---@return nil
 function CDOTABaseGameMode:SetFogOfWarDisabled(disabled) end
+
+--- Caps the number of players spawned when the game is reset. Used in tutorials where players are spawned in the script.  
+--- Env: only in `server`
+---@param cap int
+---@return nil
+function CDOTABaseGameMode:SetForcedHeroCapOnReset(cap) end
 
 --- Specify a HUD skin that is forced on for this game mode.  
 --- Env: only in `server`
@@ -700,6 +712,12 @@ function CDOTABaseGameMode:SetKillingSpreeAnnouncerDisabled(disabled) end
 ---@param enabled bool
 ---@return nil
 function CDOTABaseGameMode:SetLoseGoldOnDeath(enabled) end
+
+---   
+--- Env: only in `server`
+---@param script handle
+---@return nil
+function CDOTABaseGameMode:SetLuaGameMode(script) end
 
 --- Set the maximum attack speed for units.  
 --- Env: only in `server`

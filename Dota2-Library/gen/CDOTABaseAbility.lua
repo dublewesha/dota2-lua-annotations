@@ -51,6 +51,12 @@ function CDOTABaseAbility:EndCooldown() end
 
 ---   
 --- Env: only in `server`
+---@param value int
+---@return nil
+function CDOTABaseAbility:ForceSetFrozenCooldown(value) end
+
+---   
+--- Env: only in `server`
 ---@param level int
 ---@return float
 function CDOTABaseAbility:GetAbilityChargeRestoreTime(level) end
@@ -100,6 +106,11 @@ function CDOTABaseAbility:GetAbilityTargetType() end
 ---@return int
 function CDOTABaseAbility:GetAbilityType() end
 
+--- Gets the current Alt Cast State.  
+--- Env: only in `server`
+---@return bool
+function CDOTABaseAbility:GetAltCastState() end
+
 ---   
 --- Env: only in `server`
 ---@return bool
@@ -107,7 +118,7 @@ function CDOTABaseAbility:GetAnimationIgnoresModelScale() end
 
 ---   
 --- Env: only in `server`
----@return int
+---@return float
 function CDOTABaseAbility:GetAOERadius() end
 
 ---   
@@ -640,6 +651,12 @@ function CDOTABaseAbility:SetAbilityIndex(index) end
 ---@return nil
 function CDOTABaseAbility:SetActivated(activated) end
 
+--- Set Alt Cast State to a specific value (true for on, false for off).  
+--- Env: only in `server`
+---@param altCastEnabled bool
+---@return nil
+function CDOTABaseAbility:SetAltCastState(altCastEnabled) end
+
 ---   
 --- Env: only in `server`
 ---@param channeling bool
@@ -706,6 +723,11 @@ function CDOTABaseAbility:SetStolen(stolen) end
 ---@return nil
 function CDOTABaseAbility:SetUpgradeRecommended(upgradeRecommended) end
 
+--- This is what the Alt Cast State of the ability was when it was initially cast. Updated during Execute Orders.  
+--- Env: only in `server`
+---@return bool
+function CDOTABaseAbility:ShouldAltCast() end
+
 ---   
 --- Env: only in `server`
 ---@return bool
@@ -732,6 +754,11 @@ function CDOTABaseAbility:StartCooldown(cooldown) end
 --- Env: only in `server`
 ---@return nil
 function CDOTABaseAbility:ToggleAbility() end
+
+--- Toggle the Alt Cast State of an Ability.  
+--- Env: only in `server`
+---@return nil
+function CDOTABaseAbility:ToggleAltCast() end
 
 ---   
 --- Env: only in `server`

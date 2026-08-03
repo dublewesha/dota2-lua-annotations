@@ -148,7 +148,7 @@ function CDOTA_PlayerResource:GetConnectionState(playerId) end
 --- Env: only in `server`
 ---@param playerId PlayerID
 ---@param total bool
----@return int
+---@return float
 function CDOTA_PlayerResource:GetCreepDamageTaken(playerId, total) end
 
 ---   
@@ -173,7 +173,7 @@ function CDOTA_PlayerResource:GetCustomTeamAssignment(playerId) end
 --- Env: only in `server`
 ---@param playerId PlayerID
 ---@param victimId PlayerID
----@return int
+---@return float
 function CDOTA_PlayerResource:GetDamageDoneToHero(playerId, victimId) end
 
 ---   
@@ -264,7 +264,7 @@ function CDOTA_PlayerResource:GetHealing(playerId) end
 --- Env: only in `server`
 ---@param playerId PlayerID
 ---@param total bool
----@return int
+---@return float
 function CDOTA_PlayerResource:GetHeroDamageTaken(playerId, total) end
 
 ---   
@@ -431,7 +431,7 @@ function CDOTA_PlayerResource:GetPreferredCourierForPlayer(playerId) end
 ---   
 --- Env: only in `server`
 ---@param playerId PlayerID
----@return int
+---@return float
 function CDOTA_PlayerResource:GetRawPlayerDamage(playerId) end
 
 ---   
@@ -557,7 +557,7 @@ function CDOTA_PlayerResource:GetTotalGoldSpent(playerId) end
 --- Env: only in `server`
 ---@param playerId PlayerID
 ---@param total bool
----@return int
+---@return float
 function CDOTA_PlayerResource:GetTowerDamageTaken(playerId, total) end
 
 ---   

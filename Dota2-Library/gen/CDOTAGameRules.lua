@@ -111,8 +111,9 @@ function CDOTAGameRules:BeginNightstalkerNight(duration) end
 --- Begin temporary night.  
 --- Env: only in `server`
 ---@param duration float
+---@param arg2 int
 ---@return nil
-function CDOTAGameRules:BeginTemporaryNight(duration) end
+function CDOTAGameRules:BeginTemporaryNight(duration, arg2) end
 
 --- Fills all the teams with bots if cheat mode is enabled.  
 --- Env: only in `server`

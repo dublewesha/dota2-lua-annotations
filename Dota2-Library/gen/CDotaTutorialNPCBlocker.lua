@@ -1,6 +1,6 @@
 ---@diagnostic disable: lowercase-global, missing-return
 
----@class CDotaTutorialNPCBlocker : CBaseFlex
+---@class CDotaTutorialNPCBlocker : CBaseAnimatingOverlay
 _G.CDotaTutorialNPCBlocker = {}
 
 ---   

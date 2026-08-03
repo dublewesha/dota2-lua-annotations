@@ -54,10 +54,10 @@ function CBaseModelEntity:ScriptLookupAttachment(attachmentName) end
 
 --- Sets a bodygroup.  
 --- Env: only in `server`
----@param group int
----@param value int
+---@param bodyGroup int
+---@param choice int
 ---@return nil
-function CBaseModelEntity:SetBodygroup(group, value) end
+function CBaseModelEntity:SetBodygroup(bodyGroup, choice) end
 
 --- Sets a bodygroup by name.  
 --- Env: only in `server`
@@ -65,12 +65,6 @@ function CBaseModelEntity:SetBodygroup(group, value) end
 ---@param value int
 ---@return nil
 function CBaseModelEntity:SetBodygroupByName(name, value) end
-
---- Sets the light group of the entity.  
---- Env: only in `server`
----@param lightGroup string
----@return nil
-function CBaseModelEntity:SetLightGroup(lightGroup) end
 
 --- Set the material group of this entity.  
 --- Env: only in `server`

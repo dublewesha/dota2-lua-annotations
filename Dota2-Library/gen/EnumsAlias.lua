@@ -37,6 +37,7 @@
 ---| `DOTA_ATTRIBUTE_INTELLIGENCE_MANA`
 ---| `DOTA_ATTRIBUTE_INTELLIGENCE_MANA_REGEN`
 ---| `DOTA_ATTRIBUTE_INTELLIGENCE_MAGIC_RESIST`
+---| `DOTA_ATTRIBUTE_ALL_DAMAGE`
 
 ---@alias Attributes integer
 ---| `DOTA_ATTRIBUTE_INVALID`
@@ -76,7 +77,6 @@
 ---| `FCVAR_PER_USER`
 ---| `FCVAR_DEMO` Force the ConVar to be recorded by demo recordings. Reported as "demo" by cvarlist.
 ---| `FCVAR_DONTRECORD` Opposite of FCVAR_DEMO, ensures the ConVar is not recorded in demos. Reported as "norecord" by cvarlist.
----| `FCVAR_NOT_CONNECTED` Makes the ConVar not changeable while connected to a server or in singleplayer.
 ---| `FCVAR_VCONSOLE_SET_FOCUS`
 
 ---@alias DAMAGE_TYPES integer
@@ -91,18 +91,30 @@
 ---@alias DamageCategory_t integer
 ---| `DOTA_DAMAGE_CATEGORY_SPELL`
 ---| `DOTA_DAMAGE_CATEGORY_ATTACK`
+---| `DOTA_DAMAGE_CATEGORY_BARRIER`
 
 ---@alias DOTA_ABILITY_BEHAVIOR integer
 ---| `DOTA_ABILITY_BEHAVIOR_LAST_RESORT_POINT`
+---| `DOTA_ABILITY_BEHAVIOR_AFFECTED_BY_MUTE`
+---| `DOTA_ABILITY_BEHAVIOR_ALT_CASTABLE`
 ---| `DOTA_ABILITY_BEHAVIOR_CAN_SELF_CAST`
+---| `DOTA_ABILITY_BEHAVIOR_DONT_PROC_OTHER_ABILITIES`
+---| `DOTA_ABILITY_BEHAVIOR_FORCE_KEYBIND`
+---| `DOTA_ABILITY_BEHAVIOR_FORCE_NO_INNATE_UI`
 ---| `DOTA_ABILITY_BEHAVIOR_FREE_DRAW_TARGETING`
+---| `DOTA_ABILITY_BEHAVIOR_IGNORE_INVISIBLE`
 ---| `DOTA_ABILITY_BEHAVIOR_IGNORE_MUTED`
 ---| `DOTA_ABILITY_BEHAVIOR_IGNORE_SILENCE`
+---| `DOTA_ABILITY_BEHAVIOR_INNATE_UI`
+---| `DOTA_ABILITY_BEHAVIOR_IS_FAKE_ITEM`
+---| `DOTA_ABILITY_BEHAVIOR_ITEM_IMBUE`
 ---| `DOTA_ABILITY_BEHAVIOR_NONE`
 ---| `DOTA_ABILITY_BEHAVIOR_OVERSHOOT`
 ---| `DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES`
+---| `DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS`
 ---| `DOTA_ABILITY_BEHAVIOR_SUPPRESS_ASSOCIATED_CONSUMABLE`
 ---| `DOTA_ABILITY_BEHAVIOR_UNLOCKED_BY_EFFECT_INDEX`
+---| `DOTA_ABILITY_BEHAVIOR_UNSWAPPABLE`
 ---| `DOTA_ABILITY_BEHAVIOR_HIDDEN`
 ---| `DOTA_ABILITY_BEHAVIOR_PASSIVE`
 ---| `DOTA_ABILITY_BEHAVIOR_NO_TARGET`
@@ -332,7 +344,7 @@
 ---| `DOTA_INVALID_ORDER_CANT_CAST_ON_CONSIDERED_HERO`
 ---| `DOTA_INVALID_ORDER_CANT_SHOP_AUTO_BUY_ENABLED`
 ---| `DOTA_INVALID_ORDER_ONLY_DELIBERATE_CHANNELING_CANCEL`
----| `DOTA_INVALID_ORDER_CANT_BUYBACK_REAPERS_SCYTHE`
+---| `DOTA_INVALID_ORDER_CANT_BUYBACK_DEVILS_BARGAIN`
 ---| `DOTA_INVALID_ORDER_CANT_BUYBACK_DISABLED_BY_GAME_MODE`
 ---| `DOTA_INVALID_ORDER_CANT_ABILITY_PING_BAD_TEAM`
 ---| `DOTA_INVALID_ORDER_ABILITY_NOT_POSITIONED`
@@ -352,6 +364,11 @@
 ---| `DOTA_INVALID_ORDER_BEYOND_PHYSICAL_ITEM_LIMIT`
 ---| `DOTA_INVALID_ORDER_ABILITY_PING_DEAD_ALLY`
 ---| `DOTA_INVALID_ORDER_CANT_LOCKCOMBINE_NEUTRAL_ITEMS`
+---| `DOTA_INVALID_ORDER_ABILITY_CANT_ALT_CAST`
+---| `DOTA_INVALID_ORDER_ITEM_CANNOT_BE_CONSUMED`
+---| `DOTA_INVALID_ORDER_CANT_BUYBACK_CEASELESS_DIRGE`
+---| `DOTA_INVALID_ORDER_CANT_ATTACK_BUILDINGS`
+---| `DOTA_INVALID_ORDER_PURCHASE_LEVEL`
 ---| `DOTA_INVALID_ORDER_COUNT`
 
 ---@alias DOTA_MOTION_CONTROLLER_PRIORITY integer
@@ -376,9 +393,6 @@
 ---| `OVERHEAD_ALERT_HEAL`
 ---| `OVERHEAD_ALERT_MANA_ADD`
 ---| `OVERHEAD_ALERT_MANA_LOSS`
----| `OVERHEAD_ALERT_LAST_HIT_EARLY`
----| `OVERHEAD_ALERT_LAST_HIT_CLOSE`
----| `OVERHEAD_ALERT_LAST_HIT_MISS`
 ---| `OVERHEAD_ALERT_MAGICAL_BLOCK`
 ---| `OVERHEAD_ALERT_INCOMING_DAMAGE`
 ---| `OVERHEAD_ALERT_OUTGOING_DAMAGE`
@@ -388,6 +402,10 @@
 ---| `OVERHEAD_ALERT_ITEM_RECEIVED`
 ---| `OVERHEAD_ALERT_SHARD`
 ---| `OVERHEAD_ALERT_DEADLY_BLOW`
+---| `OVERHEAD_ALERT_FORCE_MISS`
+---| `OVERHEAD_ALERT_AEGIS`
+---| `OVERHEAD_ALERT_DISPEL`
+---| `OVERHEAD_ALERT_BONUS_PURE_DAMAGE`
 
 ---@alias DOTA_RUNES integer
 ---| `DOTA_RUNE_INVALID`
@@ -424,6 +442,7 @@
 ---| `DOTA_UNIT_TARGET_FLAG_INVULNERABLE`
 ---| `DOTA_UNIT_TARGET_FLAG_FOW_VISIBLE`
 ---| `DOTA_UNIT_TARGET_FLAG_NO_INVIS`
+---| `DOTA_UNIT_TARGET_FLAG_CAN_BE_SEEN`
 ---| `DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS`
 ---| `DOTA_UNIT_TARGET_FLAG_PLAYER_CONTROLLED`
 ---| `DOTA_UNIT_TARGET_FLAG_NOT_DOMINATED`
@@ -452,6 +471,7 @@
 ---| `DOTA_UNIT_TARGET_BUILDING`
 ---| `DOTA_UNIT_TARGET_COURIER`
 ---| `DOTA_UNIT_TARGET_BASIC`
+---| `DOTA_UNIT_TARGET_HEROES_AND_CREEPS`
 ---| `DOTA_UNIT_TARGET_OTHER`
 ---| `DOTA_UNIT_TARGET_ALL`
 ---| `DOTA_UNIT_TARGET_TREE`
@@ -471,12 +491,27 @@
 ---| `DOTA_CONNECTION_STATE_LOADING`
 ---| `DOTA_CONNECTION_STATE_FAILED`
 
+---@alias DOTACustomCameraEventFlags_t integer
+---| `k_ECustomCameraEventFlags_Zoom`
+---| `k_ECustomCameraEventFlags_Position`
+---| `k_ECustomCameraEventFlags_PositionPlayerHero`
+---| `k_ECustomCameraEventFlags_Pitch`
+---| `k_ECustomCameraEventFlags_Yaw`
+---| `k_ECustomCameraEventFlags_Lock`
+---| `k_ECustomCameraEventFlags_Unlock`
+---| `k_ECustomCameraEventFlags_ResetDefault`
+---| `k_ECustomCameraEventFlags_SpecificPlayer`
+---| `k_ECustomCameraEventFlags_FadeOut`
+---| `k_ECustomCameraEventFlags_FadeIn`
+---| `k_ECustomCameraEventFlags_LetterboxOn`
+---| `k_ECustomCameraEventFlags_LetterboxOff`
+
 ---@alias DOTADamageFlag_t integer
 ---| `DOTA_DAMAGE_FLAG_NONE`
 ---| `DOTA_DAMAGE_FLAG_IGNORES_MAGIC_ARMOR`
 ---| `DOTA_DAMAGE_FLAG_IGNORES_PHYSICAL_ARMOR`
 ---| `DOTA_DAMAGE_FLAG_BYPASSES_INVULNERABILITY`
----| `DOTA_DAMAGE_FLAG_BYPASSES_BLOCK`
+---| `DOTA_DAMAGE_FLAG_BYPASSES_PHYSICAL_BLOCK`
 ---| `DOTA_DAMAGE_FLAG_REFLECTION`
 ---| `DOTA_DAMAGE_FLAG_HPLOSS`
 ---| `DOTA_DAMAGE_FLAG_NO_DIRECTOR_EVENT`
@@ -491,6 +526,8 @@
 ---| `DOTA_DAMAGE_FLAG_FORCE_SPELL_AMPLIFICATION`
 ---| `DOTA_DAMAGE_FLAG_MAGIC_AUTO_ATTACK`
 ---| `DOTA_DAMAGE_FLAG_ATTACK_MODIFIER`
+---| `DOTA_DAMAGE_FLAG_BYPASSES_ALL_BLOCK`
+---| `DOTA_DAMAGE_FLAG_NO_REFLECTION`
 
 ---@alias DotaDefaultUIElement_t integer
 ---| `DOTA_DEFAULT_UI_INVALID`
@@ -606,6 +643,7 @@
 ---| `MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE`
 ---| `MODIFIER_ATTRIBUTE_AURA_PRIORITY`
 ---| `MODIFIER_ATTRIBUTE_IGNORE_DODGE`
+---| `MODIFIER_ATTRIBUTE_DUPLICATED`
 
 ---@alias DOTAMusicStatus_t integer
 ---| `DOTA_MUSIC_STATUS_NONE`
@@ -659,7 +697,8 @@
 ---| `DOTA_STASH_SLOT_5`
 ---| `DOTA_STASH_SLOT_6`
 ---| `DOTA_ITEM_TP_SCROLL`
----| `DOTA_ITEM_NEUTRAL_SLOT`
+---| `DOTA_ITEM_NEUTRAL_ACTIVE_SLOT`
+---| `DOTA_ITEM_NEUTRAL_PASSIVE_SLOT`
 ---| `DOTA_ITEM_TRANSIENT_ITEM`
 ---| `DOTA_ITEM_TRANSIENT_RECIPE`
 ---| `DOTA_ITEM_TRANSIENT_CAST_ITEM`
@@ -682,11 +721,13 @@
 ---| `DOTA_LOADOUT_TYPE_TAIL`
 ---| `DOTA_LOADOUT_TYPE_MISC`
 ---| `DOTA_LOADOUT_TYPE_COSTUME`
+---| `DOTA_LOADOUT_TYPE_HERO_BASE`
 ---| `DOTA_LOADOUT_TYPE_BODY_HEAD`
 ---| `DOTA_LOADOUT_TYPE_MOUNT`
 ---| `DOTA_LOADOUT_TYPE_SUMMON`
 ---| `DOTA_LOADOUT_TYPE_SHAPESHIFT`
 ---| `DOTA_LOADOUT_TYPE_TAUNT`
+---| `DOTA_LOADOUT_TYPE_HERO_EFFIGY`
 ---| `DOTA_LOADOUT_TYPE_AMBIENT_EFFECTS`
 ---| `DOTA_LOADOUT_TYPE_ABILITY_ATTACK`
 ---| `DOTA_LOADOUT_TYPE_ABILITY1`
@@ -725,6 +766,7 @@
 ---| `DOTA_LOADOUT_TYPE_SUMMON_PERSONA_1`
 ---| `DOTA_LOADOUT_TYPE_SHAPESHIFT_PERSONA_1`
 ---| `DOTA_LOADOUT_TYPE_TAUNT_PERSONA_1`
+---| `DOTA_LOADOUT_TYPE_HERO_EFFIGY_PERSONA_1`
 ---| `DOTA_LOADOUT_TYPE_AMBIENT_EFFECTS_PERSONA_1`
 ---| `DOTA_LOADOUT_TYPE_ABILITY_ATTACK_PERSONA_1`
 ---| `DOTA_LOADOUT_TYPE_ABILITY1_PERSONA_1`
@@ -765,6 +807,9 @@
 ---| `DOTA_LOADOUT_TYPE_RADIANT_SIEGE_CREEPS`
 ---| `DOTA_LOADOUT_TYPE_DIRE_SIEGE_CREEPS`
 ---| `DOTA_LOADOUT_TYPE_ROSHAN`
+---| `DOTA_LOADOUT_TYPE_TORMENTOR`
+---| `DOTA_LOADOUT_TYPE_ANCIENT`
+---| `DOTA_LOADOUT_TYPE_PET_EFFIGY`
 ---| `DOTA_PLAYER_LOADOUT_END`
 ---| `DOTA_LOADOUT_TYPE_NONE`
 ---| `DOTA_LOADOUT_TYPE_COUNT`
@@ -855,6 +900,9 @@
 ---| `DOTA_UNIT_ORDER_DROP_ITEM_AT_FOUNTAIN`
 ---| `DOTA_UNIT_ORDER_TAKE_ITEM_FROM_NEUTRAL_ITEM_STASH`
 ---| `DOTA_UNIT_ORDER_MOVE_RELATIVE`
+---| `DOTA_UNIT_ORDER_CAST_TOGGLE_ALT`
+---| `DOTA_UNIT_ORDER_CONSUME_ITEM`
+---| `DOTA_UNIT_ORDER_SET_ITEM_MARK_FOR_SELL`
 
 ---@alias EDOTA_ModifyGold_Reason integer
 ---| `DOTA_ModifyGold_Unspecified`
@@ -887,6 +935,8 @@
 ---| `DOTA_ModifyXP_RoshanKill`
 ---| `DOTA_ModifyXP_TomeOfKnowledge`
 ---| `DOTA_ModifyXP_Outpost`
+---| `DOTA_ModifyXP_CatchUp`
+---| `DOTA_ModifyXP_HeroAbility`
 ---| `DOTA_ModifyXP_MAX`
 
 ---@alias EntityEffects integer
@@ -2197,6 +2247,20 @@
 ---| `ACT_DOTA_VIPER_DIVE`
 ---| `ACT_DOTA_VIPER_DIVE_END`
 ---| `ACT_DOTA_MK_STRIKE_END`
+---| `ACT_DOTA_SHADOW_VAULT`
+---| `ACT_DOTA_KEZ_KATANA_ULT_START`
+---| `ACT_DOTA_KEZ_KATANA_ULT_CHAIN_A`
+---| `ACT_DOTA_KEZ_KATANA_ULT_CHAIN_B`
+---| `ACT_DOTA_KEZ_KATANA_ULT_END`
+---| `ACT_DOTA_KEZ_KATANA_IMPALE`
+---| `ACT_DOTA_KEZ_KATANA_IMPALE_FAST`
+---| `ACT_DOTA_UNICYCLE`
+---| `ACT_DOTA_UNICYCLE_END`
+---| `ACT_DOTA_LARGO_ULT_STRUM_SUCCESS`
+---| `ACT_DOTA_LARGO_ULT_STRUM_FAIL`
+---| `ACT_DOTA_MVP_SCREEN`
+---| `ACT_DOTA_LARGO_ULT_TOGGLE_ON`
+---| `ACT_DOTA_LARGO_ULT_TOGGLE_OFF`
 ---| `ACT_DOTA_RUN_STATUE`
 ---| `ACT_DOTA_CAST1_STATUE`
 ---| `ACT_DOTA_CAST2_STATUE`
@@ -2208,17 +2272,21 @@
 ---| `ACT_DOTA_FORCESTAFF_STATUE`
 ---| `ACT_DOTA_TELEPORT_STATUE`
 ---| `ACT_DOTA_VICTORY_STATUE`
+---| `ACT_DOTA_TAUNT_STATUE`
+---| `ACT_DOTA_IDLE_STATUE`
 ---| `ACT_DOTA_DISABLED_END`
----| `ACT_DOTA_RUN_ALT`
 ---| `ACT_DOTA_VOODOO_REST`
 ---| `ACT_DOTA_CYCLONE`
 ---| `ACT_DOTA_IMPALE`
 ---| `ACT_DOTA_TORRENT`
+---| `ACT_DOTA_RADIANT_CREEP_HAMMER`
 ---| `ACT_DOTA_RELAX_IN`
 ---| `ACT_DOTA_RELAX_OUT`
 ---| `ACT_DOTA_CAST_FENCE`
----| `ACT_DOTA_RADIANT_CREEP_HAMMER`
 ---| `ACT_DOTA_SPWN`
+---| `ACT_DOTA_CAST3_STATUE`
+---| `ACT_DOTA_CAST4_STATUE`
+---| `ACT_DOTA_CAST5_STATUE`
 
 ---@alias LuaModifierType integer
 ---| `LUA_MODIFIER_MOTION_NONE`
@@ -2246,6 +2314,8 @@
 ---| `MODIFIER_PROPERTY_PERSISTENT_INVISIBILITY` Method Name: `GetModifierPersistentInvisibility`
 ---| `MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT` Method Name: `GetModifierMoveSpeedBonus_Constant`
 ---| `MODIFIER_PROPERTY_MOVESPEED_BASE_OVERRIDE` Method Name: `GetModifierMoveSpeedOverride`
+---| `MODIFIER_PROPERTY_MOVESPEED_MIN_OVERRIDE` Method Name: `GetModifierMoveSpeed_MinOverride`
+---| `MODIFIER_PROPERTY_MOVESPEED_MAX_OVERRIDE` Method Name: `GetModifierMoveSpeed_MaxOverride`
 ---| `MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE` Method Name: `GetModifierMoveSpeedBonus_Percentage`
 ---| `MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE_UNIQUE` Method Name: `GetModifierMoveSpeedBonus_Percentage_Unique`
 ---| `MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE` Method Name: `GetModifierMoveSpeedBonus_Special_Boots`
@@ -2273,24 +2343,25 @@
 ---| `MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE_ILLUSION` Method Name: `GetModifierDamageOutgoing_Percentage_Illusion`
 ---| `MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE_ILLUSION_AMPLIFY` Method Name: `GetModifierDamageOutgoing_Percentage_Illusion_Amplify`
 ---| `MODIFIER_PROPERTY_TOTALDAMAGEOUTGOING_PERCENTAGE` Method Name: `GetModifierTotalDamageOutgoing_Percentage`
----| `MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE_CREEP` Method Name: `GetModifierSpellAmplify_PercentageCreep`
 ---| `MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE` Method Name: `GetModifierSpellAmplify_Percentage`
 ---| `MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE_UNIQUE` Method Name: `GetModifierSpellAmplify_PercentageUnique`
+---| `MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE_TARGET` Method Name: `GetModifierSpellAmplify_PercentageTarget`
 ---| `MODIFIER_PROPERTY_HEAL_AMPLIFY_PERCENTAGE_SOURCE` Method Name: `GetModifierHealAmplify_PercentageSource`
 ---| `MODIFIER_PROPERTY_HEAL_AMPLIFY_PERCENTAGE_TARGET` Method Name: `GetModifierHealAmplify_PercentageTarget`
----| `MODIFIER_PROPERTY_HP_REGEN_CAN_BE_NEGATIVE` Method Name: `GetModifierHPRegen_CanBeNegative`
 ---| `MODIFIER_PROPERTY_HP_REGEN_AMPLIFY_PERCENTAGE` Method Name: `GetModifierHPRegenAmplify_Percentage`
 ---| `MODIFIER_PROPERTY_LIFESTEAL_AMPLIFY_PERCENTAGE` Method Name: `GetModifierLifestealRegenAmplify_Percentage`
 ---| `MODIFIER_PROPERTY_SPELL_LIFESTEAL_AMPLIFY_PERCENTAGE` Method Name: `GetModifierSpellLifestealRegenAmplify_Percentage`
+---| `MODIFIER_PROPERTY_SPELL_LIFESTEAL_AMPLIFY_PERCENTAGE_UNIQUE` Method Name: `GetModifierSpellLifestealRegenAmplify_Percentage_Unique`
 ---| `MODIFIER_PROPERTY_MP_REGEN_AMPLIFY_PERCENTAGE` Method Name: `GetModifierMPRegenAmplify_Percentage`
+---| `MODIFIER_PROPERTY_MP_REGEN_AMPLIFY_PERCENTAGE_UNIQUE` Method Name: `GetModifierMPRegenAmplify_Percentage_Unique`
 ---| `MODIFIER_PROPERTY_MANA_DRAIN_AMPLIFY_PERCENTAGE` Method Name: `GetModifierManaDrainAmplify_Percentage`
 ---| `MODIFIER_PROPERTY_MP_RESTORE_AMPLIFY_PERCENTAGE` Total amplify value is clamped to 0.  Method Name: `GetModifierMPRestoreAmplify_Percentage`.
 ---| `MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE` Method Name: `GetModifierBaseDamageOutgoing_Percentage`
 ---| `MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE_UNIQUE` Method Name: `GetModifierBaseDamageOutgoing_PercentageUnique`
 ---| `MODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE` Method Name: `GetModifierIncomingDamage_Percentage`
 ---| `MODIFIER_PROPERTY_INCOMING_PHYSICAL_DAMAGE_PERCENTAGE` Method Name: `GetModifierIncomingPhysicalDamage_Percentage`
----| `MODIFIER_PROPERTY_INCOMING_PHYSICAL_DAMAGE_CONSTANT` Method Name: `GetModifierIncomingPhysicalDamageConstant`
----| `MODIFIER_PROPERTY_INCOMING_SPELL_DAMAGE_CONSTANT` Method Name: `GetModifierIncomingSpellDamageConstant`
+---| `MODIFIER_PROPERTY_INCOMING_PHYSICAL_DAMAGE_CONSTANT` This property controls 'physical' shield, if defined both on client and server. Return value on client should be current shield health, as a positive integer, on server - amount of damage blocked.  Method Name: `GetModifierIncomingPhysicalDamageConstant`.
+---| `MODIFIER_PROPERTY_INCOMING_SPELL_DAMAGE_CONSTANT` This property controls 'spell' shield, if defined both on client and server. Return value on client should be current shield health, as a positive integer, on server - amount of damage blocked.  Method Name: `GetModifierIncomingSpellDamageConstant`.
 ---| `MODIFIER_PROPERTY_EVASION_CONSTANT` Method Name: `GetModifierEvasion_Constant`
 ---| `MODIFIER_PROPERTY_NEGATIVE_EVASION_CONSTANT` Method Name: `GetModifierNegativeEvasion_Constant`
 ---| `MODIFIER_PROPERTY_STATUS_RESISTANCE` Method Name: `GetModifierStatusResistance`
@@ -2305,6 +2376,7 @@
 ---| `MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS_UNIQUE` Method Name: `GetModifierPhysicalArmorBonusUnique`
 ---| `MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS_UNIQUE_ACTIVE` Method Name: `GetModifierPhysicalArmorBonusUniqueActive`
 ---| `MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS_POST` Method Name: `GetModifierPhysicalArmorBonusPost`
+---| `MODIFIER_PROPERTY_MIN_PHYSICAL_ARMOR` Method Name: `GetModifierMinPhysicalArmor`
 ---| `MODIFIER_PROPERTY_IGNORE_PHYSICAL_ARMOR` Method Name: `GetModifierIgnorePhysicalArmor`
 ---| `MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BASE_REDUCTION` Method Name: `GetModifierMagicalResistanceBaseReduction`
 ---| `MODIFIER_PROPERTY_MAGICAL_RESISTANCE_DIRECT_MODIFICATION` Method Name: `GetModifierMagicalResistanceDirectModification`
@@ -2333,6 +2405,7 @@
 ---| `MODIFIER_PROPERTY_STATS_STRENGTH_BONUS_PERCENTAGE` Method Name: `GetModifierBonusStats_Strength_Percentage`
 ---| `MODIFIER_PROPERTY_STATS_AGILITY_BONUS_PERCENTAGE` Method Name: `GetModifierBonusStats_Agility_Percentage`
 ---| `MODIFIER_PROPERTY_STATS_INTELLECT_BONUS_PERCENTAGE` Method Name: `GetModifierBonusStats_Intellect_Percentage`
+---| `MODIFIER_PROPERTY_STATS_INTELLECT_NONE` Method Name: `GetModifierIntellectNone`
 ---| `MODIFIER_PROPERTY_CAST_RANGE_BONUS` Method Name: `GetModifierCastRangeBonus`
 ---| `MODIFIER_PROPERTY_CAST_RANGE_BONUS_PERCENTAGE` Method Name: `GetModifierCastRangeBonusPercentage`
 ---| `MODIFIER_PROPERTY_CAST_RANGE_BONUS_TARGET` Method Name: `GetModifierCastRangeBonusTarget`
@@ -2346,6 +2419,7 @@
 ---| `MODIFIER_PROPERTY_PROJECTILE_SPEED_BONUS_PERCENTAGE` Method Name: `GetModifierProjectileSpeedBonusPercentage`
 ---| `MODIFIER_PROPERTY_PROJECTILE_NAME` Method Name: `GetModifierProjectileName`
 ---| `MODIFIER_PROPERTY_REINCARNATION` Method Name: `ReincarnateTime`
+---| `MODIFIER_PROPERTY_REINCARNATION_SUPPRESS_FX` Method Name: `ReincarnateSuppressFX`
 ---| `MODIFIER_PROPERTY_RESPAWNTIME` Method Name: `GetModifierConstantRespawnTime`
 ---| `MODIFIER_PROPERTY_RESPAWNTIME_PERCENTAGE` Method Name: `GetModifierPercentageRespawnTime`
 ---| `MODIFIER_PROPERTY_RESPAWNTIME_STACKING` Method Name: `GetModifierStackingRespawnTime`
@@ -2358,28 +2432,34 @@
 ---| `MODIFIER_PROPERTY_HEALTHCOST_PERCENTAGE` Method Name: `GetModifierPercentageHealthcost`
 ---| `MODIFIER_PROPERTY_HEALTHCOST_PERCENTAGE_STACKING` Method Name: `GetModifierPercentageHealthcostStacking`
 ---| `MODIFIER_PROPERTY_DEATHGOLDCOST` Method Name: `GetModifierConstantDeathGoldCost`
+---| `MODIFIER_PROPERTY_PERCENTAGE_DEATHGOLDCOST` Method Name: `GetModifierPercentageDeathGoldCost`
 ---| `MODIFIER_PROPERTY_EXP_RATE_BOOST` Method Name: `GetModifierPercentageExpRateBoost`
 ---| `MODIFIER_PROPERTY_GOLD_RATE_BOOST` Method Name: `GetModifierPercentageGoldRateBoost`
+---| `MODIFIER_PROPERTY_KILL_ASSIST_GOLD_BOOST` Method Name: `GetModifierPercentageKillAssistGoldBoost`
+---| `MODIFIER_PROPERTY_CONVERT_EXP_TO_GOLD_PCT` Method Name: `GetModifierPercentageConvertExpToGold`
 ---| `MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE` Method Name: `GetModifierPreAttack_CriticalStrike`
 ---| `MODIFIER_PROPERTY_PREATTACK_TARGET_CRITICALSTRIKE` Method Name: `GetModifierPreAttack_Target_CriticalStrike`
 ---| `MODIFIER_PROPERTY_MAGICAL_CONSTANT_BLOCK` Method Name: `GetModifierMagical_ConstantBlock`
 ---| `MODIFIER_PROPERTY_PHYSICAL_CONSTANT_BLOCK` Method Name: `GetModifierPhysical_ConstantBlock`
 ---| `MODIFIER_PROPERTY_PHYSICAL_CONSTANT_BLOCK_SPECIAL` Method Name: `GetModifierPhysical_ConstantBlockSpecial`
+---| `MODIFIER_PROPERTY_PHYSICAL_CONSTANT_BLOCK_BONUS` Method Name: `GetModifierPhysical_ConstantBlockBonus`
+---| `MODIFIER_PROPERTY_INNATE_DAMAGE_BLOCK_PCT_OVERRIDE` Method Name: `GetModifierInnateDamageBlockPctOverride`
 ---| `MODIFIER_PROPERTY_TOTAL_CONSTANT_BLOCK_UNAVOIDABLE_PRE_ARMOR` Method Name: `GetModifierPhysical_ConstantBlockUnavoidablePreArmor`
 ---| `MODIFIER_PROPERTY_TOTAL_CONSTANT_BLOCK` Method Name: `GetModifierTotal_ConstantBlock`
 ---| `MODIFIER_PROPERTY_OVERRIDE_ANIMATION` Method Name: `GetOverrideAnimation`
----| `MODIFIER_PROPERTY_OVERRIDE_ANIMATION_WEIGHT` Method Name: `GetOverrideAnimationWeight`
 ---| `MODIFIER_PROPERTY_OVERRIDE_ANIMATION_RATE` Method Name: `GetOverrideAnimationRate`
 ---| `MODIFIER_PROPERTY_ABSORB_SPELL` Method Name: `GetAbsorbSpell`
 ---| `MODIFIER_PROPERTY_REFLECT_SPELL` Method Name: `GetReflectSpell`
 ---| `MODIFIER_PROPERTY_DISABLE_AUTOATTACK` Method Name: `GetDisableAutoAttack`
 ---| `MODIFIER_PROPERTY_BONUS_DAY_VISION` Method Name: `GetBonusDayVision`
+---| `MODIFIER_PROPERTY_BONUS_DAY_VISION_PERCENTAGE` Method Name: `GetBonusDayVisionPercentage`
 ---| `MODIFIER_PROPERTY_BONUS_NIGHT_VISION` Method Name: `GetBonusNightVision`
 ---| `MODIFIER_PROPERTY_BONUS_NIGHT_VISION_UNIQUE` Method Name: `GetBonusNightVisionUnique`
 ---| `MODIFIER_PROPERTY_BONUS_VISION_PERCENTAGE` Method Name: `GetBonusVisionPercentage`
 ---| `MODIFIER_PROPERTY_FIXED_DAY_VISION` Method Name: `GetFixedDayVision`
 ---| `MODIFIER_PROPERTY_FIXED_NIGHT_VISION` Method Name: `GetFixedNightVision`
 ---| `MODIFIER_PROPERTY_MIN_HEALTH` Method Name: `GetMinHealth`
+---| `MODIFIER_PROPERTY_MIN_MANA` Method Name: `GetMinMana`
 ---| `MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_PHYSICAL` Method Name: `GetAbsoluteNoDamagePhysical`
 ---| `MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_MAGICAL` Method Name: `GetAbsoluteNoDamageMagical`
 ---| `MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_PURE` Method Name: `GetAbsoluteNoDamagePure`
@@ -2392,6 +2472,7 @@
 ---| `MODIFIER_PROPERTY_TURN_RATE_PERCENTAGE` Method Name: `GetModifierTurnRate_Percentage`
 ---| `MODIFIER_PROPERTY_TURN_RATE_OVERRIDE` Method Name: `GetModifierTurnRate_Override`
 ---| `MODIFIER_PROPERTY_DISABLE_HEALING` Method Name: `GetDisableHealing`
+---| `MODIFIER_PROPERTY_DISABLE_MANA_GAIN` Method Name: `GetDisableManaGain`
 ---| `MODIFIER_PROPERTY_ALWAYS_ALLOW_ATTACK` Method Name: `GetAlwaysAllowAttack`
 ---| `MODIFIER_PROPERTY_ALWAYS_ETHEREAL_ATTACK` Method Name: `GetAllowEtherealAttack`
 ---| `MODIFIER_PROPERTY_OVERRIDE_ATTACK_MAGICAL` Method Name: `GetOverrideAttackMagical`
@@ -2401,10 +2482,14 @@
 ---| `MODIFIER_PROPERTY_UNIT_DISALLOW_UPGRADING` Method Name: `GetModifierUnitDisllowUpgrading`
 ---| `MODIFIER_PROPERTY_DODGE_PROJECTILE` Method Name: `GetModifierDodgeProjectile`
 ---| `MODIFIER_PROPERTY_TRIGGER_COSMETIC_AND_END_ATTACK` Method Name: `GetTriggerCosmeticAndEndAttack`
----| `MODIFIER_PROPERTY_MAX_DEBUFF_DURATION` Method Name: `GetModifierMaxDebuffDuration`
 ---| `MODIFIER_PROPERTY_PRIMARY_STAT_DAMAGE_MULTIPLIER` Method Name: `GetPrimaryStatDamageMultiplier`
 ---| `MODIFIER_PROPERTY_PREATTACK_DEADLY_BLOW` Method Name: `GetModifierPreAttack_DeadlyBlow`
 ---| `MODIFIER_PROPERTY_ALWAYS_AUTOATTACK_WHILE_HOLD_POSITION` Method Name: `GetAlwaysAutoAttackWhileHoldPosition`
+---| `MODIFIER_PROPERTY_PHYSICAL_ARMOR_PIERCING_PERCENTAGE_TARGET` Method Name: `GetPhysicalArmorPiercingPercentageTarget`
+---| `MODIFIER_PROPERTY_MAGICAL_ARMOR_PIERCING_PERCENTAGE_TARGET` Method Name: `GetMagicalArmorPiercingPercentageTarget`
+---| `MODIFIER_PROPERTY_CRITICAL_STRIKE_BONUS` Method Name: `GetCriticalStrikeBonus`
+---| `MODIFIER_PROPERTY_CONVERT_ATTACK_PHYSICAL_TO_PURE` Method Name: `GetConvertAttackPhysicalToPure`
+---| `MODIFIER_PROPERTY_BUFF_AMPLIFICATION` Method Name: `GetBuffAmplification`
 ---| `MODIFIER_EVENT_ON_SPELL_TARGET_READY` Method Name: `OnSpellTargetReady`
 ---| `MODIFIER_EVENT_ON_ATTACK_RECORD` Method Name: `OnAttackRecord`
 ---| `MODIFIER_EVENT_ON_ATTACK_START` Method Name: `OnAttackStart`
@@ -2414,6 +2499,7 @@
 ---| `MODIFIER_EVENT_ON_ATTACK_ALLIED` Happens even if attack can't be issued.  Method Name: `OnAttackAllied`.
 ---| `MODIFIER_EVENT_ON_PROJECTILE_DODGE` Method Name: `OnProjectileDodge`
 ---| `MODIFIER_EVENT_ON_ORDER` Method Name: `OnOrder`
+---| `MODIFIER_EVENT_ON_ORDER_RECEIVED` Method Name: `OnOrderReceived`
 ---| `MODIFIER_EVENT_ON_UNIT_MOVED` Method Name: `OnUnitMoved`
 ---| `MODIFIER_EVENT_ON_ABILITY_START` Method Name: `OnAbilityStart`
 ---| `MODIFIER_EVENT_ON_ABILITY_EXECUTED` Method Name: `OnAbilityExecuted`
@@ -2435,6 +2521,7 @@
 ---| `MODIFIER_EVENT_ON_RESPAWN` Method Name: `OnRespawn`
 ---| `MODIFIER_EVENT_ON_SPENT_MANA` Method Name: `OnSpentMana`
 ---| `MODIFIER_EVENT_ON_SPENT_HEALTH` Method Name: `OnSpentHealth`
+---| `MODIFIER_EVENT_ON_SPENT_ITEM_CHARGE` Method Name: `OnSpentItemCharge`
 ---| `MODIFIER_EVENT_ON_TELEPORTING` Method Name: `OnTeleporting`
 ---| `MODIFIER_EVENT_ON_TELEPORTED` Method Name: `OnTeleported`
 ---| `MODIFIER_EVENT_ON_SET_LOCATION` Method Name: `OnSetLocation`
@@ -2443,21 +2530,28 @@
 ---| `MODIFIER_EVENT_ON_TAKEDAMAGE_KILLCREDIT` Method Name: `OnTakeDamageKillCredit`
 ---| `MODIFIER_EVENT_ON_HERO_KILLED` Method Name: `OnHeroKilled`
 ---| `MODIFIER_EVENT_ON_HEAL_RECEIVED` Method Name: `OnHealReceived`
+---| `MODIFIER_EVENT_ON_REDIRECT_HEALTH_GAIN` Method Name: `OnRedirectHealthGain`
 ---| `MODIFIER_EVENT_ON_BUILDING_KILLED` Method Name: `OnBuildingKilled`
 ---| `MODIFIER_EVENT_ON_MODEL_CHANGED` Method Name: `OnModelChanged`
 ---| `MODIFIER_EVENT_ON_MODIFIER_ADDED` Method Name: `OnModifierAdded`
+---| `MODIFIER_EVENT_ON_MODIFIER_REMOVED` Method Name: `OnModifierRemoved`
+---| `MODIFIER_EVENT_ON_SCEPTER_UPGRADE_SELECTED` Method Name: `OnScepterUpgradeSelected`
+---| `MODIFIER_EVENT_ON_SHARD_UPGRADE_SELECTED` Method Name: `OnShardUpgradeSelected`
 ---| `MODIFIER_PROPERTY_TOOLTIP` Method Name: `OnTooltip`
 ---| `MODIFIER_PROPERTY_MODEL_CHANGE` Method Name: `GetModifierModelChange`
 ---| `MODIFIER_PROPERTY_MODEL_SCALE` Method Name: `GetModifierModelScale`
 ---| `MODIFIER_PROPERTY_MODEL_SCALE_ANIMATE_TIME` Method Name: `GetModifierModelScaleAnimateTime`
----| `MODIFIER_PROPERTY_IS_SCEPTER` Always applies scepter when this property is active  Method Name: `GetModifierScepter`.
----| `MODIFIER_PROPERTY_IS_SHARD` Method Name: `GetModifierShard`
+---| `MODIFIER_PROPERTY_MODEL_SCALE_USE_IN_OUT_EASE` Method Name: `GetModifierModelScaleUseInOutEase`
+---| `MODIFIER_PROPERTY_MODEL_SCALE_CONSTANT` Method Name: `GetModifierModelScaleConstant`
+---| `MODIFIER_PROPERTY_IS_SCEPTER` Applies scepter when this property is active  Method Name: `GetModifierScepter`.
+---| `MODIFIER_PROPERTY_IS_SHARD` Applies shard when this property is active  Method Name: `GetModifierShard`.
 ---| `MODIFIER_PROPERTY_RADAR_COOLDOWN_REDUCTION` Method Name: `GetModifierRadarCooldownReduction`
 ---| `MODIFIER_PROPERTY_TRANSLATE_ACTIVITY_MODIFIERS` Method Name: `GetActivityTranslationModifiers`
 ---| `MODIFIER_PROPERTY_TRANSLATE_ATTACK_SOUND` Method Name: `GetAttackSound`
 ---| `MODIFIER_PROPERTY_LIFETIME_FRACTION` Method Name: `GetUnitLifetimeFraction`
 ---| `MODIFIER_PROPERTY_PROVIDES_FOW_POSITION` Method Name: `GetModifierProvidesFOWVision`
 ---| `MODIFIER_PROPERTY_SPELLS_REQUIRE_HP` Method Name: `GetModifierSpellsRequireHP`
+---| `MODIFIER_PROPERTY_CONVERT_MANA_COST_TO_HEALTH_COST` Method Name: `GetModifierConvertManaCostToHealthCost`
 ---| `MODIFIER_PROPERTY_FORCE_DRAW_MINIMAP` Method Name: `GetForceDrawOnMinimap`
 ---| `MODIFIER_PROPERTY_DISABLE_TURNING` Method Name: `GetModifierDisableTurning`
 ---| `MODIFIER_PROPERTY_IGNORE_CAST_ANGLE` Method Name: `GetModifierIgnoreCastAngle`
@@ -2489,17 +2583,118 @@
 ---| `MODIFIER_PROPERTY_ATTACK_WHILE_MOVING_TARGET`
 ---| `MODIFIER_PROPERTY_ATTACKSPEED_PERCENTAGE` Method Name: `GetModifierAttackSpeedPercentage`
 ---| `MODIFIER_EVENT_ON_ATTEMPT_PROJECTILE_DODGE` Method Name: `OnAttemptProjectileDodge`
----| `MODIFIER_EVENT_ON_PREDEBUFF_APPLIED` Method Name: `OnPreDebuffApplied`
 ---| `MODIFIER_PROPERTY_COOLDOWN_PERCENTAGE_STACKING` Method Name: `GetModifierPercentageCooldownStacking`
 ---| `MODIFIER_PROPERTY_SPELL_REDIRECT_TARGET` Method Name: `GetModifierSpellRedirectTarget`
 ---| `MODIFIER_PROPERTY_TURN_RATE_CONSTANT` Method Name: `GetModifierTurnRateConstant`
----| `MODIFIER_PROPERTY_RAT_PACK` Method Name: `GetModifierIsRatPack`
+---| `MODIFIER_PROPERTY_PACK_RAT` Method Name: `GetModifierIsPackRat`
 ---| `MODIFIER_PROPERTY_PHYSICALDAMAGEOUTGOING_PERCENTAGE` Method Name: `GetModifierPhysicalDamageOutgoing_Percentage`
 ---| `MODIFIER_PROPERTY_KNOCKBACK_AMPLIFICATION_PERCENTAGE` Method Name: `GetModifierKnockbackAmplification_Percentage`
----| `MODIFIER_PROPERTY_HEALTHBAR_PIPS` Method Name: `GetModifierHealthBarPips`
----| `MODIFIER_PROPERTY_INCOMING_DAMAGE_CONSTANT` Method Name: `GetModifierPropertyIncomingDamage_Constant`
+---| `MODIFIER_PROPERTY_HEALTHBAR_PIPS` Return value is a count of pips.  Method Name: `GetModifierHealthBarPips`.
+---| `MODIFIER_PROPERTY_INCOMING_DAMAGE_CONSTANT` This property controls 'universal' shield, if defined both on client and server. Return value on client should be current shield health, as a positive integer, on server - amount of damage blocked.  Method Name: `GetModifierIncomingDamageConstant`.
 ---| `MODIFIER_EVENT_SPELL_APPLIED_SUCCESSFULLY` Method Name: `OnSpellAppliedSuccessfully`
 ---| `MODIFIER_PROPERTY_AVOID_DAMAGE_AFTER_REDUCTIONS` Method Name: `GetModifierAvoidDamageAfterReductions`
+---| `MODIFIER_PROPERTY_FAIL_ATTACK` Method Name: `GetModifierPropetyFailAttack`
+---| `MODIFIER_PROPERTY_PREREDUCE_INCOMING_DAMAGE_MULT` Method Name: `GetModifierPrereduceIncomingDamage_Mult`
+---| `MODIFIER_PROPERTY_SUPPRESS_FULLSCREEN_DEATH_FX` Method Name: `GetModifierSuppressFullscreenDeathFX`
+---| `MODIFIER_PROPERTY_INCOMING_DAMAGE_CONSTANT_POST` Method Name: `MODIFIER_PROPERTY_INCOMING_DAMAGE_CONSTANT_POST`
+---| `MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE_MULTIPLICATIVE` Method Name: `GetModifierDamageOutgoing_PercentageMultiplicative`
+---| `MODIFIER_PROPERTY_TICK_GOLD_MULTIPLIER` Method Name: `GetModifierTickGold_Multiplier`
+---| `MODIFIER_PROPERTY_SLOW_RESISTANCE_UNIQUE` Method Name: `GEtModifierSlowResistance_Unique`
+---| `MODIFIER_PROPERTY_SLOW_RESISTANCE_STACKING` Method Name: `GetModifierSlowResistance_Stacking`
+---| `MODIFIER_PROPERTY_SLOW_RESISTANCE_APPLIES_TO_ATTACKS` Method Name: `GetModifierSlowResistanceAppliesToAttacks`
+---| `MODIFIER_PROPERTY_AOE_BONUS_PERCENTAGE` Method Name: `GetModifierAoEBonusPercentage`
+---| `MODIFIER_PROPERTY_PROJECTILE_SPEED` Method Name: `GetModifierProjectileSpeed`
+---| `MODIFIER_PROPERTY_PROJECTILE_SPEED_TARGET` Method Name: `GetModifierProjectileSpeedTarget`
+---| `MODIFIER_PROPERTY_BECOME_STRENGTH` Method Name: `GetModifierBecomeStrength`
+---| `MODIFIER_PROPERTY_BECOME_AGILITY` Method Name: `GetModifierBecomeAgility`
+---| `MODIFIER_PROPERTY_BECOME_INTELLIGENCE` Method Name: `GetModifierBecomeIntelligence`
+---| `MODIFIER_PROPERTY_BECOME_UNIVERSAL` Method Name: `GetModifierBecomeUniversal`
+---| `MODIFIER_EVENT_ON_FORCE_PROC_MAGIC_STICK` Method Name: `OnForceProcMagicStick`
+---| `MODIFIER_EVENT_ON_DAMAGE_HPLOSS` Method Name: `OnDamageHPLoss`
+---| `MODIFIER_PROPERTY_SHARE_XPRUNE` Method Name: `GetModifierShareXPRune`
+---| `MODIFIER_PROPERTY_XP_FOUNTAIN_COUNTDOWN_TIME_OVERRIDE` Method Name: `GetModifierXPFountainCountdownTimeOverride`
+---| `MODIFIER_PROPERTY_NO_FREE_TP_SCROLL_ON_DEATH` Method Name: `GetModifierNoFreeTPScrollOnDeath`
+---| `MODIFIER_PROPERTY_HAS_BONUS_NEUTRAL_ITEM_CHOICE` Method Name: `GetModifierHasBonusNeutralItemChoice`
+---| `MODIFIER_PROPERTY_HAS_BONUS_NEUTRAL_ITEM_PASSIVE` Method Name: `HasBonusNeutralItemPassive`
+---| `MODIFIER_PROPERTY_PRESERVE_NEUTRAL_ITEM_PASSIVES` Method Name: `GetModifierPreserveNeutralItemPassives`
+---| `MODIFIER_PROPERTY_FORCE_MAX_HEALTH` Method Name: `GetModifierForceMaxHealth`
+---| `MODIFIER_PROPERTY_FORCE_MAX_MANA` Method Name: `GetModifierForceMaxMana`
+---| `MODIFIER_PROPERTY_AOE_BONUS_CONSTANT` Method Name: `GetModifierAoEBonusConstant`
+---| `MODIFIER_PROPERTY_AOE_BONUS_CONSTANT_STACKING` Method Name: `GetModifierAoEBonusConstantStacking`
+---| `MODIFIER_EVENT_ON_TAKEDAMAGE_POST_UNAVOIDABLE_BLOCK` Method Name: `OnTakeDamagePostUnavoidableBlock`
+---| `MODIFIER_EVENT_ON_MUTE_DAMAGE_ABILITIES` Method Name: `OnMuteDamageAbilities`
+---| `MODIFIER_PROPERTY_SUPPRESS_CRIT` Method Name: `GetSuppressCrit`
+---| `MODIFIER_PROPERTY_ABILITY_POINTS` Method Name: `GetModifierAbilityPoints`
+---| `MODIFIER_PROPERTY_BUYBACK_PENALTY_PERCENT` Method Name: `GetModifierBuybackPenaltyPercent`
+---| `MODIFIER_PROPERTY_ITEM_SELLBACK_COST` Method Name: `GetModifierItemSellbackCost`
+---| `MODIFIER_PROPERTY_DISASSEMBLE_ANYTHING` Method Name: `GetModifierDisassembleAnything`
+---| `MODIFIER_PROPERTY_FIXED_MANA_REGEN` Method Name: `GetModifierFixedManaRegen`
+---| `MODIFIER_PROPERTY_BONUS_UPHILL_MISS_CHANCE` Method Name: `GetModifierBonusUphillMissChance`
+---| `MODIFIER_PROPERTY_CREEP_DENY_PERCENT` Method Name: `GetModifierCreepDenyPercent`
+---| `MODIFIER_PROPERTY_ATTACKSPEED_ABSOLUTE_MAX` Method Name: `GetModifierAttackSpeedAbsoluteMax`
+---| `MODIFIER_PROPERTY_FOW_TEAM` Method Name: `GetModifierFoWTeam`
+---| `MODIFIER_EVENT_ON_HERO_BEGIN_DYING` Method Name: `OnHeroBeginDying`
+---| `MODIFIER_PROPERTY_BONUS_LOTUS_HEAL` Method Name: `GetModifierBonusLotusHeal`
+---| `MODIFIER_PROPERTY_BASE_HP_REGEN_PER_STR_BONUS_PERCENTAGE` Method Name: `GetModifierBaseHpRegenPerStrBonusPercentage`
+---| `MODIFIER_PROPERTY_BASE_ARMOR_PER_AGI_BONUS_PERCENTAGE` Method Name: `GetModifierBaseArmorPerAgiBonusPercentage`
+---| `MODIFIER_PROPERTY_BASE_ATTACKSPEED_PER_AGI_BONUS_PERCENTAGE` Method Name: `GetModifierBaseAttackSpeedPerAgiBonusPercentage`
+---| `MODIFIER_PROPERTY_BASE_MP_REGEN_PER_INT_BONUS_PERCENTAGE` Method Name: `GetModifierBaseManaRegenPerIntBonusPercentage`
+---| `MODIFIER_PROPERTY_BASE_MRES_PER_INT_BONUS_PERCENTAGE` Method Name: `GetModifierBaseMagicResistPerIntBonusPercentage`
+---| `MODIFIER_EVENT_ON_DAY_STARTED` Method Name: `OnDayStarted`
+---| `MODIFIER_EVENT_ON_NIGHT_STARTED` Method Name: `OnNightStarted`
+---| `MODIFIER_PROPERTY_CREATE_BONUS_ILLUSION_CHANCE` Method Name: `GetModifierCreateBonusIllusionChance`
+---| `MODIFIER_PROPERTY_CREATE_BONUS_ILLUSION_COUNT` Method Name: `GetModifierCreateBonusIllusionCount`
+---| `MODIFIER_PROPERTY_PSEUDORANDOM_BONUS` Method Name: `GetModofierPropertyPseudoRandomBonus`
+---| `MODIFIER_PROPERTY_ATTACK_HEIGHT_BONUS` Method Name: `GetModifierAttackHeightBonus`
+---| `MODIFIER_PROPERTY_SKIP_ATTACK_REGULATOR` Method Name: `GetSkipAttackRegulator`
+---| `MODIFIER_PROPERTY_MISS_PERCENTAGE_TARGET` Method Name: `GetModifierMiss_Percentage_Target`
+---| `MODIFIER_PROPERTY_ADDITIONAL_NEUTRAL_ITEM_DROPS` Method Name: `GetModifierAdditionalNutralItemDrops`
+---| `MODIFIER_PROPERTY_KILL_STREAK_BONUS_GOLD_PERCENTAGE` Method Name: `GetModifierKillStreakBonusGoldPercentage`
+---| `MODIFIER_PROPERTY_HP_REGEN_MULTIPLIER_PRE_AMPLIFICATION` Method Name: `GetModifierHPRegenMultiplierPreAmplification`
+---| `MODIFIER_PROPERTY_HEROFACET_OVERRIDE` Method Name: `GetModifierHeroFacetOverride`
+---| `MODIFIER_EVENT_ON_TREE_CUT_DOWN` Method Name: `OnTreeCutDown`
+---| `MODIFIER_EVENT_ON_CLEAVE_ATTACK_LANDED` Method Name: `OnCleaveAttackLanded`
+---| `MODIFIER_PROPERTY_MIN_ATTRIBUTE_LEVEL` Method Name: `MinAttributeLevel`
+---| `MODIFIER_PROPERTY_TIER_TOKEN_REROLL` Method Name: `GetTierTokenReroll`
+---| `MODIFIER_PROPERTY_VISION_DEGREES_RESTRICTION` Method Name: `GetVisionDegreeRestriction`
+---| `MODIFIER_PROPERTY_TOTAL_CONSTANT_BLOCK_STACKING` Method Name: `GetModifierTotal_ConstantBlockStacking`
+---| `MODIFIER_PROPERTY_INVENTORY_SLOT_RESTRICTED` Method Name: `GetModifierInventorySlotRestricted`
+---| `MODIFIER_EVENT_ON_TIER_TOKEN_REROLLED` Method Name: `OnTierTokenRerolled`
+---| `MODIFIER_PROPERTY_REDIRECT_SPELL` Method Name: `GetRedirectSpell`
+---| `MODIFIER_PROPERTY_BASEATTACK_POSTBONUS` Method Name: `GetBaseAttackPostBonus`
+---| `MODIFIER_EVENT_ON_FOW_TEAM_CHANGED` Method Name: `OnFoWTeamChanged`
+---| `MODIFIER_PROPERTY_SUPPRESS_ATTACK_PROCS` Method Name: `GetSuppressAttackProcs`
+---| `MODIFIER_EVENT_ON_ABILITY_TOGGLED` Method Name: `OnAbilityToggled`
+---| `MODIFIER_PROPERTY_AVOID_ATTACK_PROCS` Method Name: `GetModifierAvoidAttackProcs`
+---| `MODIFIER_EVENT_ON_RUNE_SPAWN` Method Name: `OnRuneSpawn`
+---| `MODIFIER_PROPERTY_PHYSICAL_LIFESTEAL` Method Name: `GetModifierProperty_PhysicalLifesteal`
+---| `MODIFIER_PROPERTY_MAGICAL_LIFESTEAL` Method Name: `GetModifierProperty_MagicalLifesteal`
+---| `MODIFIER_EVENT_ON_PURE_DAMAGE_CALCULATED` Method Name: `OnPureDamageCalculated`
+---| `MODIFIER_EVENT_NEUTRAL_TRINKET_OPTIONS` Method Name: `GetModifierNeutralTrinketOptions`
+---| `MODIFIER_EVENT_NEUTRAL_ENHANCEMENT_OPTIONS` Method Name: `GetModifierNeutralEnhancementOptions`
+---| `MODIFIER_PROPERTY_MOVESPEED_MAX_BONUS_CONSTANT` Method Name: `GetModifierMoveSpeedMax_BonusConstant`
+---| `MODIFIER_PROPERTY_MOVESPEED_POST_MULTIPLIER_BONUS_CONSTANT` Method Name: `GetModifierMoveSpeedPostMultiplierBonus_Constant`
+---| `MODIFIER_PROPERTY_FORBID_ILLUSIONS` Method Name: `GetModifierPropertyForbidIllusions`
+---| `MODIFIER_PROPERTY_MANACOST_OVERRIDE` Method Name: `GetModifierPropertyManacostOverride`
+---| `MODIFIER_PROPERTY_RESTORATION_AMPLIFICATION` Method Name: `GetModifierPropertyRestorationAmplification`
+---| `MODIFIER_PROPERTY_RESTORATION_AMPLIFICATION_UNIQUE` Method Name: `GetModifierPropertyRestorationAmplificationUnique`
+---| `MODIFIER_PROPERTY_HEAL_AMPLIFY_PERCENTAGE_SOURCE_UNIQUE` Method Name: `GetModifierPropertyHealingAmplificationUnique`
+---| `MODIFIER_PROPERTY_REDIRECT_HEALTH_GAIN` Method Name: `GetModifierPropertyRedirectHealthGain`
+---| `MODIFIER_PROPERTY_SUPPRESS_INCOMING_CRIT` Method Name: `GetSuppressIncomingCrit`
+---| `MODIFIER_PROPERTY_UPGRADE_NEUTRAL_ARTIFACTS` Method Name: `GetModifierPropertyUpgradeNeutralArtifacts`
+---| `MODIFIER_PROPERTY_SUPPRESS_INVALID_MOVE_ATTACK_ORDERS` Method Name: `GetModifierPropertySuppressInvalidMoveAttackOrders`
+---| `MODIFIER_PROPERTY_CONSUMABLE_USE_SPEED` Method Name: `GetModifierPropertyConsumableUseSpeed`
+---| `MODIFIER_PROPERTY_REQUIRED_LEVEL` Method Name: `GetRequiredLevel`
+---| `MODIFIER_EVENT_ON_MODIFIER_REFRESHED` Method Name: `OnModifierRefreshed`
+---| `MODIFIER_EVENT_ON_ABILITY_SWAPPED` Method Name: `OnAbilitySwapped`
+---| `MODIFIER_PROPERTY_OVERRIDE_CREEP_BOUNTY` Method Name: `GetModifierOverrideCreepBounty`
+---| `MODIFIER_PROPERTY_OVERRIDE_BASE_DAMAGE` Method Name: `GetModifierOverrideBaseDamage`
+---| `MODIFIER_PROPERTY_UNTARGETABLE_FROM` Method Name: `GetModifierOverrideUntargetableFrom`
+---| `MODIFIER_PROPERTY_UNTARGETABLE_TO` Method Name: `GetModifierOverrideUntargetableTo`
+---| `MODIFIER_PROPERTY_SUPER_ILLUSION_WITH_ITEMS` Method Name: `GetModifierSuperIllusionWithItems`
+---| `MODIFIER_EVENT_ON_PURGE` Method Name: `OnPurged`
+---| `MODIFIER_EVENT_ON_ILLUSION_CREATED` Method Name: `OnIllusionCreated`
+---| `MODIFIER_PROPERTY_HEROLEVELSCALE` Method Name: `GetModifierHeroLevelScale`
 ---| `MODIFIER_FUNCTION_LAST`
 ---| `MODIFIER_FUNCTION_INVALID`
 
@@ -2569,12 +2764,17 @@
 ---| `MODIFIER_STATE_FORCED_FLYING_VISION`
 ---| `MODIFIER_STATE_ATTACK_ALLIES`
 ---| `MODIFIER_STATE_ALLOW_PATHING_THROUGH_CLIFFS`
----| `MODIFIER_STATE_ALLOW_PATHING_THROUGH_FISSURE`
+---| `MODIFIER_STATE_ALLOW_PATHING_THROUGH_POWER_COGS`
 ---| `MODIFIER_STATE_SPECIALLY_UNDENIABLE`
 ---| `MODIFIER_STATE_ALLOW_PATHING_THROUGH_OBSTRUCTIONS`
 ---| `MODIFIER_STATE_DEBUFF_IMMUNE`
----| `MODIFIER_STATE_NO_INVISIBILITY_VISUALS`
 ---| `MODIFIER_STATE_ALLOW_PATHING_THROUGH_BASE_BLOCKER`
+---| `MODIFIER_STATE_IGNORING_MOVE_ORDERS`
+---| `MODIFIER_STATE_ATTACKS_ARE_MELEE`
+---| `MODIFIER_STATE_CAN_USE_BACKPACK_ITEMS`
+---| `MODIFIER_STATE_CASTS_IGNORE_CHANNELING`
+---| `MODIFIER_STATE_ATTACKS_DONT_REVEAL`
+---| `MODIFIER_STATE_NEUTRALS_DONT_ATTACK`
 ---| `MODIFIER_STATE_LAST`
 
 ---@alias ParticleAttachment_t integer
@@ -2665,7 +2865,7 @@
 ---| `DOTA_PSEUDO_RANDOM_GENERIC_MISS`
 ---| `DOTA_PSEUDO_RANDOM_ARMADILLO_HEARTPIERCER`
 ---| `DOTA_PSEUDO_RANDOM_MARS_SHIELD`
----| `DOTA_PSEUDO_RANDOM_ANTIMAGE_SILENT`
+---| `DOTA_PSEUDO_RANDOM_CHAOS_KNIGHT_INNATE_REFUND`
 ---| `DOTA_PSEUDO_RANDOM_NEUTRAL_DROP_TIER1`
 ---| `DOTA_PSEUDO_RANDOM_NEUTRAL_DROP_TIER2`
 ---| `DOTA_PSEUDO_RANDOM_NEUTRAL_DROP_TIER3`
@@ -2673,7 +2873,14 @@
 ---| `DOTA_PSEUDO_RANDOM_NEUTRAL_DROP_TIER5`
 ---| `DOTA_PSEUDO_RANDOM_MARS_BULWARK`
 ---| `DOTA_PSEUDO_RANDOM_MUERTA_GUNSLINGER`
----| `DOTA_PSEUDO_RANDOM_BATRIDER_NAPALM`
+---| `DOTA_PSEUDO_RANDOM_TROLL_FERVOR_SHARD`
+---| `DOTA_PSEUDO_RANDOM_SNAPFIRE_GLANCING`
+---| `DOTA_PSEUDO_RANDOM_PANGOLIER_PARRY`
+---| `DOTA_PSEUDO_RANDOM_HOODWINK_REDIRECT`
+---| `DOTA_PSEUDO_RANDOM_KEZ_SAI`
+---| `DOTA_PSEUDO_RANDOM_CHAOS_KNIGHT_HAVOC`
+---| `DOTA_PSEUDO_RANDOM_LARGO_FROGSTOMP`
+---| `DOTA_PSEUDO_RANDOM_NAGA_RIPTIDE`
 ---| `DOTA_PSEUDO_RANDOM_CUSTOM_GENERIC`
 ---| `DOTA_PSEUDO_RANDOM_CUSTOM_GAME_1`
 ---| `DOTA_PSEUDO_RANDOM_CUSTOM_GAME_2`
@@ -2710,26 +2917,29 @@
 ---| `AE_SV_CREATE_PARTICLE_EFFECT_CFG`
 ---| `AE_SV_STOP_PARTICLE_EFFECT`
 ---| `AE_FOOTSTEP`
----| `AE_RAGDOLL`
 ---| `AE_CL_STOP_RAGDOLL_CONTROL`
 ---| `AE_CL_ENABLE_BODYGROUP`
 ---| `AE_CL_DISABLE_BODYGROUP`
----| `AE_CL_BODYGROUP_SET_VALUE`
----| `AE_SV_BODYGROUP_SET_VALUE`
----| `AE_CL_BODYGROUP_SET_VALUE_CMODEL_WPN`
----| `AE_WPN_PRIMARYATTACK`
----| `AE_WPN_SECONDARYATTACK`
+---| `AE_BODYGROUP_SET_VALUE`
+---| `AE_WEAPON_PERFORM_ATTACK`
 ---| `AE_FIRE_INPUT`
 ---| `AE_CL_CLOTH_ATTR`
 ---| `AE_CL_CLOTH_GROUND_OFFSET`
 ---| `AE_CL_CLOTH_STIFFEN`
 ---| `AE_CL_CLOTH_EFFECT`
 ---| `AE_CL_CREATE_ANIM_SCOPE_PROP`
+---| `AE_SV_IKLOCK`
+---| `AE_PULSE_GRAPH`
+---| `AE_DISABLE_PLATFORM`
+---| `AE_ENABLE_PLATFORM_PLAYER_FOLLOWS_YAW`
+---| `AE_ENABLE_PLATFORM_PLAYER_IGNORES_YAW`
+---| `AE_DESTRUCTIBLE_PART_DESTROY`
 ---| `AE_CL_SUPPRESS_EVENTS_WITH_TAG`
 ---| `AE_CL_HIDE_PARTICLE_EFFECT`
 ---| `AE_CL_SHOW_PARTICLE_EFFECT`
 ---| `AE_CL_ADD_PARTICLE_EFFECT_CP`
 ---| `AE_CL_SPEECH`
+---| `AE_CL_PANORAMA_EVENT`
 ---| `AE_CL_DOTA_PLAY_STATUS_EFFECT`
 ---| `AE_CL_DOTA_STOP_STATUS_EFFECT`
 ---| `AE_CL_DOTA_NPC_CREATE_PARTICLE_EFFECT`
@@ -2745,6 +2955,7 @@
 ---| `AE_EF_NODRAW`
 ---| `AE_EF_DRAW`
 ---| `AE_DOTA_PLAY_SOUND_ATTACK`
+---| `AE_CL_CREATE_PARTICLE_BRASS`
 
 ---@alias SourceEngineDamageTypes integer
 ---| `DMG_GENERIC` Generic damage.
@@ -2767,18 +2978,11 @@
 ---| `DMG_NERVEGAS` Neurotoxin damage.
 ---| `DMG_POISON` Poison damage.
 ---| `DMG_RADIATION` Radiation. Will be ignored by most vehicle passengers.
----| `DMG_DROWNRECOVER` Damage applied to the player to restore health after drowning.
----| `DMG_ACID` Toxic chemicals or acid burns.
----| `DMG_SLOWBURN` In an oven.
----| `DMG_REMOVENORAGDOLL` Don't create a ragdoll on death.
----| `DMG_PHYSGUN` Damage done by the gravity gun.
----| `DMG_PLASMA` Plasma.
 
 ---@alias SourceEngineSoundData integer
 ---| `EMPTY`
 ---| `SINGLE_SHOT`
 ---| `DOUBLE_SHOT`
----| `RELOAD`
 ---| `MELEE_MISS`
 ---| `MELEE_HIT`
 ---| `MELEE_HIT_WORLD`

@@ -6,7 +6,7 @@ _G.CDebugOverlayScriptHelper = {}
 --- Draws an axis. Specify origin + orientation in world space.  
 --- Env: `server` or `client`
 ---@param arg1 Vector
----@param arg2 unknown
+---@param arg2 Vector
 ---@param arg3 float
 ---@param arg4 bool
 ---@param arg5 float
@@ -31,7 +31,7 @@ function CDebugOverlayScriptHelper:Box(arg1, arg2, arg3, arg4, arg5, arg6, arg7,
 ---@param arg1 Vector
 ---@param arg2 Vector
 ---@param arg3 Vector
----@param arg4 unknown
+---@param arg4 Vector
 ---@param arg5 int
 ---@param arg6 int
 ---@param arg7 int
@@ -44,7 +44,7 @@ function CDebugOverlayScriptHelper:BoxAngles(arg1, arg2, arg3, arg4, arg5, arg6,
 --- Draws a capsule. Specify base in world space.  
 --- Env: `server` or `client`
 ---@param arg1 Vector
----@param arg2 unknown
+---@param arg2 Vector
 ---@param arg3 float
 ---@param arg4 float
 ---@param arg5 int
@@ -59,7 +59,7 @@ function CDebugOverlayScriptHelper:Capsule(arg1, arg2, arg3, arg4, arg5, arg6, a
 --- Draws a circle. Specify center in world space.  
 --- Env: `server` or `client`
 ---@param arg1 Vector
----@param arg2 unknown
+---@param arg2 Vector
 ---@param arg3 float
 ---@param arg4 int
 ---@param arg5 int
@@ -127,7 +127,7 @@ function CDebugOverlayScriptHelper:Cross3D(arg1, arg2, arg3, arg4, arg5, arg6, a
 --- Draws an oriented cross. Specify origin in world space.  
 --- Env: `server` or `client`
 ---@param arg1 Vector
----@param arg2 unknown
+---@param arg2 Vector
 ---@param arg3 float
 ---@param arg4 int
 ---@param arg5 int
@@ -310,7 +310,7 @@ function CDebugOverlayScriptHelper:Sphere(arg1, arg2, arg3, arg4, arg5, arg6, ar
 ---@param arg2 Vector
 ---@param arg3 Vector
 ---@param arg4 Vector
----@param arg5 unknown
+---@param arg5 Vector
 ---@param arg6 int
 ---@param arg7 int
 ---@param arg8 int
@@ -365,7 +365,7 @@ function CDebugOverlayScriptHelper:Triangle(arg1, arg2, arg3, arg4, arg5, arg6, 
 --- Draws 3D text. Specify origin + orientation in world space.  
 --- Env: `server` or `client`
 ---@param arg1 Vector
----@param arg2 unknown
+---@param arg2 Vector
 ---@param arg3 string
 ---@param arg4 int
 ---@param arg5 int

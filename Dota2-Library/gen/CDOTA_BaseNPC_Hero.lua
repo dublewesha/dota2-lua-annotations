@@ -9,8 +9,9 @@ _G.CDOTA_BaseNPC_Hero = {}
 ---@param reason EDOTA_ModifyXP_Reason
 ---@param applyBotDifficultyScaling bool
 ---@param incrementTotal bool
+---@param cloneCount int
 ---@return bool
-function CDOTA_BaseNPC_Hero:AddExperience(xp, reason, applyBotDifficultyScaling, incrementTotal) end
+function CDOTA_BaseNPC_Hero:AddExperience(xp, reason, applyBotDifficultyScaling, incrementTotal, cloneCount) end
 
 --- Spend the gold and buyback with this hero.  
 --- Env: only in `server`
@@ -116,9 +117,8 @@ function CDOTA_BaseNPC_Hero:GetBuybackCooldownTime() end
 
 --- Return integer value for the gold cost of a buyback.  
 --- Env: only in `server`
----@param returnOldValues bool
 ---@return int
-function CDOTA_BaseNPC_Hero:GetBuybackCost(returnOldValues) end
+function CDOTA_BaseNPC_Hero:GetBuybackCost() end
 
 --- Returns the amount of time gold gain is limited after buying back.  
 --- Env: only in `server`
@@ -156,19 +156,26 @@ function CDOTA_BaseNPC_Hero:GetGold() end
 function CDOTA_BaseNPC_Hero:GetGoldBounty() end
 
 ---   
+--- Env: `server` or `client`
+---@return uint
+function CDOTA_BaseNPC_Hero:GetHeroFacetID() end
+
+---   
 --- Env: only in `server`
 ---@return int
 function CDOTA_BaseNPC_Hero:GetHeroID() end
 
 --- Hero attack speed is also affected by agility.  
 --- Env: only in `server`
+---@param ignoreTempAttackSpeed bool
 ---@return float
-function CDOTA_BaseNPC_Hero:GetIncreasedAttackSpeed() end
+function CDOTA_BaseNPC_Hero:GetIncreasedAttackSpeed(ignoreTempAttackSpeed) end
 
 ---   
 --- Env: `server` or `client`
+---@param skipNoConsume bool
 ---@return float
-function CDOTA_BaseNPC_Hero:GetIntellect() end
+function CDOTA_BaseNPC_Hero:GetIntellect(skipNoConsume) end
 
 ---   
 --- Env: only in `server`
@@ -268,7 +275,7 @@ function CDOTA_BaseNPC_Hero:GetTimeUntilRespawn() end
 --- Get wearable entity in slot (slot).  
 --- Env: only in `server`
 ---@param slotType DOTASlotType_t
----@return CBaseFlex|nil
+---@return CBaseAnimatingActivity|nil
 function CDOTA_BaseNPC_Hero:GetTogglableWearable(slotType) end
 
 ---   
@@ -351,7 +358,7 @@ function CDOTA_BaseNPC_Hero:IncrementStreak() end
 ---   
 --- Env: only in `server`
 ---@return bool
-function CDOTA_BaseNPC_Hero:IsBuybackDisabledByReapersScythe() end
+function CDOTA_BaseNPC_Hero:IsBuybackDisabledByDevilsBargain() end
 
 ---   
 --- Env: only in `server`
@@ -461,7 +468,7 @@ function CDOTA_BaseNPC_Hero:SetBuybackCooldownTime(time) end
 --- Env: only in `server`
 ---@param buybackDisabled bool
 ---@return nil
-function CDOTA_BaseNPC_Hero:SetBuyBackDisabledByReapersScythe(buybackDisabled) end
+function CDOTA_BaseNPC_Hero:SetBuyBackDisabledByDevilsBargain(buybackDisabled) end
 
 --- Set the amount of time gold gain is limited after buying back.  
 --- Env: only in `server`

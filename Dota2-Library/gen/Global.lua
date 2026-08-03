@@ -139,7 +139,7 @@ function CreateIllusions(owner, heroToCopy, modifierKeys, numIllusions, padding,
 --- Env: only in `server`
 ---@param itemName string
 ---@param owner CDOTAPlayerController|nil
----@param purchaser CDOTAPlayerController|nil
+---@param purchaser CDOTA_BaseNPC_Hero|nil
 ---@return CDOTA_Item|nil
 function CreateItem(itemName, owner, purchaser) end
 
@@ -275,6 +275,23 @@ function cvar_setf(arg1, arg2) end
 --- Env: `server` or `client`
 ---@return nil
 function DebugBreak() end
+
+--- Changes the team of the hero.  
+--- Env: only in `server`
+---@param arg1 handle
+---@return nil
+function DebugChangeTeam(arg1) end
+
+--- Creates a unit with a specified hero variant, controllable by the specified player.  
+--- Env: only in `server`
+---@param arg1 handle
+---@param arg2 string
+---@param arg3 int
+---@param arg4 int
+---@param arg5 bool
+---@param arg6 handle
+---@return int
+function DebugCreateHeroWithVariant(arg1, arg2, arg3, arg4, arg5, arg6) end
 
 --- Creates a test unit controllable by the specified player.  
 --- Env: only in `server`
@@ -967,12 +984,12 @@ function IsDedicatedServer() end
 
 --- Returns true if whatever alt is remapped to is pressed.  
 --- Env: only in `client`
----@return unknown
+---@return bool
 function IsDotaAltPressed() end
 
 --- Returns true if whatever ctrl is remapped to is pressed.  
 --- Env: only in `client`
----@return unknown
+---@return bool
 function IsDotaCtrlPressed() end
 
 --- Returns true if this is lua running within tools mode.  
@@ -1199,11 +1216,18 @@ function PrintLinkedConsoleMessage(message, tooltip) end
 function QSlerp(from_angle, to_angle, time) end
 
 --- Get a random float within a range.  
---- Env: `server` or `client`
+--- Env: only in `server`
 ---@param min float
 ---@param max float
 ---@return float
 function RandomFloat(min, max) end
+
+--- Generate a random floating point number within a range, inclusive.  
+--- Env: `server` or `client`
+---@param arg1 float
+---@param arg2 float
+---@return float
+function RandomFloatWrapper(arg1, arg2) end
 
 --- Get a random int within a range.  
 --- Env: `server` or `client`
@@ -1334,6 +1358,13 @@ function Say(entity, message, teamOnly) end
 ---@param airShake bool
 ---@return nil
 function ScreenShake(center, amplitude, frequency, duration, radius, command, airShake) end
+
+--- Get a random float within a range.  
+--- Env: `server` or `client`
+---@param arg1 float
+---@param arg2 float
+---@return float
+function Script_RandomFloat(arg1, arg2) end
 
 --- RemapValClamped.  
 --- Env: only in `server`

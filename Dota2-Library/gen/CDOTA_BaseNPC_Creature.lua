@@ -88,6 +88,12 @@ function CDOTA_BaseNPC_Creature:SetDisableResistance(disableResistance) end
 ---@return nil
 function CDOTA_BaseNPC_Creature:SetDisableResistanceGain(disableResistanceGain) end
 
+--- Switches visible econ item group.  
+--- Env: only in `server`
+---@param group int
+---@return nil
+function CDOTA_BaseNPC_Creature:SetEconItemGroup(group) end
+
 --- Set the hit points gained per level on this creature.  
 --- Env: only in `server`
 ---@param hpGain int

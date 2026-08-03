@@ -1,6 +1,6 @@
 ---@diagnostic disable: lowercase-global, missing-return
 
----@class CDOTA_BaseNPC : CBaseFlex
+---@class CDOTA_BaseNPC : CBaseAnimatingOverlay
 _G.CDOTA_BaseNPC = {}
 
 --- Add an ability to this unit by name.  
@@ -149,6 +149,12 @@ function CDOTA_BaseNPC:ChangeTeam(teamNum) end
 ---@return nil
 function CDOTA_BaseNPC:ClearActivityModifiers() end
 
+--- Consume the item, deleting it from the inventory and granting the hero the specified bonuses.  
+--- Env: only in `server`
+---@param item handle
+---@return nil
+function CDOTA_BaseNPC:ConsumeItem(item) end
+
 ---   
 --- Env: only in `server`
 ---@return nil
@@ -288,13 +294,15 @@ function CDOTA_BaseNPC:GetAttackRangeBuffer() end
 
 ---   
 --- Env: `server` or `client`
+---@param ignoreTempAttackSpeed bool
 ---@return float
-function CDOTA_BaseNPC:GetAttackSpeed() end
+function CDOTA_BaseNPC:GetAttackSpeed(ignoreTempAttackSpeed) end
 
 ---   
 --- Env: `server` or `client`
+---@param ignoreTempAttackSpeed bool
 ---@return float
-function CDOTA_BaseNPC:GetAttacksPerSecond() end
+function CDOTA_BaseNPC:GetAttacksPerSecond(ignoreTempAttackSpeed) end
 
 ---   
 --- Env: only in `server`
@@ -500,8 +508,9 @@ function CDOTA_BaseNPC:GetIdealSpeedNoSlows() end
 
 ---   
 --- Env: `server` or `client`
+---@param ignoreTempAttackSpeed bool
 ---@return float
-function CDOTA_BaseNPC:GetIncreasedAttackSpeed() end
+function CDOTA_BaseNPC:GetIncreasedAttackSpeed(ignoreTempAttackSpeed) end
 
 --- Returns the initial waypoint goal for this NPC.  
 --- Env: only in `server`
@@ -678,8 +687,9 @@ function CDOTA_BaseNPC:GetRemainingPathLength() end
 
 ---   
 --- Env: `server` or `client`
+---@param ignoreTempAttackSpeed bool
 ---@return float
-function CDOTA_BaseNPC:GetSecondsPerAttack() end
+function CDOTA_BaseNPC:GetSecondsPerAttack(ignoreTempAttackSpeed) end
 
 ---   
 --- Env: only in `server`
@@ -701,6 +711,11 @@ function CDOTA_BaseNPC:GetTotalPurchasedUpgradeGoldCost() end
 --- Env: `server` or `client`
 ---@return string
 function CDOTA_BaseNPC:GetUnitLabel() end
+
+--- Get the localization token for this unit's name.  
+--- Env: only in `client`
+---@return string
+function CDOTA_BaseNPC:GetUnitLocToken() end
 
 --- Get the name of this unit.  
 --- Env: `server` or `client`
@@ -920,6 +935,11 @@ function CDOTA_BaseNPC:IsCurrentlyHorizontalMotionControlled() end
 --- Env: only in `server`
 ---@return bool
 function CDOTA_BaseNPC:IsCurrentlyVerticalMotionControlled() end
+
+---   
+--- Env: `server` or `client`
+---@return bool
+function CDOTA_BaseNPC:IsDebuffImmune() end
 
 ---   
 --- Env: `server` or `client`
@@ -1469,10 +1489,9 @@ function CDOTA_BaseNPC:Script_GetAttackRange() end
 
 --- Returns current magical armor value.  
 --- Env: `server` or `client`
----@param useExperimentalFormula bool
 ---@param inflictor handle
 ---@return float
-function CDOTA_BaseNPC:Script_GetMagicalArmorValue(useExperimentalFormula, inflictor) end
+function CDOTA_BaseNPC:Script_GetMagicalArmorValue(inflictor) end
 
 ---   
 --- Env: `server` or `client`
@@ -1582,6 +1601,12 @@ function CDOTA_BaseNPC:SetBaseMoveSpeed(moveSpeed) end
 ---@param canSell bool
 ---@return nil
 function CDOTA_BaseNPC:SetCanSellItems(canSell) end
+
+--- Set this unit controllable by all players.  
+--- Env: only in `server`
+---@param controllableByAllPlayers bool
+---@return nil
+function CDOTA_BaseNPC:SetControllableByAllPlayers(controllableByAllPlayers) end
 
 --- Set this unit controllable by the player with the passed ID.  
 --- Env: only in `server`
@@ -1892,8 +1917,10 @@ function CDOTA_BaseNPC:TimeUntilNextAttack() end
 
 ---   
 --- Env: only in `server`
+---@param ability handle
+---@param buff handle
 ---@return bool
-function CDOTA_BaseNPC:TriggerModifierDodge() end
+function CDOTA_BaseNPC:TriggerModifierDodge(ability, buff) end
 
 ---   
 --- Env: only in `server`

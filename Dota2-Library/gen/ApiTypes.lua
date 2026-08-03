@@ -256,6 +256,7 @@ local TrackingProjectileFilterEvent = {}
 ---@field no_attack_cooldown bool
 ---@field record int
 ---@field fail_type attackfail
+---@field report_max bool|nil
 local ModifierAttackEvent = {}
 
 ---@class ModifierInstanceEvent

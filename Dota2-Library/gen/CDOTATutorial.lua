@@ -73,6 +73,12 @@ function CDOTATutorial:ForceGameStart() end
 ---@return bool
 function CDOTATutorial:IsItemInWhiteList(itemName) end
 
+--- Moves the camera to a position.  
+--- Env: only in `server`
+---@param arg1 Vector
+---@return nil
+function CDOTATutorial:MoveCameraToLocation(arg1) end
+
 --- Remove an item from the shop whitelist.  
 --- Env: only in `server`
 ---@param itemName string

@@ -58,6 +58,12 @@ function CDOTA_Item_Lua:GetBehavior() end
 ---@return int
 function CDOTA_Item_Lua:GetCastRange(location, target) end
 
+--- Return health cost per second of channeling at the given level (-1 is current).  
+--- Env: `server` or `client`
+---@param level int
+---@return int
+function CDOTA_Item_Lua:GetChannelledHealthCostPerSecond(level) end
+
 --- Return mana cost at the given level per second while channeling (-1 is current).  
 --- Env: `server` or `client`
 ---@param level int
@@ -120,6 +126,12 @@ function CDOTA_Item_Lua:GetEffectiveCastRange(location, target) end
 ---@param level int
 ---@return int
 function CDOTA_Item_Lua:GetGoldCost(level) end
+
+--- Return health cost at the given level (-1 is current).  
+--- Env: `server` or `client`
+---@param level int
+---@return int
+function CDOTA_Item_Lua:GetHealthCost(level) end
 
 --- Returns the name of the modifier applied passively by this ability.  
 --- Env: only in `server`
@@ -184,10 +196,11 @@ function CDOTA_Item_Lua:OnChannelFinish(interrupted) end
 ---@return nil
 function CDOTA_Item_Lua:OnChannelThink(interval) end
 
---- Runs when item's charge count changes.  
+--- Runs when item's charge count changes. bSpent is true when the charge count change is coming from SpendCharge.  
 --- Env: only in `server`
+---@param spent bool
 ---@return nil
-function CDOTA_Item_Lua:OnChargeCountChanged() end
+function CDOTA_Item_Lua:OnChargeCountChanged(spent) end
 
 --- Caster (hero only) gained a level, skilled an ability, or received a new stat bonus.  
 --- Env: only in `server`

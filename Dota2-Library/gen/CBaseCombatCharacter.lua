@@ -1,5 +1,5 @@
 ---@diagnostic disable: lowercase-global, missing-return
 
----@class CBaseCombatCharacter : CBaseFlex
+---@class CBaseCombatCharacter : CBaseAnimatingOverlay
 _G.CBaseCombatCharacter = {}
 
