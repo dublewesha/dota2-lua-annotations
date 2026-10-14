@@ -7,8 +7,29 @@ Dota2 lua api annotations for [lua-language-server](https://github.com/LuaLS/lua
 
 API is exported from [ModDota/dota-data](https://github.com/ModDota/dota-data).
 
--   Install VSCode extension [sumneko.lua](https://marketplace.visualstudio.com/items?itemName=sumneko.lua)
--   Install VSCode extension [robincode.dota2-lua-annotations](https://marketplace.visualstudio.com/items?itemName=robincode.dota2-lua-annotations)
+## Installation (Windows)
+
+This fork is not published to the Marketplace. Build and install it locally with the
+bundled script, which also pulls the latest Dota 2 API data:
+
+1. Install [Node.js](https://nodejs.org/) and [VS Code](https://code.visualstudio.com/)
+   (make sure the `code` command is available in `PATH`).
+2. **Close all VS Code windows** (a running VS Code locks the extension folder and the install step fails).
+3. Run `update-all.bat` from the repository root (double-click or from a terminal):
+
+```bat
+update-all.bat
+```
+
+The script will:
+
+-   install `pnpm` if it is missing (user-level, no admin rights needed);
+-   update dependencies, including `@moddota/dota-data` with the current API dump;
+-   regenerate the Lua annotations in `Dota2-Library/gen`;
+-   compile and package the extension into `dota2-lua-annotations-latest.vsix`;
+-   install `sumneko.lua` and the packaged extension into VS Code.
+
+Re-run the script whenever you want to refresh the annotations after a Dota 2 update.
 
 > NOTE: This extension is force `Lua.runtime.version` to `LuaJIT`,
 > recommend using `VSCode Profiles`.
@@ -37,5 +58,7 @@ end
 
 ```
 pnpm install
-pnpm dump
+pnpm dump      # regenerate Dota2-Library/gen
+pnpm compile   # build src -> out
+pnpm exec vsce package --out dota2-lua-annotations-latest.vsix
 ```
