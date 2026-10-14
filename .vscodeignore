@@ -8,6 +8,11 @@ vsc-extension-quickstart.md
 **/.eslintrc.json
 **/*.map
 **/*.ts
-.github
-dump
+.github/**
+dump/**
 *.vsix
+node_modules/**
+pnpm-lock.yaml
+pnpm-workspace.yaml
+package-lock.json
+update-all.bat

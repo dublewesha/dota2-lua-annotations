@@ -1,3 +1,6 @@
 allowBuilds:
-  '@vscode/vsce-sign': set this to true or false
-  keytar: set this to true or false
+  '@vscode/vsce-sign': true
+  esbuild: true
+updateConfig:
+  ignoreDependencies:
+    - '@types/vscode'

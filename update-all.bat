@@ -15,15 +15,11 @@ call :require node "Node.js is not installed or is not available in PATH."
 
 where pnpm >nul 2>nul
 if errorlevel 1 (
-    echo pnpm was not found. Trying to enable it through Corepack...
-    where corepack >nul 2>nul
-    if errorlevel 1 (
-        echo ERROR: pnpm is not installed and Corepack is not available.
-        echo Install pnpm manually: npm install -g pnpm
+    echo pnpm was not found. Installing it through npm ^(user-level, no admin rights needed^)...
+    call npm install -g pnpm || (
+        echo ERROR: failed to install pnpm. Install it manually: npm install -g pnpm
         exit /b 1
     )
-    call corepack enable || exit /b 1
-    call corepack prepare pnpm@latest --activate || exit /b 1
 )
 
 call :require pnpm "pnpm is not installed or is not available in PATH."
@@ -58,6 +54,11 @@ call pnpm exec vsce package --out "%VSIX_FILE%" || exit /b 1
 
 echo.
 echo [6/6] Installing extensions in VS Code...
+tasklist /FI "IMAGENAME eq Code.exe" 2>nul | find /i "Code.exe" >nul
+if not errorlevel 1 (
+    echo WARNING: VS Code is running. It locks the installed extension folder, so the install may fail.
+    echo          If it fails, close all VS Code windows and run this script again.
+)
 call code --install-extension sumneko.lua || exit /b 1
 call code --install-extension "%CD%\%VSIX_FILE%" --force || exit /b 1
 
