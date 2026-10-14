@@ -322,8 +322,9 @@ function CDOTA_BaseNPC:GetBaseAttackRange() end
 
 ---   
 --- Env: `server` or `client`
+---@param bIgnoreModifiers bool|nil
 ---@return float
-function CDOTA_BaseNPC:GetBaseAttackTime() end
+function CDOTA_BaseNPC:GetBaseAttackTime(bIgnoreModifiers) end
 
 --- Get the maximum attack damage of this unit.  
 --- Env: only in `server`
@@ -1362,7 +1363,7 @@ function CDOTA_BaseNPC:PlayVCD(vcd) end
 ---@return bool
 function CDOTA_BaseNPC:ProvidesVision() end
 
----   
+--- (bool RemovePositiveBuffs, bool RemoveDebuffs, bool BuffsCreatedThisFrameOnly, bool RemoveStuns, bool RemoveExceptions)  
 --- Env: only in `server`
 ---@param removePositiveBuffs bool
 ---@param removeDebuffs bool
@@ -1420,7 +1421,7 @@ function CDOTA_BaseNPC:RemoveAbilityByHandle(ability) end
 ---@return nil
 function CDOTA_BaseNPC:RemoveAbilityFromIndexByName(abilityName) end
 
----   
+--- (int targets [0=all, 1=enemy, 2=ally], bool bNow, bool bPermanent, bool bDeath)  
 --- Env: only in `server`
 ---@param targets 0|1|2
 ---@param now bool

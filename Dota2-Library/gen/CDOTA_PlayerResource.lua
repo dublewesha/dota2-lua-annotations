@@ -328,7 +328,7 @@ function CDOTA_PlayerResource:GetMisses(playerId) end
 ---@return int
 function CDOTA_PlayerResource:GetNearbyCreepDeaths(playerId) end
 
----   
+--- (nPlayerID, eEvent, nActionID)  
 --- Env: only in `server`
 ---@param playerId PlayerID
 ---@param eventId int
@@ -336,7 +336,7 @@ function CDOTA_PlayerResource:GetNearbyCreepDeaths(playerId) end
 ---@return int
 function CDOTA_PlayerResource:GetNetworkedEventActionClaimCount(playerId, eventId, unActionId) end
 
----   
+--- (nPlayerID, eEvent, pActionName)  
 --- Env: only in `server`
 ---@param playerId PlayerID
 ---@param eventId int

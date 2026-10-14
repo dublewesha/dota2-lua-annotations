@@ -303,3 +303,8 @@ function CDOTA_Item:StacksWithOtherOwners() end
 ---@return nil
 function CDOTA_Item:Think() end
 
+---   
+--- Env: only in `server`
+---@return bool
+function CDOTA_Item:IsInStash() end
+

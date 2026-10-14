@@ -3,6 +3,7 @@ import { join } from 'path';
 import { dumpAPI } from './dump_api';
 import { dumpEnums } from './dump_enum';
 import { dumpApiTypes } from './dump_api_types';
+import { printMergeReport } from './game_api';
 
 async function StartDump() {
     const root = join(__dirname, '../Dota2-Library/gen');
@@ -11,6 +12,7 @@ async function StartDump() {
     await dumpApiTypes(root);
     await dumpEnums(root);
     await dumpAPI(root);
+    printMergeReport();
 }
 
 StartDump();

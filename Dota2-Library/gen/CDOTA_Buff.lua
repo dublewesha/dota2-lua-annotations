@@ -3,7 +3,7 @@
 ---@class CDOTA_Buff
 _G.CDOTA_Buff = {}
 
----   
+--- (index, bDestroyImmediately, bStatusEffect, priority, bHeroEffect, bOverheadEffect  
 --- Env: `server` or `client`
 ---@param index int
 ---@param destroyImmediately bool
@@ -151,7 +151,7 @@ function CDOTA_Buff:IsStunDebuff() end
 ---@return nil
 function CDOTA_Buff:SendBuffRefreshToClients() end
 
----   
+--- (flTime, bInformClients)  
 --- Env: `server` or `client`
 ---@param duration float
 ---@param informClient bool

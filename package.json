@@ -39,7 +39,8 @@
         "vscode:prepublish": "npm run compile",
         "compile": "tsc -p ./",
         "watch": "tsc -watch -p ./",
-        "dump": "tsx dump/dump.ts"
+        "dump": "tsx dump/dump.ts",
+        "fetch-api": "tsx dump/vconsole.ts"
     },
     "devDependencies": {
         "@moddota/dota-data": "^0.47.2",

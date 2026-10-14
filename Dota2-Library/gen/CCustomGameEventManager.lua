@@ -10,14 +10,14 @@ _G.CCustomGameEventManager = {}
 ---@return CustomGameEventListenerID
 function CCustomGameEventManager:RegisterListener(eventName, listener) end
 
----   
+--- ( string EventName, table EventData )  
 --- Env: only in `server`
 ---@param eventName string
 ---@param eventData table
 ---@return nil
 function CCustomGameEventManager:Send_ServerToAllClients(eventName, eventData) end
 
----   
+--- ( Entity Player, string EventName, table EventData )  
 --- Env: only in `server`
 ---@param player CDOTAPlayerController
 ---@param eventName string
@@ -25,7 +25,7 @@ function CCustomGameEventManager:Send_ServerToAllClients(eventName, eventData) e
 ---@return nil
 function CCustomGameEventManager:Send_ServerToPlayer(player, eventName, eventData) end
 
----   
+--- ( int TeamNumber, string EventName, table EventData )  
 --- Env: only in `server`
 ---@param team DOTATeam_t
 ---@param eventName string

@@ -1,4 +1,4 @@
-import enums from '@moddota/dota-data/files/vscripts/enums';
+import { enums } from './game_api';
 import { writeFile } from 'fs/promises';
 import { join } from 'path';
 import { availableAnnotation } from './utils';

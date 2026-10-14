@@ -3,6 +3,7 @@
         "module": "commonjs",
         "target": "ESNext",
         "lib": ["ESNext"],
+        "types": ["node"],
         "rootDir": ".",
         "strict": true,
         "esModuleInterop": true

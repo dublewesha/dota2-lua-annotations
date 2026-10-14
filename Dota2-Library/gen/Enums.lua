@@ -558,6 +558,14 @@ DOTA_ABILITY_BEHAVIOR_DONT_CANCEL_CHANNEL = 536870912
 --- Env: `server` or `client`
 DOTA_ABILITY_BEHAVIOR_VECTOR_TARGETING = 1073741824
 
+--- Enum: `DOTA_ABILITY_BEHAVIOR`  
+--- Env: `server` or `client`
+DOTA_ABILITY_BEHAVIOR_DIRECT_KEYBIND = 0
+
+--- Enum: `DOTA_ABILITY_BEHAVIOR`  
+--- Env: `server` or `client`
+DOTA_ABILITY_BEHAVIOR_HAS_DETAILS_UI = 0
+
 --- Enum: `DOTA_GameState`  
 --- Env: only in `server`
 DOTA_GAMERULES_STATE_INIT = 0
@@ -2864,159 +2872,195 @@ DOTA_LOADOUT_TYPE_ABILITY_ULTIMATE_PERSONA_1 = 67
 
 --- Enum: `DOTASlotType_t`  
 --- Env: only in `server`
-DOTA_LOADOUT_PERSONA_1_END = 68
+DOTA_LOADOUT_PERSONA_1_END = 77
 
 --- Enum: `DOTASlotType_t`  
 --- Env: only in `server`
-DOTA_LOADOUT_TYPE_VOICE_PERSONA_1 = 68
+DOTA_LOADOUT_TYPE_VOICE_PERSONA_1 = 77
 
 --- Enum: `DOTASlotType_t`  
 --- Env: only in `server`
-DOTA_LOADOUT_TYPE_PERSONA_SELECTOR = 69
+DOTA_LOADOUT_TYPE_PERSONA_SELECTOR = 78
 
 --- Enum: `DOTASlotType_t`  
 --- Env: only in `server`
-DOTA_LOADOUT_TYPE_COURIER = 70
+DOTA_LOADOUT_TYPE_COURIER = 79
 
 --- Enum: `DOTASlotType_t`  
 --- Env: only in `server`
-DOTA_PLAYER_LOADOUT_START = 70
+DOTA_PLAYER_LOADOUT_START = 79
 
 --- Enum: `DOTASlotType_t`  
 --- Env: only in `server`
-DOTA_LOADOUT_TYPE_ANNOUNCER = 71
+DOTA_LOADOUT_TYPE_ANNOUNCER = 80
 
 --- Enum: `DOTASlotType_t`  
 --- Env: only in `server`
-DOTA_LOADOUT_TYPE_MEGA_KILLS = 72
+DOTA_LOADOUT_TYPE_MEGA_KILLS = 81
 
 --- Enum: `DOTASlotType_t`  
 --- Env: only in `server`
-DOTA_LOADOUT_TYPE_MUSIC = 73
+DOTA_LOADOUT_TYPE_MUSIC = 82
 
 --- Enum: `DOTASlotType_t`  
 --- Env: only in `server`
-DOTA_LOADOUT_TYPE_WARD = 74
+DOTA_LOADOUT_TYPE_WARD = 83
 
 --- Enum: `DOTASlotType_t`  
 --- Env: only in `server`
-DOTA_LOADOUT_TYPE_HUD_SKIN = 75
+DOTA_LOADOUT_TYPE_HUD_SKIN = 84
 
 --- Enum: `DOTASlotType_t`  
 --- Env: only in `server`
-DOTA_LOADOUT_TYPE_LOADING_SCREEN = 76
+DOTA_LOADOUT_TYPE_LOADING_SCREEN = 85
 
 --- Enum: `DOTASlotType_t`  
 --- Env: only in `server`
-DOTA_LOADOUT_TYPE_WEATHER = 77
+DOTA_LOADOUT_TYPE_WEATHER = 86
 
 --- Enum: `DOTASlotType_t`  
 --- Env: only in `server`
-DOTA_LOADOUT_TYPE_HEROIC_STATUE = 78
+DOTA_LOADOUT_TYPE_HEROIC_STATUE = 87
 
 --- Enum: `DOTASlotType_t`  
 --- Env: only in `server`
-DOTA_LOADOUT_TYPE_MULTIKILL_BANNER = 79
+DOTA_LOADOUT_TYPE_MULTIKILL_BANNER = 88
 
 --- Enum: `DOTASlotType_t`  
 --- Env: only in `server`
-DOTA_LOADOUT_TYPE_CURSOR_PACK = 80
+DOTA_LOADOUT_TYPE_CURSOR_PACK = 89
 
 --- Enum: `DOTASlotType_t`  
 --- Env: only in `server`
-DOTA_LOADOUT_TYPE_TELEPORT_EFFECT = 81
+DOTA_LOADOUT_TYPE_TELEPORT_EFFECT = 90
 
 --- Enum: `DOTASlotType_t`  
 --- Env: only in `server`
-DOTA_LOADOUT_TYPE_BLINK_EFFECT = 82
+DOTA_LOADOUT_TYPE_BLINK_EFFECT = 91
 
 --- Enum: `DOTASlotType_t`  
 --- Env: only in `server`
-DOTA_LOADOUT_TYPE_EMBLEM = 83
+DOTA_LOADOUT_TYPE_EMBLEM = 92
 
 --- Enum: `DOTASlotType_t`  
 --- Env: only in `server`
-DOTA_LOADOUT_TYPE_TERRAIN = 84
+DOTA_LOADOUT_TYPE_TERRAIN = 93
 
 --- Enum: `DOTASlotType_t`  
 --- Env: only in `server`
-DOTA_LOADOUT_TYPE_RADIANT_CREEPS = 85
+DOTA_LOADOUT_TYPE_RADIANT_CREEPS = 94
 
 --- Enum: `DOTASlotType_t`  
 --- Env: only in `server`
-DOTA_LOADOUT_TYPE_DIRE_CREEPS = 86
+DOTA_LOADOUT_TYPE_DIRE_CREEPS = 95
 
 --- Enum: `DOTASlotType_t`  
 --- Env: only in `server`
-DOTA_LOADOUT_TYPE_RADIANT_TOWER = 87
+DOTA_LOADOUT_TYPE_RADIANT_TOWER = 96
 
 --- Enum: `DOTASlotType_t`  
 --- Env: only in `server`
-DOTA_LOADOUT_TYPE_DIRE_TOWER = 88
+DOTA_LOADOUT_TYPE_DIRE_TOWER = 97
 
 --- Enum: `DOTASlotType_t`  
 --- Env: only in `server`
-DOTA_LOADOUT_TYPE_VERSUS_SCREEN = 89
+DOTA_LOADOUT_TYPE_VERSUS_SCREEN = 98
 
 --- Enum: `DOTASlotType_t`  
 --- Env: only in `server`
-DOTA_LOADOUT_TYPE_STREAK_EFFECT = 90
+DOTA_LOADOUT_TYPE_STREAK_EFFECT = 99
 
 --- Enum: `DOTASlotType_t`  
 --- Env: only in `server`
-DOTA_LOADOUT_TYPE_KILL_EFFECT = 91
+DOTA_LOADOUT_TYPE_KILL_EFFECT = 100
 
 --- Enum: `DOTASlotType_t`  
 --- Env: only in `server`
-DOTA_LOADOUT_TYPE_DEATH_EFFECT = 92
+DOTA_LOADOUT_TYPE_DEATH_EFFECT = 101
 
 --- Enum: `DOTASlotType_t`  
 --- Env: only in `server`
-DOTA_LOADOUT_TYPE_HEAD_EFFECT = 93
+DOTA_LOADOUT_TYPE_HEAD_EFFECT = 102
 
 --- Enum: `DOTASlotType_t`  
 --- Env: only in `server`
-DOTA_LOADOUT_TYPE_MAP_EFFECT = 94
+DOTA_LOADOUT_TYPE_MAP_EFFECT = 103
 
 --- Enum: `DOTASlotType_t`  
 --- Env: only in `server`
-DOTA_LOADOUT_TYPE_COURIER_EFFECT = 95
+DOTA_LOADOUT_TYPE_COURIER_EFFECT = 104
 
 --- Enum: `DOTASlotType_t`  
 --- Env: only in `server`
-DOTA_LOADOUT_TYPE_RADIANT_SIEGE_CREEPS = 96
+DOTA_LOADOUT_TYPE_RADIANT_SIEGE_CREEPS = 105
 
 --- Enum: `DOTASlotType_t`  
 --- Env: only in `server`
-DOTA_LOADOUT_TYPE_DIRE_SIEGE_CREEPS = 97
+DOTA_LOADOUT_TYPE_DIRE_SIEGE_CREEPS = 106
 
 --- Enum: `DOTASlotType_t`  
 --- Env: only in `server`
-DOTA_LOADOUT_TYPE_ROSHAN = 98
+DOTA_LOADOUT_TYPE_ROSHAN = 107
 
 --- Enum: `DOTASlotType_t`  
 --- Env: only in `server`
-DOTA_LOADOUT_TYPE_TORMENTOR = 99
+DOTA_LOADOUT_TYPE_TORMENTOR = 108
 
 --- Enum: `DOTASlotType_t`  
 --- Env: only in `server`
-DOTA_LOADOUT_TYPE_ANCIENT = 100
+DOTA_LOADOUT_TYPE_ANCIENT = 109
 
 --- Enum: `DOTASlotType_t`  
 --- Env: only in `server`
-DOTA_LOADOUT_TYPE_PET_EFFIGY = 101
+DOTA_LOADOUT_TYPE_PET_EFFIGY = 110
 
 --- Enum: `DOTASlotType_t`  
 --- Env: only in `server`
-DOTA_PLAYER_LOADOUT_END = 101
+DOTA_PLAYER_LOADOUT_END = 110
 
 --- Enum: `DOTASlotType_t`  
 --- Env: only in `server`
-DOTA_LOADOUT_TYPE_NONE = 102
+DOTA_LOADOUT_TYPE_NONE = 111
 
 --- Enum: `DOTASlotType_t`  
 --- Env: only in `server`
-DOTA_LOADOUT_TYPE_COUNT = 103
+DOTA_LOADOUT_TYPE_COUNT = 112
+
+--- Enum: `DOTASlotType_t`  
+--- Env: only in `server`
+DOTA_LOADOUT_TYPE_ABILITY_EFFECTS_1_PERSONA_1 = 68
+
+--- Enum: `DOTASlotType_t`  
+--- Env: only in `server`
+DOTA_LOADOUT_TYPE_ABILITY_EFFECTS_2_PERSONA_1 = 69
+
+--- Enum: `DOTASlotType_t`  
+--- Env: only in `server`
+DOTA_LOADOUT_TYPE_ABILITY_EFFECTS_3_PERSONA_1 = 70
+
+--- Enum: `DOTASlotType_t`  
+--- Env: only in `server`
+DOTA_LOADOUT_TYPE_ABILITY_EFFECTS_4_PERSONA_1 = 71
+
+--- Enum: `DOTASlotType_t`  
+--- Env: only in `server`
+DOTA_LOADOUT_TYPE_ABILITY_EFFECTS_5_PERSONA_1 = 72
+
+--- Enum: `DOTASlotType_t`  
+--- Env: only in `server`
+DOTA_LOADOUT_TYPE_ABILITY_EFFECTS_6_PERSONA_1 = 73
+
+--- Enum: `DOTASlotType_t`  
+--- Env: only in `server`
+DOTA_LOADOUT_TYPE_ABILITY_EFFECTS_7_PERSONA_1 = 74
+
+--- Enum: `DOTASlotType_t`  
+--- Env: only in `server`
+DOTA_LOADOUT_TYPE_ABILITY_EFFECTS_8_PERSONA_1 = 75
+
+--- Enum: `DOTASlotType_t`  
+--- Env: only in `server`
+DOTA_LOADOUT_TYPE_ABILITY_EFFECTS_9_PERSONA_1 = 76
 
 --- Enum: `DOTASpeechType_t`  
 --- Env: `server` or `client`
@@ -3426,6 +3470,10 @@ DOTA_ModifyGold_WardKill = 20
 --- Env: only in `server`
 DOTA_ModifyGold_CourierKilledByThisPlayer = 21
 
+--- Enum: `EDOTA_ModifyGold_Reason`  
+--- Env: only in `server`
+DOTA_ModifyGold_SummonKill = 22
+
 --- Enum: `EDOTA_ModifyXP_Reason`  
 --- Env: only in `server`
 DOTA_ModifyXP_Unspecified = 0
@@ -3460,7 +3508,11 @@ DOTA_ModifyXP_HeroAbility = 7
 
 --- Enum: `EDOTA_ModifyXP_Reason`  
 --- Env: only in `server`
-DOTA_ModifyXP_MAX = 8
+DOTA_ModifyXP_MAX = 9
+
+--- Enum: `EDOTA_ModifyXP_Reason`  
+--- Env: only in `server`
+DOTA_ModifyXP_SummonKill = 8
 
 --- Enum: `EntityEffects`  
 --- Env: only in `server`
@@ -9086,1771 +9138,1841 @@ MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE_UNIQUE = 48
 --- Method Name: `GetModifierSpellAmplify_PercentageTarget`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE_TARGET = 49
+MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE_TARGET = 50
 
 --- Method Name: `GetModifierHealAmplify_PercentageSource`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_HEAL_AMPLIFY_PERCENTAGE_SOURCE = 50
+MODIFIER_PROPERTY_HEAL_AMPLIFY_PERCENTAGE_SOURCE = 51
 
 --- Method Name: `GetModifierHealAmplify_PercentageTarget`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_HEAL_AMPLIFY_PERCENTAGE_TARGET = 51
+MODIFIER_PROPERTY_HEAL_AMPLIFY_PERCENTAGE_TARGET = 52
 
 --- Method Name: `GetModifierHPRegenAmplify_Percentage`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_HP_REGEN_AMPLIFY_PERCENTAGE = 52
+MODIFIER_PROPERTY_HP_REGEN_AMPLIFY_PERCENTAGE = 53
 
 --- Method Name: `GetModifierLifestealRegenAmplify_Percentage`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_LIFESTEAL_AMPLIFY_PERCENTAGE = 53
+MODIFIER_PROPERTY_LIFESTEAL_AMPLIFY_PERCENTAGE = 54
 
 --- Method Name: `GetModifierSpellLifestealRegenAmplify_Percentage`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_SPELL_LIFESTEAL_AMPLIFY_PERCENTAGE = 54
+MODIFIER_PROPERTY_SPELL_LIFESTEAL_AMPLIFY_PERCENTAGE = 55
 
 --- Method Name: `GetModifierSpellLifestealRegenAmplify_Percentage_Unique`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_SPELL_LIFESTEAL_AMPLIFY_PERCENTAGE_UNIQUE = 55
+MODIFIER_PROPERTY_SPELL_LIFESTEAL_AMPLIFY_PERCENTAGE_UNIQUE = 56
 
 --- Method Name: `GetModifierMPRegenAmplify_Percentage`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_MP_REGEN_AMPLIFY_PERCENTAGE = 56
+MODIFIER_PROPERTY_MP_REGEN_AMPLIFY_PERCENTAGE = 57
 
 --- Method Name: `GetModifierMPRegenAmplify_Percentage_Unique`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_MP_REGEN_AMPLIFY_PERCENTAGE_UNIQUE = 57
+MODIFIER_PROPERTY_MP_REGEN_AMPLIFY_PERCENTAGE_UNIQUE = 58
 
 --- Method Name: `GetModifierManaDrainAmplify_Percentage`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_MANA_DRAIN_AMPLIFY_PERCENTAGE = 58
+MODIFIER_PROPERTY_MANA_DRAIN_AMPLIFY_PERCENTAGE = 59
 
 --- Total amplify value is clamped to 0.  
 ---   
 --- Method Name: `GetModifierMPRestoreAmplify_Percentage`.  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_MP_RESTORE_AMPLIFY_PERCENTAGE = 59
+MODIFIER_PROPERTY_MP_RESTORE_AMPLIFY_PERCENTAGE = 60
 
 --- Method Name: `GetModifierBaseDamageOutgoing_Percentage`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE = 60
+MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE = 61
 
 --- Method Name: `GetModifierBaseDamageOutgoing_PercentageUnique`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE_UNIQUE = 61
+MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE_UNIQUE = 62
 
 --- Method Name: `GetModifierIncomingDamage_Percentage`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE = 62
+MODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE = 63
 
 --- Method Name: `GetModifierIncomingPhysicalDamage_Percentage`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_INCOMING_PHYSICAL_DAMAGE_PERCENTAGE = 63
+MODIFIER_PROPERTY_INCOMING_PHYSICAL_DAMAGE_PERCENTAGE = 64
 
 --- This property controls 'physical' shield, if defined both on client and server. Return value on client should be current shield health, as a positive integer, on server - amount of damage blocked.  
 ---   
 --- Method Name: `GetModifierIncomingPhysicalDamageConstant`.  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_INCOMING_PHYSICAL_DAMAGE_CONSTANT = 64
+MODIFIER_PROPERTY_INCOMING_PHYSICAL_DAMAGE_CONSTANT = 65
 
 --- This property controls 'spell' shield, if defined both on client and server. Return value on client should be current shield health, as a positive integer, on server - amount of damage blocked.  
 ---   
 --- Method Name: `GetModifierIncomingSpellDamageConstant`.  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_INCOMING_SPELL_DAMAGE_CONSTANT = 65
+MODIFIER_PROPERTY_INCOMING_SPELL_DAMAGE_CONSTANT = 66
 
 --- Method Name: `GetModifierEvasion_Constant`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_EVASION_CONSTANT = 66
+MODIFIER_PROPERTY_EVASION_CONSTANT = 67
 
 --- Method Name: `GetModifierNegativeEvasion_Constant`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_NEGATIVE_EVASION_CONSTANT = 67
+MODIFIER_PROPERTY_NEGATIVE_EVASION_CONSTANT = 68
 
 --- Method Name: `GetModifierStatusResistance`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_STATUS_RESISTANCE = 68
+MODIFIER_PROPERTY_STATUS_RESISTANCE = 69
 
 --- Method Name: `GetModifierStatusResistanceStacking`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_STATUS_RESISTANCE_STACKING = 69
+MODIFIER_PROPERTY_STATUS_RESISTANCE_STACKING = 70
 
 --- Method Name: `GetModifierStatusResistanceCaster`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_STATUS_RESISTANCE_CASTER = 70
+MODIFIER_PROPERTY_STATUS_RESISTANCE_CASTER = 71
 
 --- Method Name: `GetModifierAvoidDamage`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_AVOID_DAMAGE = 71
+MODIFIER_PROPERTY_AVOID_DAMAGE = 72
 
 --- Method Name: `GetModifierAvoidSpell`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_AVOID_SPELL = 72
+MODIFIER_PROPERTY_AVOID_SPELL = 73
 
 --- Method Name: `GetModifierMiss_Percentage`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_MISS_PERCENTAGE = 73
+MODIFIER_PROPERTY_MISS_PERCENTAGE = 74
 
 --- Values above 100% are ignored.  
 ---   
 --- Method Name: `GetModifierPhysicalArmorBase_Percentage`.  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_PHYSICAL_ARMOR_BASE_PERCENTAGE = 74
+MODIFIER_PROPERTY_PHYSICAL_ARMOR_BASE_PERCENTAGE = 75
 
 --- Method Name: `GetModifierPhysicalArmorTotal_Percentage`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_PHYSICAL_ARMOR_TOTAL_PERCENTAGE = 75
+MODIFIER_PROPERTY_PHYSICAL_ARMOR_TOTAL_PERCENTAGE = 76
 
 --- Method Name: `GetModifierPhysicalArmorBonus`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS = 76
+MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS = 77
 
 --- Method Name: `GetModifierPhysicalArmorBonusUnique`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS_UNIQUE = 77
+MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS_UNIQUE = 78
 
 --- Method Name: `GetModifierPhysicalArmorBonusUniqueActive`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS_UNIQUE_ACTIVE = 78
+MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS_UNIQUE_ACTIVE = 79
 
 --- Method Name: `GetModifierPhysicalArmorBonusPost`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS_POST = 79
+MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS_POST = 80
 
 --- Method Name: `GetModifierMinPhysicalArmor`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_MIN_PHYSICAL_ARMOR = 80
+MODIFIER_PROPERTY_MIN_PHYSICAL_ARMOR = 81
 
 --- Method Name: `GetModifierIgnorePhysicalArmor`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_IGNORE_PHYSICAL_ARMOR = 81
+MODIFIER_PROPERTY_IGNORE_PHYSICAL_ARMOR = 82
 
 --- Method Name: `GetModifierMagicalResistanceBaseReduction`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BASE_REDUCTION = 82
+MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BASE_REDUCTION = 83
 
 --- Method Name: `GetModifierMagicalResistanceDirectModification`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_MAGICAL_RESISTANCE_DIRECT_MODIFICATION = 83
+MODIFIER_PROPERTY_MAGICAL_RESISTANCE_DIRECT_MODIFICATION = 84
 
 --- Method Name: `GetModifierMagicalResistanceBonus`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS = 84
+MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS = 85
 
 --- Method Name: `GetModifierMagicalResistanceBonusIllusions`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS_ILLUSIONS = 85
+MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS_ILLUSIONS = 86
 
 --- Method Name: `GetModifierMagicalResistanceBonusUnique`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS_UNIQUE = 86
+MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS_UNIQUE = 87
 
 --- Method Name: `GetModifierMagicalResistanceDecrepifyUnique`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_MAGICAL_RESISTANCE_DECREPIFY_UNIQUE = 87
+MODIFIER_PROPERTY_MAGICAL_RESISTANCE_DECREPIFY_UNIQUE = 88
 
 --- Method Name: `GetModifierBaseRegen`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_BASE_MANA_REGEN = 88
+MODIFIER_PROPERTY_BASE_MANA_REGEN = 89
 
 --- Method Name: `GetModifierConstantManaRegen`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_MANA_REGEN_CONSTANT = 89
+MODIFIER_PROPERTY_MANA_REGEN_CONSTANT = 90
 
 --- Method Name: `GetModifierConstantManaRegenUnique`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_MANA_REGEN_CONSTANT_UNIQUE = 90
+MODIFIER_PROPERTY_MANA_REGEN_CONSTANT_UNIQUE = 91
 
 --- Method Name: `GetModifierTotalPercentageManaRegen`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_MANA_REGEN_TOTAL_PERCENTAGE = 91
+MODIFIER_PROPERTY_MANA_REGEN_TOTAL_PERCENTAGE = 92
 
 --- Method Name: `GetModifierConstantHealthRegen`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT = 92
+MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT = 93
 
 --- Method Name: `GetModifierHealthRegenPercentage`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE = 93
+MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE = 94
 
 --- Method Name: `GetModifierHealthRegenPercentageUnique`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE_UNIQUE = 94
+MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE_UNIQUE = 95
 
 --- Method Name: `GetModifierHealthBonus`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_HEALTH_BONUS = 95
+MODIFIER_PROPERTY_HEALTH_BONUS = 96
 
 --- Method Name: `GetModifierManaBonus`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_MANA_BONUS = 96
+MODIFIER_PROPERTY_MANA_BONUS = 97
 
 --- Method Name: `GetModifierExtraStrengthBonus`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_EXTRA_STRENGTH_BONUS = 97
+MODIFIER_PROPERTY_EXTRA_STRENGTH_BONUS = 98
 
 --- Method Name: `GetModifierExtraHealthBonus`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_EXTRA_HEALTH_BONUS = 98
+MODIFIER_PROPERTY_EXTRA_HEALTH_BONUS = 99
 
 --- Method Name: `GetModifierExtraManaBonus`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_EXTRA_MANA_BONUS = 99
+MODIFIER_PROPERTY_EXTRA_MANA_BONUS = 100
 
 --- Method Name: `GetModifierExtraManaBonusPercentage`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_EXTRA_MANA_BONUS_PERCENTAGE = 100
+MODIFIER_PROPERTY_EXTRA_MANA_BONUS_PERCENTAGE = 101
 
 --- Method Name: `GetModifierExtraHealthPercentage`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_EXTRA_HEALTH_PERCENTAGE = 101
+MODIFIER_PROPERTY_EXTRA_HEALTH_PERCENTAGE = 102
 
 --- Method Name: `GetModifierExtraManaPercentage`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_EXTRA_MANA_PERCENTAGE = 102
+MODIFIER_PROPERTY_EXTRA_MANA_PERCENTAGE = 103
 
 --- Method Name: `GetModifierBonusStats_Strength`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_STATS_STRENGTH_BONUS = 103
+MODIFIER_PROPERTY_STATS_STRENGTH_BONUS = 104
 
 --- Method Name: `GetModifierBonusStats_Agility`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_STATS_AGILITY_BONUS = 104
+MODIFIER_PROPERTY_STATS_AGILITY_BONUS = 105
 
 --- Method Name: `GetModifierBonusStats_Intellect`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_STATS_INTELLECT_BONUS = 105
+MODIFIER_PROPERTY_STATS_INTELLECT_BONUS = 106
 
 --- Method Name: `GetModifierBonusStats_Strength_Percentage`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_STATS_STRENGTH_BONUS_PERCENTAGE = 106
+MODIFIER_PROPERTY_STATS_STRENGTH_BONUS_PERCENTAGE = 107
 
 --- Method Name: `GetModifierBonusStats_Agility_Percentage`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_STATS_AGILITY_BONUS_PERCENTAGE = 107
+MODIFIER_PROPERTY_STATS_AGILITY_BONUS_PERCENTAGE = 108
 
 --- Method Name: `GetModifierBonusStats_Intellect_Percentage`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_STATS_INTELLECT_BONUS_PERCENTAGE = 108
+MODIFIER_PROPERTY_STATS_INTELLECT_BONUS_PERCENTAGE = 109
 
 --- Method Name: `GetModifierIntellectNone`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_STATS_INTELLECT_NONE = 109
+MODIFIER_PROPERTY_STATS_INTELLECT_NONE = 110
 
 --- Method Name: `GetModifierCastRangeBonus`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_CAST_RANGE_BONUS = 110
+MODIFIER_PROPERTY_CAST_RANGE_BONUS = 111
 
 --- Method Name: `GetModifierCastRangeBonusPercentage`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_CAST_RANGE_BONUS_PERCENTAGE = 111
+MODIFIER_PROPERTY_CAST_RANGE_BONUS_PERCENTAGE = 112
 
 --- Method Name: `GetModifierCastRangeBonusTarget`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_CAST_RANGE_BONUS_TARGET = 112
+MODIFIER_PROPERTY_CAST_RANGE_BONUS_TARGET = 113
 
 --- Method Name: `GetModifierCastRangeBonusStacking`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_CAST_RANGE_BONUS_STACKING = 113
+MODIFIER_PROPERTY_CAST_RANGE_BONUS_STACKING = 114
 
 --- Method Name: `GetModifierAttackRangeOverride`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_ATTACK_RANGE_BASE_OVERRIDE = 114
+MODIFIER_PROPERTY_ATTACK_RANGE_BASE_OVERRIDE = 115
 
 --- Method Name: `GetModifierAttackRangeBonus`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_ATTACK_RANGE_BONUS = 115
+MODIFIER_PROPERTY_ATTACK_RANGE_BONUS = 116
 
 --- Method Name: `GetModifierAttackRangeBonusUnique`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_ATTACK_RANGE_BONUS_UNIQUE = 116
+MODIFIER_PROPERTY_ATTACK_RANGE_BONUS_UNIQUE = 117
 
 --- Method Name: `GetModifierAttackRangeBonusPercentage`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_ATTACK_RANGE_BONUS_PERCENTAGE = 117
+MODIFIER_PROPERTY_ATTACK_RANGE_BONUS_PERCENTAGE = 118
 
 --- Method Name: `GetModifierMaxAttackRange`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_MAX_ATTACK_RANGE = 118
+MODIFIER_PROPERTY_MAX_ATTACK_RANGE = 120
 
 --- Method Name: `GetModifierProjectileSpeedBonus`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_PROJECTILE_SPEED_BONUS = 119
+MODIFIER_PROPERTY_PROJECTILE_SPEED_BONUS = 121
 
 --- Method Name: `GetModifierProjectileSpeedBonusPercentage`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_PROJECTILE_SPEED_BONUS_PERCENTAGE = 120
+MODIFIER_PROPERTY_PROJECTILE_SPEED_BONUS_PERCENTAGE = 122
 
 --- Method Name: `GetModifierProjectileName`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_PROJECTILE_NAME = 121
+MODIFIER_PROPERTY_PROJECTILE_NAME = 123
 
 --- Method Name: `ReincarnateTime`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_REINCARNATION = 122
+MODIFIER_PROPERTY_REINCARNATION = 124
 
 --- Method Name: `ReincarnateSuppressFX`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_REINCARNATION_SUPPRESS_FX = 123
+MODIFIER_PROPERTY_REINCARNATION_SUPPRESS_FX = 125
 
 --- Method Name: `GetModifierConstantRespawnTime`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_RESPAWNTIME = 124
+MODIFIER_PROPERTY_RESPAWNTIME = 126
 
 --- Method Name: `GetModifierPercentageRespawnTime`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_RESPAWNTIME_PERCENTAGE = 125
+MODIFIER_PROPERTY_RESPAWNTIME_PERCENTAGE = 127
 
 --- Method Name: `GetModifierStackingRespawnTime`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_RESPAWNTIME_STACKING = 126
+MODIFIER_PROPERTY_RESPAWNTIME_STACKING = 128
 
 --- Method Name: `GetModifierPercentageCooldown`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_COOLDOWN_PERCENTAGE = 127
+MODIFIER_PROPERTY_COOLDOWN_PERCENTAGE = 129
 
 --- Method Name: `GetModifierPercentageCooldownOngoing`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_COOLDOWN_PERCENTAGE_ONGOING = 128
+MODIFIER_PROPERTY_COOLDOWN_PERCENTAGE_ONGOING = 130
 
 --- Method Name: `GetModifierPercentageCasttime`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_CASTTIME_PERCENTAGE = 129
+MODIFIER_PROPERTY_CASTTIME_PERCENTAGE = 131
 
 --- Method Name: `GetModifierPercentageAttackAnimTime`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_ATTACK_ANIM_TIME_PERCENTAGE = 130
+MODIFIER_PROPERTY_ATTACK_ANIM_TIME_PERCENTAGE = 133
 
 --- Method Name: `GetModifierPercentageManacost`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_MANACOST_PERCENTAGE = 131
+MODIFIER_PROPERTY_MANACOST_PERCENTAGE = 134
 
 --- Method Name: `GetModifierPercentageManacostStacking`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_MANACOST_PERCENTAGE_STACKING = 132
+MODIFIER_PROPERTY_MANACOST_PERCENTAGE_STACKING = 135
 
 --- Method Name: `GetModifierPercentageHealthcost`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_HEALTHCOST_PERCENTAGE = 133
+MODIFIER_PROPERTY_HEALTHCOST_PERCENTAGE = 136
 
 --- Method Name: `GetModifierPercentageHealthcostStacking`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_HEALTHCOST_PERCENTAGE_STACKING = 134
+MODIFIER_PROPERTY_HEALTHCOST_PERCENTAGE_STACKING = 137
 
 --- Method Name: `GetModifierConstantDeathGoldCost`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_DEATHGOLDCOST = 135
+MODIFIER_PROPERTY_DEATHGOLDCOST = 138
 
 --- Method Name: `GetModifierPercentageDeathGoldCost`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_PERCENTAGE_DEATHGOLDCOST = 136
+MODIFIER_PROPERTY_PERCENTAGE_DEATHGOLDCOST = 139
 
 --- Method Name: `GetModifierPercentageExpRateBoost`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_EXP_RATE_BOOST = 137
+MODIFIER_PROPERTY_EXP_RATE_BOOST = 140
 
 --- Method Name: `GetModifierPercentageGoldRateBoost`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_GOLD_RATE_BOOST = 138
+MODIFIER_PROPERTY_GOLD_RATE_BOOST = 141
 
 --- Method Name: `GetModifierPercentageKillAssistGoldBoost`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_KILL_ASSIST_GOLD_BOOST = 139
+MODIFIER_PROPERTY_KILL_ASSIST_GOLD_BOOST = 142
 
 --- Method Name: `GetModifierPercentageConvertExpToGold`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_CONVERT_EXP_TO_GOLD_PCT = 140
+MODIFIER_PROPERTY_CONVERT_EXP_TO_GOLD_PCT = 143
 
 --- Method Name: `GetModifierPreAttack_CriticalStrike`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE = 141
+MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE = 144
 
 --- Method Name: `GetModifierPreAttack_Target_CriticalStrike`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_PREATTACK_TARGET_CRITICALSTRIKE = 142
+MODIFIER_PROPERTY_PREATTACK_TARGET_CRITICALSTRIKE = 145
 
 --- Method Name: `GetModifierMagical_ConstantBlock`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_MAGICAL_CONSTANT_BLOCK = 143
+MODIFIER_PROPERTY_MAGICAL_CONSTANT_BLOCK = 146
 
 --- Method Name: `GetModifierPhysical_ConstantBlock`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_PHYSICAL_CONSTANT_BLOCK = 144
+MODIFIER_PROPERTY_PHYSICAL_CONSTANT_BLOCK = 147
 
 --- Method Name: `GetModifierPhysical_ConstantBlockSpecial`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_PHYSICAL_CONSTANT_BLOCK_SPECIAL = 145
+MODIFIER_PROPERTY_PHYSICAL_CONSTANT_BLOCK_SPECIAL = 148
 
 --- Method Name: `GetModifierPhysical_ConstantBlockBonus`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_PHYSICAL_CONSTANT_BLOCK_BONUS = 146
+MODIFIER_PROPERTY_PHYSICAL_CONSTANT_BLOCK_BONUS = 149
 
 --- Method Name: `GetModifierInnateDamageBlockPctOverride`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_INNATE_DAMAGE_BLOCK_PCT_OVERRIDE = 147
+MODIFIER_PROPERTY_INNATE_DAMAGE_BLOCK_PCT_OVERRIDE = 150
 
 --- Method Name: `GetModifierPhysical_ConstantBlockUnavoidablePreArmor`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_TOTAL_CONSTANT_BLOCK_UNAVOIDABLE_PRE_ARMOR = 148
+MODIFIER_PROPERTY_TOTAL_CONSTANT_BLOCK_UNAVOIDABLE_PRE_ARMOR = 151
 
 --- Method Name: `GetModifierTotal_ConstantBlock`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_TOTAL_CONSTANT_BLOCK = 149
+MODIFIER_PROPERTY_TOTAL_CONSTANT_BLOCK = 152
 
 --- Method Name: `GetOverrideAnimation`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_OVERRIDE_ANIMATION = 150
+MODIFIER_PROPERTY_OVERRIDE_ANIMATION = 153
 
 --- Method Name: `GetOverrideAnimationRate`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_OVERRIDE_ANIMATION_RATE = 151
+MODIFIER_PROPERTY_OVERRIDE_ANIMATION_RATE = 154
 
 --- Method Name: `GetAbsorbSpell`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_ABSORB_SPELL = 152
+MODIFIER_PROPERTY_ABSORB_SPELL = 155
 
 --- Method Name: `GetReflectSpell`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_REFLECT_SPELL = 153
+MODIFIER_PROPERTY_REFLECT_SPELL = 156
 
 --- Method Name: `GetDisableAutoAttack`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_DISABLE_AUTOATTACK = 154
+MODIFIER_PROPERTY_DISABLE_AUTOATTACK = 157
 
 --- Method Name: `GetBonusDayVision`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_BONUS_DAY_VISION = 155
+MODIFIER_PROPERTY_BONUS_DAY_VISION = 158
 
 --- Method Name: `GetBonusDayVisionPercentage`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_BONUS_DAY_VISION_PERCENTAGE = 156
+MODIFIER_PROPERTY_BONUS_DAY_VISION_PERCENTAGE = 159
 
 --- Method Name: `GetBonusNightVision`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_BONUS_NIGHT_VISION = 157
+MODIFIER_PROPERTY_BONUS_NIGHT_VISION = 160
 
 --- Method Name: `GetBonusNightVisionUnique`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_BONUS_NIGHT_VISION_UNIQUE = 158
+MODIFIER_PROPERTY_BONUS_NIGHT_VISION_UNIQUE = 161
 
 --- Method Name: `GetBonusVisionPercentage`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_BONUS_VISION_PERCENTAGE = 159
+MODIFIER_PROPERTY_BONUS_VISION_PERCENTAGE = 162
 
 --- Method Name: `GetFixedDayVision`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_FIXED_DAY_VISION = 160
+MODIFIER_PROPERTY_FIXED_DAY_VISION = 163
 
 --- Method Name: `GetFixedNightVision`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_FIXED_NIGHT_VISION = 161
+MODIFIER_PROPERTY_FIXED_NIGHT_VISION = 164
 
 --- Method Name: `GetMinHealth`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_MIN_HEALTH = 162
+MODIFIER_PROPERTY_MIN_HEALTH = 165
 
 --- Method Name: `GetMinMana`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_MIN_MANA = 163
+MODIFIER_PROPERTY_MIN_MANA = 166
 
 --- Method Name: `GetAbsoluteNoDamagePhysical`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_PHYSICAL = 164
+MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_PHYSICAL = 167
 
 --- Method Name: `GetAbsoluteNoDamageMagical`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_MAGICAL = 165
+MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_MAGICAL = 168
 
 --- Method Name: `GetAbsoluteNoDamagePure`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_PURE = 166
+MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_PURE = 169
 
 --- Method Name: `GetIsIllusion`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_IS_ILLUSION = 167
+MODIFIER_PROPERTY_IS_ILLUSION = 170
 
 --- Method Name: `GetModifierIllusionLabel`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_ILLUSION_LABEL = 168
+MODIFIER_PROPERTY_ILLUSION_LABEL = 171
 
 --- Method Name: `GetModifierStrongIllusion`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_STRONG_ILLUSION = 169
+MODIFIER_PROPERTY_STRONG_ILLUSION = 172
 
 --- Method Name: `GetModifierSuperIllusion`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_SUPER_ILLUSION = 170
+MODIFIER_PROPERTY_SUPER_ILLUSION = 173
 
 --- Method Name: `GetModifierSuperIllusionWithUltimate`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_SUPER_ILLUSION_WITH_ULTIMATE = 171
+MODIFIER_PROPERTY_SUPER_ILLUSION_WITH_ULTIMATE = 174
 
 --- Method Name: `GetModifierXPDuringDeath`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_XP_DURING_DEATH = 172
+MODIFIER_PROPERTY_XP_DURING_DEATH = 175
 
 --- Method Name: `GetModifierTurnRate_Percentage`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_TURN_RATE_PERCENTAGE = 173
+MODIFIER_PROPERTY_TURN_RATE_PERCENTAGE = 176
 
 --- Method Name: `GetModifierTurnRate_Override`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_TURN_RATE_OVERRIDE = 174
+MODIFIER_PROPERTY_TURN_RATE_OVERRIDE = 177
 
 --- Method Name: `GetDisableHealing`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_DISABLE_HEALING = 175
+MODIFIER_PROPERTY_DISABLE_HEALING = 178
 
 --- Method Name: `GetDisableManaGain`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_DISABLE_MANA_GAIN = 176
+MODIFIER_PROPERTY_DISABLE_MANA_GAIN = 179
 
 --- Method Name: `GetAlwaysAllowAttack`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_ALWAYS_ALLOW_ATTACK = 177
+MODIFIER_PROPERTY_ALWAYS_ALLOW_ATTACK = 180
 
 --- Method Name: `GetAllowEtherealAttack`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_ALWAYS_ETHEREAL_ATTACK = 178
+MODIFIER_PROPERTY_ALWAYS_ETHEREAL_ATTACK = 181
 
 --- Method Name: `GetOverrideAttackMagical`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_OVERRIDE_ATTACK_MAGICAL = 179
+MODIFIER_PROPERTY_OVERRIDE_ATTACK_MAGICAL = 182
 
 --- Method Name: `GetModifierUnitStatsNeedsRefresh`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_UNIT_STATS_NEEDS_REFRESH = 180
+MODIFIER_PROPERTY_UNIT_STATS_NEEDS_REFRESH = 183
 
+--- Unused  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_BOUNTY_CREEP_MULTIPLIER = 181
+MODIFIER_PROPERTY_BOUNTY_CREEP_MULTIPLIER = 184
 
+--- Unused  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_BOUNTY_OTHER_MULTIPLIER = 182
+MODIFIER_PROPERTY_BOUNTY_OTHER_MULTIPLIER = 185
 
 --- Method Name: `GetModifierUnitDisllowUpgrading`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_UNIT_DISALLOW_UPGRADING = 183
+MODIFIER_PROPERTY_UNIT_DISALLOW_UPGRADING = 186
 
 --- Method Name: `GetModifierDodgeProjectile`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_DODGE_PROJECTILE = 184
+MODIFIER_PROPERTY_DODGE_PROJECTILE = 187
 
 --- Method Name: `GetTriggerCosmeticAndEndAttack`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_TRIGGER_COSMETIC_AND_END_ATTACK = 185
+MODIFIER_PROPERTY_TRIGGER_COSMETIC_AND_END_ATTACK = 188
 
 --- Method Name: `GetPrimaryStatDamageMultiplier`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_PRIMARY_STAT_DAMAGE_MULTIPLIER = 186
+MODIFIER_PROPERTY_PRIMARY_STAT_DAMAGE_MULTIPLIER = 189
 
 --- Method Name: `GetModifierPreAttack_DeadlyBlow`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_PREATTACK_DEADLY_BLOW = 187
+MODIFIER_PROPERTY_PREATTACK_DEADLY_BLOW = 190
 
 --- Method Name: `GetAlwaysAutoAttackWhileHoldPosition`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_ALWAYS_AUTOATTACK_WHILE_HOLD_POSITION = 188
+MODIFIER_PROPERTY_ALWAYS_AUTOATTACK_WHILE_HOLD_POSITION = 191
 
 --- Method Name: `GetPhysicalArmorPiercingPercentageTarget`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_PHYSICAL_ARMOR_PIERCING_PERCENTAGE_TARGET = 189
+MODIFIER_PROPERTY_PHYSICAL_ARMOR_PIERCING_PERCENTAGE_TARGET = 192
 
 --- Method Name: `GetMagicalArmorPiercingPercentageTarget`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_MAGICAL_ARMOR_PIERCING_PERCENTAGE_TARGET = 190
+MODIFIER_PROPERTY_MAGICAL_ARMOR_PIERCING_PERCENTAGE_TARGET = 193
 
 --- Method Name: `GetCriticalStrikeBonus`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_CRITICAL_STRIKE_BONUS = 191
+MODIFIER_PROPERTY_CRITICAL_STRIKE_BONUS = 194
 
 --- Method Name: `GetConvertAttackPhysicalToPure`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_CONVERT_ATTACK_PHYSICAL_TO_PURE = 192
+MODIFIER_PROPERTY_CONVERT_ATTACK_PHYSICAL_TO_PURE = 195
 
 --- Method Name: `GetBuffAmplification`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_BUFF_AMPLIFICATION = 193
+MODIFIER_PROPERTY_BUFF_AMPLIFICATION = 196
 
 --- Method Name: `OnSpellTargetReady`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_SPELL_TARGET_READY = 194
+MODIFIER_EVENT_ON_SPELL_TARGET_READY = 197
 
 --- Method Name: `OnAttackRecord`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_ATTACK_RECORD = 195
+MODIFIER_EVENT_ON_ATTACK_RECORD = 198
 
 --- Method Name: `OnAttackStart`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_ATTACK_START = 196
+MODIFIER_EVENT_ON_ATTACK_START = 199
 
 --- Method Name: `OnAttack`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_ATTACK = 197
+MODIFIER_EVENT_ON_ATTACK = 200
 
 --- Method Name: `OnAttackLanded`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_ATTACK_LANDED = 198
+MODIFIER_EVENT_ON_ATTACK_LANDED = 201
 
 --- Method Name: `OnAttackFail`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_ATTACK_FAIL = 199
+MODIFIER_EVENT_ON_ATTACK_FAIL = 202
 
 --- Happens even if attack can't be issued.  
 ---   
 --- Method Name: `OnAttackAllied`.  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_ATTACK_ALLIED = 200
+MODIFIER_EVENT_ON_ATTACK_ALLIED = 203
 
 --- Method Name: `OnProjectileDodge`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_PROJECTILE_DODGE = 201
+MODIFIER_EVENT_ON_PROJECTILE_DODGE = 204
 
 --- Method Name: `OnOrder`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_ORDER = 202
+MODIFIER_EVENT_ON_ORDER = 205
 
 --- Method Name: `OnOrderReceived`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_ORDER_RECEIVED = 203
+MODIFIER_EVENT_ON_ORDER_RECEIVED = 206
 
 --- Method Name: `OnUnitMoved`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_UNIT_MOVED = 204
+MODIFIER_EVENT_ON_UNIT_MOVED = 207
 
 --- Method Name: `OnAbilityStart`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_ABILITY_START = 205
+MODIFIER_EVENT_ON_ABILITY_START = 208
 
 --- Method Name: `OnAbilityExecuted`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_ABILITY_EXECUTED = 206
+MODIFIER_EVENT_ON_ABILITY_EXECUTED = 209
 
 --- Method Name: `OnAbilityFullyCast`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_ABILITY_FULLY_CAST = 207
+MODIFIER_EVENT_ON_ABILITY_FULLY_CAST = 210
 
 --- Method Name: `OnBreakInvisibility`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_BREAK_INVISIBILITY = 208
+MODIFIER_EVENT_ON_BREAK_INVISIBILITY = 211
 
 --- Method Name: `OnAbilityEndChannel`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_ABILITY_END_CHANNEL = 209
+MODIFIER_EVENT_ON_ABILITY_END_CHANNEL = 212
 
+--- Unused  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_PROCESS_UPGRADE = 210
+MODIFIER_EVENT_ON_PROCESS_UPGRADE = 213
 
+--- Unused  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_REFRESH = 211
+MODIFIER_EVENT_ON_REFRESH = 214
 
 --- Method Name: `OnTakeDamage`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_TAKEDAMAGE = 212
+MODIFIER_EVENT_ON_TAKEDAMAGE = 215
 
 --- Method Name: `OnDamagePrevented`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_DEATH_PREVENTED = 213
+MODIFIER_EVENT_ON_DEATH_PREVENTED = 216
 
 --- Method Name: `OnStateChanged`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_STATE_CHANGED = 214
+MODIFIER_EVENT_ON_STATE_CHANGED = 217
 
+--- Unused  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_ORB_EFFECT = 215
+MODIFIER_EVENT_ON_ORB_EFFECT = 218
 
 --- Method Name: `OnProcessCleave`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_PROCESS_CLEAVE = 216
+MODIFIER_EVENT_ON_PROCESS_CLEAVE = 219
 
 --- Method Name: `OnDamageCalculated`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_DAMAGE_CALCULATED = 217
+MODIFIER_EVENT_ON_DAMAGE_CALCULATED = 220
 
 --- Method Name: `OnMagicDamageCalculated`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_MAGIC_DAMAGE_CALCULATED = 218
+MODIFIER_EVENT_ON_MAGIC_DAMAGE_CALCULATED = 221
 
 --- Method Name: `OnAttacked`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_ATTACKED = 219
+MODIFIER_EVENT_ON_ATTACKED = 222
 
 --- Method Name: `OnDeath`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_DEATH = 220
+MODIFIER_EVENT_ON_DEATH = 223
 
 --- Method Name: `OnDeathCompleted`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_DEATH_COMPLETED = 221
+MODIFIER_EVENT_ON_DEATH_COMPLETED = 224
 
 --- Method Name: `OnRespawn`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_RESPAWN = 222
+MODIFIER_EVENT_ON_RESPAWN = 225
 
 --- Method Name: `OnSpentMana`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_SPENT_MANA = 223
+MODIFIER_EVENT_ON_SPENT_MANA = 226
 
 --- Method Name: `OnSpentHealth`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_SPENT_HEALTH = 224
+MODIFIER_EVENT_ON_SPENT_HEALTH = 227
 
 --- Method Name: `OnSpentItemCharge`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_SPENT_ITEM_CHARGE = 225
+MODIFIER_EVENT_ON_SPENT_ITEM_CHARGE = 228
 
 --- Method Name: `OnTeleporting`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_TELEPORTING = 226
+MODIFIER_EVENT_ON_TELEPORTING = 229
 
 --- Method Name: `OnTeleported`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_TELEPORTED = 227
+MODIFIER_EVENT_ON_TELEPORTED = 230
 
 --- Method Name: `OnSetLocation`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_SET_LOCATION = 228
+MODIFIER_EVENT_ON_SET_LOCATION = 231
 
 --- Method Name: `OnHealthGained`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_HEALTH_GAINED = 229
+MODIFIER_EVENT_ON_HEALTH_GAINED = 232
 
 --- Method Name: `OnManaGained`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_MANA_GAINED = 230
+MODIFIER_EVENT_ON_MANA_GAINED = 233
 
 --- Method Name: `OnTakeDamageKillCredit`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_TAKEDAMAGE_KILLCREDIT = 231
+MODIFIER_EVENT_ON_TAKEDAMAGE_KILLCREDIT = 234
 
 --- Method Name: `OnHeroKilled`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_HERO_KILLED = 232
+MODIFIER_EVENT_ON_HERO_KILLED = 235
 
 --- Method Name: `OnHealReceived`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_HEAL_RECEIVED = 233
+MODIFIER_EVENT_ON_HEAL_RECEIVED = 236
 
 --- Method Name: `OnRedirectHealthGain`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_REDIRECT_HEALTH_GAIN = 234
+MODIFIER_EVENT_ON_REDIRECT_HEALTH_GAIN = 237
 
 --- Method Name: `OnBuildingKilled`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_BUILDING_KILLED = 235
+MODIFIER_EVENT_ON_BUILDING_KILLED = 238
 
 --- Method Name: `OnModelChanged`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_MODEL_CHANGED = 236
+MODIFIER_EVENT_ON_MODEL_CHANGED = 239
 
 --- Method Name: `OnModifierAdded`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_MODIFIER_ADDED = 237
+MODIFIER_EVENT_ON_MODIFIER_ADDED = 240
 
 --- Method Name: `OnModifierRemoved`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_MODIFIER_REMOVED = 238
+MODIFIER_EVENT_ON_MODIFIER_REMOVED = 241
 
 --- Method Name: `OnScepterUpgradeSelected`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_SCEPTER_UPGRADE_SELECTED = 239
+MODIFIER_EVENT_ON_SCEPTER_UPGRADE_SELECTED = 242
 
 --- Method Name: `OnShardUpgradeSelected`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_SHARD_UPGRADE_SELECTED = 240
+MODIFIER_EVENT_ON_SHARD_UPGRADE_SELECTED = 243
 
 --- Method Name: `OnTooltip`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_TOOLTIP = 241
+MODIFIER_PROPERTY_TOOLTIP = 244
 
 --- Method Name: `GetModifierModelChange`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_MODEL_CHANGE = 242
+MODIFIER_PROPERTY_MODEL_CHANGE = 245
 
 --- Method Name: `GetModifierModelScale`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_MODEL_SCALE = 243
+MODIFIER_PROPERTY_MODEL_SCALE = 246
 
 --- Method Name: `GetModifierModelScaleAnimateTime`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_MODEL_SCALE_ANIMATE_TIME = 244
+MODIFIER_PROPERTY_MODEL_SCALE_ANIMATE_TIME = 247
 
 --- Method Name: `GetModifierModelScaleUseInOutEase`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_MODEL_SCALE_USE_IN_OUT_EASE = 245
+MODIFIER_PROPERTY_MODEL_SCALE_USE_IN_OUT_EASE = 248
 
 --- Method Name: `GetModifierModelScaleConstant`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_MODEL_SCALE_CONSTANT = 246
+MODIFIER_PROPERTY_MODEL_SCALE_CONSTANT = 249
 
 --- Applies scepter when this property is active  
 ---   
 --- Method Name: `GetModifierScepter`.  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_IS_SCEPTER = 247
+MODIFIER_PROPERTY_IS_SCEPTER = 250
 
 --- Applies shard when this property is active  
 ---   
 --- Method Name: `GetModifierShard`.  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_IS_SHARD = 248
+MODIFIER_PROPERTY_IS_SHARD = 251
 
 --- Method Name: `GetModifierRadarCooldownReduction`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_RADAR_COOLDOWN_REDUCTION = 249
+MODIFIER_PROPERTY_RADAR_COOLDOWN_REDUCTION = 252
 
 --- Method Name: `GetActivityTranslationModifiers`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_TRANSLATE_ACTIVITY_MODIFIERS = 250
+MODIFIER_PROPERTY_TRANSLATE_ACTIVITY_MODIFIERS = 253
 
 --- Method Name: `GetAttackSound`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_TRANSLATE_ATTACK_SOUND = 251
+MODIFIER_PROPERTY_TRANSLATE_ATTACK_SOUND = 254
 
 --- Method Name: `GetUnitLifetimeFraction`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_LIFETIME_FRACTION = 252
+MODIFIER_PROPERTY_LIFETIME_FRACTION = 255
 
 --- Method Name: `GetModifierProvidesFOWVision`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_PROVIDES_FOW_POSITION = 253
+MODIFIER_PROPERTY_PROVIDES_FOW_POSITION = 256
 
 --- Method Name: `GetModifierSpellsRequireHP`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_SPELLS_REQUIRE_HP = 254
+MODIFIER_PROPERTY_SPELLS_REQUIRE_HP = 257
 
 --- Method Name: `GetModifierConvertManaCostToHealthCost`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_CONVERT_MANA_COST_TO_HEALTH_COST = 255
+MODIFIER_PROPERTY_CONVERT_MANA_COST_TO_HEALTH_COST = 258
 
 --- Method Name: `GetForceDrawOnMinimap`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_FORCE_DRAW_MINIMAP = 256
+MODIFIER_PROPERTY_FORCE_DRAW_MINIMAP = 259
 
 --- Method Name: `GetModifierDisableTurning`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_DISABLE_TURNING = 257
+MODIFIER_PROPERTY_DISABLE_TURNING = 260
 
 --- Method Name: `GetModifierIgnoreCastAngle`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_IGNORE_CAST_ANGLE = 258
+MODIFIER_PROPERTY_IGNORE_CAST_ANGLE = 261
 
 --- Method Name: `GetModifierChangeAbilityValue`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_CHANGE_ABILITY_VALUE = 259
+MODIFIER_PROPERTY_CHANGE_ABILITY_VALUE = 262
 
 --- Method Name: `GetModifierOverrideAbilitySpecial`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_OVERRIDE_ABILITY_SPECIAL = 260
+MODIFIER_PROPERTY_OVERRIDE_ABILITY_SPECIAL = 263
 
 --- Method Name: `GetModifierOverrideAbilitySpecialValue`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_OVERRIDE_ABILITY_SPECIAL_VALUE = 261
+MODIFIER_PROPERTY_OVERRIDE_ABILITY_SPECIAL_VALUE = 264
 
 --- Method Name: `GetModifierAbilityLayout`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_ABILITY_LAYOUT = 262
+MODIFIER_PROPERTY_ABILITY_LAYOUT = 265
 
 --- Method Name: `OnDominated`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_DOMINATED = 263
+MODIFIER_EVENT_ON_DOMINATED = 266
 
 --- Method Name: `OnKill`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_KILL = 264
+MODIFIER_EVENT_ON_KILL = 267
 
 --- Method Name: `OnAssist`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_ASSIST = 265
+MODIFIER_EVENT_ON_ASSIST = 268
 
 --- Method Name: `GetModifierTempestDouble`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_TEMPEST_DOUBLE = 266
+MODIFIER_PROPERTY_TEMPEST_DOUBLE = 269
 
 --- Method Name: `PreserveParticlesOnModelChanged`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_PRESERVE_PARTICLES_ON_MODEL_CHANGE = 267
+MODIFIER_PROPERTY_PRESERVE_PARTICLES_ON_MODEL_CHANGE = 270
 
 --- Method Name: `OnAttackFinished`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_ATTACK_FINISHED = 268
+MODIFIER_EVENT_ON_ATTACK_FINISHED = 271
 
 --- Method Name: `GetModifierIgnoreCooldown`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_IGNORE_COOLDOWN = 269
+MODIFIER_PROPERTY_IGNORE_COOLDOWN = 272
 
 --- Method Name: `GetModifierCanAttackTrees`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_CAN_ATTACK_TREES = 270
+MODIFIER_PROPERTY_CAN_ATTACK_TREES = 273
 
 --- Method Name: `GetVisualZDelta`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_VISUAL_Z_DELTA = 271
+MODIFIER_PROPERTY_VISUAL_Z_DELTA = 274
 
 --- Method Name: `GetVisualZSpeedBaseOverride`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_VISUAL_Z_SPEED_BASE_OVERRIDE = 272
+MODIFIER_PROPERTY_VISUAL_Z_SPEED_BASE_OVERRIDE = 275
 
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_INCOMING_DAMAGE_ILLUSION = 273
+MODIFIER_PROPERTY_INCOMING_DAMAGE_ILLUSION = 276
 
 --- Method Name: `GetModifierNoVisionOfAttacker`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_DONT_GIVE_VISION_OF_ATTACKER = 274
+MODIFIER_PROPERTY_DONT_GIVE_VISION_OF_ATTACKER = 277
 
 --- Method Name: `OnTooltip2`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_TOOLTIP2 = 275
+MODIFIER_PROPERTY_TOOLTIP2 = 278
 
 --- Method Name: `OnAttackRecordDestroy`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_ATTACK_RECORD_DESTROY = 276
+MODIFIER_EVENT_ON_ATTACK_RECORD_DESTROY = 279
 
 --- Method Name: `OnProjectileObstructionHit`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_PROJECTILE_OBSTRUCTION_HIT = 277
+MODIFIER_EVENT_ON_PROJECTILE_OBSTRUCTION_HIT = 280
 
 --- Method Name: `GetSuppressTeleport`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_SUPPRESS_TELEPORT = 278
+MODIFIER_PROPERTY_SUPPRESS_TELEPORT = 281
 
 --- Method Name: `OnAttackCancelled`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_ATTACK_CANCELLED = 279
+MODIFIER_EVENT_ON_ATTACK_CANCELLED = 282
 
 --- Method Name: `GetSuppressCleave`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_SUPPRESS_CLEAVE = 280
+MODIFIER_PROPERTY_SUPPRESS_CLEAVE = 283
 
 --- Method Name: `BotAttackScoreBonus`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_BOT_ATTACK_SCORE_BONUS = 281
+MODIFIER_PROPERTY_BOT_ATTACK_SCORE_BONUS = 284
 
 --- Method Name: `GetModifierAttackSpeedReductionPercentage`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_ATTACKSPEED_REDUCTION_PERCENTAGE = 282
+MODIFIER_PROPERTY_ATTACKSPEED_REDUCTION_PERCENTAGE = 285
 
 --- Method Name: `GetModifierMoveSpeedReductionPercentage`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_MOVESPEED_REDUCTION_PERCENTAGE = 283
+MODIFIER_PROPERTY_MOVESPEED_REDUCTION_PERCENTAGE = 286
 
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_ATTACK_WHILE_MOVING_TARGET = 284
+MODIFIER_PROPERTY_ATTACK_WHILE_MOVING_TARGET = 287
 
 --- Method Name: `GetModifierAttackSpeedPercentage`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_ATTACKSPEED_PERCENTAGE = 285
+MODIFIER_PROPERTY_ATTACKSPEED_PERCENTAGE = 288
 
 --- Method Name: `OnAttemptProjectileDodge`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_ATTEMPT_PROJECTILE_DODGE = 286
+MODIFIER_EVENT_ON_ATTEMPT_PROJECTILE_DODGE = 289
 
 --- Method Name: `GetModifierPercentageCooldownStacking`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_COOLDOWN_PERCENTAGE_STACKING = 287
+MODIFIER_PROPERTY_COOLDOWN_PERCENTAGE_STACKING = 290
 
 --- Method Name: `GetModifierSpellRedirectTarget`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_SPELL_REDIRECT_TARGET = 288
+MODIFIER_PROPERTY_SPELL_REDIRECT_TARGET = 291
 
 --- Method Name: `GetModifierTurnRateConstant`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_TURN_RATE_CONSTANT = 289
+MODIFIER_PROPERTY_TURN_RATE_CONSTANT = 292
 
 --- Method Name: `GetModifierIsPackRat`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_PACK_RAT = 290
+MODIFIER_PROPERTY_PACK_RAT = 293
 
 --- Method Name: `GetModifierPhysicalDamageOutgoing_Percentage`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_PHYSICALDAMAGEOUTGOING_PERCENTAGE = 291
+MODIFIER_PROPERTY_PHYSICALDAMAGEOUTGOING_PERCENTAGE = 294
 
 --- Method Name: `GetModifierKnockbackAmplification_Percentage`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_KNOCKBACK_AMPLIFICATION_PERCENTAGE = 292
+MODIFIER_PROPERTY_KNOCKBACK_AMPLIFICATION_PERCENTAGE = 295
 
 --- Return value is a count of pips.  
 ---   
 --- Method Name: `GetModifierHealthBarPips`.  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_HEALTHBAR_PIPS = 293
+MODIFIER_PROPERTY_HEALTHBAR_PIPS = 296
 
 --- This property controls 'universal' shield, if defined both on client and server. Return value on client should be current shield health, as a positive integer, on server - amount of damage blocked.  
 ---   
 --- Method Name: `GetModifierIncomingDamageConstant`.  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_INCOMING_DAMAGE_CONSTANT = 294
+MODIFIER_PROPERTY_INCOMING_DAMAGE_CONSTANT = 297
 
 --- Method Name: `OnSpellAppliedSuccessfully`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_SPELL_APPLIED_SUCCESSFULLY = 295
+MODIFIER_EVENT_SPELL_APPLIED_SUCCESSFULLY = 298
 
 --- Method Name: `GetModifierAvoidDamageAfterReductions`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_AVOID_DAMAGE_AFTER_REDUCTIONS = 296
+MODIFIER_PROPERTY_AVOID_DAMAGE_AFTER_REDUCTIONS = 299
 
 --- Method Name: `GetModifierPropetyFailAttack`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_FAIL_ATTACK = 297
+MODIFIER_PROPERTY_FAIL_ATTACK = 300
 
 --- Method Name: `GetModifierPrereduceIncomingDamage_Mult`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_PREREDUCE_INCOMING_DAMAGE_MULT = 298
+MODIFIER_PROPERTY_PREREDUCE_INCOMING_DAMAGE_MULT = 301
 
 --- Method Name: `GetModifierSuppressFullscreenDeathFX`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_SUPPRESS_FULLSCREEN_DEATH_FX = 299
+MODIFIER_PROPERTY_SUPPRESS_FULLSCREEN_DEATH_FX = 302
 
 --- Method Name: `MODIFIER_PROPERTY_INCOMING_DAMAGE_CONSTANT_POST`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_INCOMING_DAMAGE_CONSTANT_POST = 300
+MODIFIER_PROPERTY_INCOMING_DAMAGE_CONSTANT_POST = 303
 
 --- Method Name: `GetModifierDamageOutgoing_PercentageMultiplicative`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE_MULTIPLICATIVE = 301
+MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE_MULTIPLICATIVE = 304
 
 --- Method Name: `GetModifierTickGold_Multiplier`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_TICK_GOLD_MULTIPLIER = 302
+MODIFIER_PROPERTY_TICK_GOLD_MULTIPLIER = 305
 
 --- Method Name: `GEtModifierSlowResistance_Unique`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_SLOW_RESISTANCE_UNIQUE = 303
+MODIFIER_PROPERTY_SLOW_RESISTANCE_UNIQUE = 306
 
 --- Method Name: `GetModifierSlowResistance_Stacking`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_SLOW_RESISTANCE_STACKING = 304
+MODIFIER_PROPERTY_SLOW_RESISTANCE_STACKING = 307
 
 --- Method Name: `GetModifierSlowResistanceAppliesToAttacks`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_SLOW_RESISTANCE_APPLIES_TO_ATTACKS = 305
+MODIFIER_PROPERTY_SLOW_RESISTANCE_APPLIES_TO_ATTACKS = 308
 
 --- Method Name: `GetModifierAoEBonusPercentage`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_AOE_BONUS_PERCENTAGE = 306
+MODIFIER_PROPERTY_AOE_BONUS_PERCENTAGE = 309
 
 --- Method Name: `GetModifierProjectileSpeed`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_PROJECTILE_SPEED = 307
+MODIFIER_PROPERTY_PROJECTILE_SPEED = 310
 
 --- Method Name: `GetModifierProjectileSpeedTarget`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_PROJECTILE_SPEED_TARGET = 308
+MODIFIER_PROPERTY_PROJECTILE_SPEED_TARGET = 311
 
 --- Method Name: `GetModifierBecomeStrength`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_BECOME_STRENGTH = 309
+MODIFIER_PROPERTY_BECOME_STRENGTH = 312
 
 --- Method Name: `GetModifierBecomeAgility`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_BECOME_AGILITY = 310
+MODIFIER_PROPERTY_BECOME_AGILITY = 313
 
 --- Method Name: `GetModifierBecomeIntelligence`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_BECOME_INTELLIGENCE = 311
+MODIFIER_PROPERTY_BECOME_INTELLIGENCE = 314
 
 --- Method Name: `GetModifierBecomeUniversal`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_BECOME_UNIVERSAL = 312
+MODIFIER_PROPERTY_BECOME_UNIVERSAL = 315
 
 --- Method Name: `OnForceProcMagicStick`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_FORCE_PROC_MAGIC_STICK = 313
+MODIFIER_EVENT_ON_FORCE_PROC_MAGIC_STICK = 316
 
 --- Method Name: `OnDamageHPLoss`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_DAMAGE_HPLOSS = 314
+MODIFIER_EVENT_ON_DAMAGE_HPLOSS = 317
 
 --- Method Name: `GetModifierShareXPRune`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_SHARE_XPRUNE = 315
+MODIFIER_PROPERTY_SHARE_XPRUNE = 318
 
 --- Method Name: `GetModifierXPFountainCountdownTimeOverride`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_XP_FOUNTAIN_COUNTDOWN_TIME_OVERRIDE = 316
+MODIFIER_PROPERTY_XP_FOUNTAIN_COUNTDOWN_TIME_OVERRIDE = 319
 
 --- Method Name: `GetModifierNoFreeTPScrollOnDeath`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_NO_FREE_TP_SCROLL_ON_DEATH = 317
+MODIFIER_PROPERTY_NO_FREE_TP_SCROLL_ON_DEATH = 320
 
 --- Method Name: `GetModifierHasBonusNeutralItemChoice`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_HAS_BONUS_NEUTRAL_ITEM_CHOICE = 318
+MODIFIER_PROPERTY_HAS_BONUS_NEUTRAL_ITEM_CHOICE = 321
 
 --- Method Name: `HasBonusNeutralItemPassive`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_HAS_BONUS_NEUTRAL_ITEM_PASSIVE = 319
+MODIFIER_PROPERTY_HAS_BONUS_NEUTRAL_ITEM_PASSIVE = 322
 
 --- Method Name: `GetModifierPreserveNeutralItemPassives`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_PRESERVE_NEUTRAL_ITEM_PASSIVES = 320
+MODIFIER_PROPERTY_PRESERVE_NEUTRAL_ITEM_PASSIVES = 323
 
 --- Method Name: `GetModifierForceMaxHealth`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_FORCE_MAX_HEALTH = 321
+MODIFIER_PROPERTY_FORCE_MAX_HEALTH = 324
 
 --- Method Name: `GetModifierForceMaxMana`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_FORCE_MAX_MANA = 322
+MODIFIER_PROPERTY_FORCE_MAX_MANA = 325
 
 --- Method Name: `GetModifierAoEBonusConstant`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_AOE_BONUS_CONSTANT = 323
+MODIFIER_PROPERTY_AOE_BONUS_CONSTANT = 326
 
 --- Method Name: `GetModifierAoEBonusConstantStacking`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_AOE_BONUS_CONSTANT_STACKING = 324
+MODIFIER_PROPERTY_AOE_BONUS_CONSTANT_STACKING = 327
 
 --- Method Name: `OnTakeDamagePostUnavoidableBlock`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_TAKEDAMAGE_POST_UNAVOIDABLE_BLOCK = 325
+MODIFIER_EVENT_ON_TAKEDAMAGE_POST_UNAVOIDABLE_BLOCK = 328
 
 --- Method Name: `OnMuteDamageAbilities`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_MUTE_DAMAGE_ABILITIES = 326
+MODIFIER_EVENT_ON_MUTE_DAMAGE_ABILITIES = 329
 
 --- Method Name: `GetSuppressCrit`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_SUPPRESS_CRIT = 327
+MODIFIER_PROPERTY_SUPPRESS_CRIT = 330
 
 --- Method Name: `GetModifierAbilityPoints`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_ABILITY_POINTS = 328
+MODIFIER_PROPERTY_ABILITY_POINTS = 331
 
 --- Method Name: `GetModifierBuybackPenaltyPercent`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_BUYBACK_PENALTY_PERCENT = 329
+MODIFIER_PROPERTY_BUYBACK_PENALTY_PERCENT = 332
 
 --- Method Name: `GetModifierItemSellbackCost`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_ITEM_SELLBACK_COST = 330
+MODIFIER_PROPERTY_ITEM_SELLBACK_COST = 333
 
 --- Method Name: `GetModifierDisassembleAnything`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_DISASSEMBLE_ANYTHING = 331
+MODIFIER_PROPERTY_DISASSEMBLE_ANYTHING = 334
 
 --- Method Name: `GetModifierFixedManaRegen`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_FIXED_MANA_REGEN = 332
+MODIFIER_PROPERTY_FIXED_MANA_REGEN = 335
 
 --- Method Name: `GetModifierBonusUphillMissChance`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_BONUS_UPHILL_MISS_CHANCE = 333
+MODIFIER_PROPERTY_BONUS_UPHILL_MISS_CHANCE = 336
 
 --- Method Name: `GetModifierCreepDenyPercent`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_CREEP_DENY_PERCENT = 334
+MODIFIER_PROPERTY_CREEP_DENY_PERCENT = 337
 
 --- Method Name: `GetModifierAttackSpeedAbsoluteMax`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_ATTACKSPEED_ABSOLUTE_MAX = 335
+MODIFIER_PROPERTY_ATTACKSPEED_ABSOLUTE_MAX = 338
 
 --- Method Name: `GetModifierFoWTeam`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_FOW_TEAM = 336
+MODIFIER_PROPERTY_FOW_TEAM = 339
 
 --- Method Name: `OnHeroBeginDying`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_HERO_BEGIN_DYING = 337
+MODIFIER_EVENT_ON_HERO_BEGIN_DYING = 340
 
 --- Method Name: `GetModifierBonusLotusHeal`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_BONUS_LOTUS_HEAL = 338
+MODIFIER_PROPERTY_BONUS_LOTUS_HEAL = 341
 
 --- Method Name: `GetModifierBaseHpRegenPerStrBonusPercentage`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_BASE_HP_REGEN_PER_STR_BONUS_PERCENTAGE = 339
+MODIFIER_PROPERTY_BASE_HP_REGEN_PER_STR_BONUS_PERCENTAGE = 342
 
 --- Method Name: `GetModifierBaseArmorPerAgiBonusPercentage`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_BASE_ARMOR_PER_AGI_BONUS_PERCENTAGE = 340
+MODIFIER_PROPERTY_BASE_ARMOR_PER_AGI_BONUS_PERCENTAGE = 343
 
 --- Method Name: `GetModifierBaseAttackSpeedPerAgiBonusPercentage`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_BASE_ATTACKSPEED_PER_AGI_BONUS_PERCENTAGE = 341
+MODIFIER_PROPERTY_BASE_ATTACKSPEED_PER_AGI_BONUS_PERCENTAGE = 344
 
 --- Method Name: `GetModifierBaseManaRegenPerIntBonusPercentage`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_BASE_MP_REGEN_PER_INT_BONUS_PERCENTAGE = 342
+MODIFIER_PROPERTY_BASE_MP_REGEN_PER_INT_BONUS_PERCENTAGE = 345
 
 --- Method Name: `GetModifierBaseMagicResistPerIntBonusPercentage`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_BASE_MRES_PER_INT_BONUS_PERCENTAGE = 343
+MODIFIER_PROPERTY_BASE_MRES_PER_INT_BONUS_PERCENTAGE = 346
 
 --- Method Name: `OnDayStarted`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_DAY_STARTED = 344
+MODIFIER_EVENT_ON_DAY_STARTED = 347
 
 --- Method Name: `OnNightStarted`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_NIGHT_STARTED = 345
+MODIFIER_EVENT_ON_NIGHT_STARTED = 348
 
 --- Method Name: `GetModifierCreateBonusIllusionChance`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_CREATE_BONUS_ILLUSION_CHANCE = 346
+MODIFIER_PROPERTY_CREATE_BONUS_ILLUSION_CHANCE = 349
 
 --- Method Name: `GetModifierCreateBonusIllusionCount`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_CREATE_BONUS_ILLUSION_COUNT = 347
+MODIFIER_PROPERTY_CREATE_BONUS_ILLUSION_COUNT = 350
 
 --- Method Name: `GetModofierPropertyPseudoRandomBonus`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_PSEUDORANDOM_BONUS = 348
+MODIFIER_PROPERTY_PSEUDORANDOM_BONUS = 351
 
 --- Method Name: `GetModifierAttackHeightBonus`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_ATTACK_HEIGHT_BONUS = 349
+MODIFIER_PROPERTY_ATTACK_HEIGHT_BONUS = 352
 
 --- Method Name: `GetSkipAttackRegulator`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_SKIP_ATTACK_REGULATOR = 350
+MODIFIER_PROPERTY_SKIP_ATTACK_REGULATOR = 353
 
 --- Method Name: `GetModifierMiss_Percentage_Target`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_MISS_PERCENTAGE_TARGET = 351
+MODIFIER_PROPERTY_MISS_PERCENTAGE_TARGET = 354
 
 --- Method Name: `GetModifierAdditionalNutralItemDrops`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_ADDITIONAL_NEUTRAL_ITEM_DROPS = 352
+MODIFIER_PROPERTY_ADDITIONAL_NEUTRAL_ITEM_DROPS = 355
 
 --- Method Name: `GetModifierKillStreakBonusGoldPercentage`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_KILL_STREAK_BONUS_GOLD_PERCENTAGE = 353
+MODIFIER_PROPERTY_KILL_STREAK_BONUS_GOLD_PERCENTAGE = 356
 
 --- Method Name: `GetModifierHPRegenMultiplierPreAmplification`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_HP_REGEN_MULTIPLIER_PRE_AMPLIFICATION = 354
+MODIFIER_PROPERTY_HP_REGEN_MULTIPLIER_PRE_AMPLIFICATION = 357
 
 --- Method Name: `GetModifierHeroFacetOverride`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_HEROFACET_OVERRIDE = 355
+MODIFIER_PROPERTY_HEROFACET_OVERRIDE = 358
 
 --- Method Name: `OnTreeCutDown`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_TREE_CUT_DOWN = 356
+MODIFIER_EVENT_ON_TREE_CUT_DOWN = 359
 
 --- Method Name: `OnCleaveAttackLanded`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_CLEAVE_ATTACK_LANDED = 357
+MODIFIER_EVENT_ON_CLEAVE_ATTACK_LANDED = 360
 
 --- Method Name: `MinAttributeLevel`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_MIN_ATTRIBUTE_LEVEL = 358
+MODIFIER_PROPERTY_MIN_ATTRIBUTE_LEVEL = 361
 
 --- Method Name: `GetTierTokenReroll`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_TIER_TOKEN_REROLL = 359
+MODIFIER_PROPERTY_TIER_TOKEN_REROLL = 362
 
 --- Method Name: `GetVisionDegreeRestriction`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_VISION_DEGREES_RESTRICTION = 360
+MODIFIER_PROPERTY_VISION_DEGREES_RESTRICTION = 363
 
 --- Method Name: `GetModifierTotal_ConstantBlockStacking`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_TOTAL_CONSTANT_BLOCK_STACKING = 361
+MODIFIER_PROPERTY_TOTAL_CONSTANT_BLOCK_STACKING = 364
 
 --- Method Name: `GetModifierInventorySlotRestricted`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_INVENTORY_SLOT_RESTRICTED = 362
+MODIFIER_PROPERTY_INVENTORY_SLOT_RESTRICTED = 365
 
 --- Method Name: `OnTierTokenRerolled`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_TIER_TOKEN_REROLLED = 363
+MODIFIER_EVENT_ON_TIER_TOKEN_REROLLED = 366
 
 --- Method Name: `GetRedirectSpell`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_REDIRECT_SPELL = 364
+MODIFIER_PROPERTY_REDIRECT_SPELL = 367
 
 --- Method Name: `GetBaseAttackPostBonus`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_BASEATTACK_POSTBONUS = 365
+MODIFIER_PROPERTY_BASEATTACK_POSTBONUS = 368
 
 --- Method Name: `OnFoWTeamChanged`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_FOW_TEAM_CHANGED = 366
+MODIFIER_EVENT_ON_FOW_TEAM_CHANGED = 369
 
 --- Method Name: `GetSuppressAttackProcs`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_SUPPRESS_ATTACK_PROCS = 367
+MODIFIER_PROPERTY_SUPPRESS_ATTACK_PROCS = 370
 
 --- Method Name: `OnAbilityToggled`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_ABILITY_TOGGLED = 368
+MODIFIER_EVENT_ON_ABILITY_TOGGLED = 371
 
 --- Method Name: `GetModifierAvoidAttackProcs`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_AVOID_ATTACK_PROCS = 369
+MODIFIER_PROPERTY_AVOID_ATTACK_PROCS = 372
 
 --- Method Name: `OnRuneSpawn`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_RUNE_SPAWN = 370
+MODIFIER_EVENT_ON_RUNE_SPAWN = 373
 
 --- Method Name: `GetModifierProperty_PhysicalLifesteal`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_PHYSICAL_LIFESTEAL = 371
+MODIFIER_PROPERTY_PHYSICAL_LIFESTEAL = 374
 
 --- Method Name: `GetModifierProperty_MagicalLifesteal`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_MAGICAL_LIFESTEAL = 372
+MODIFIER_PROPERTY_MAGICAL_LIFESTEAL = 375
 
 --- Method Name: `OnPureDamageCalculated`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_PURE_DAMAGE_CALCULATED = 373
+MODIFIER_EVENT_ON_PURE_DAMAGE_CALCULATED = 376
 
 --- Method Name: `GetModifierNeutralTrinketOptions`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_NEUTRAL_TRINKET_OPTIONS = 374
+MODIFIER_EVENT_NEUTRAL_TRINKET_OPTIONS = 377
 
 --- Method Name: `GetModifierNeutralEnhancementOptions`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_NEUTRAL_ENHANCEMENT_OPTIONS = 375
+MODIFIER_EVENT_NEUTRAL_ENHANCEMENT_OPTIONS = 378
 
 --- Method Name: `GetModifierMoveSpeedMax_BonusConstant`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_MOVESPEED_MAX_BONUS_CONSTANT = 376
+MODIFIER_PROPERTY_MOVESPEED_MAX_BONUS_CONSTANT = 379
 
 --- Method Name: `GetModifierMoveSpeedPostMultiplierBonus_Constant`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_MOVESPEED_POST_MULTIPLIER_BONUS_CONSTANT = 377
+MODIFIER_PROPERTY_MOVESPEED_POST_MULTIPLIER_BONUS_CONSTANT = 380
 
 --- Method Name: `GetModifierPropertyForbidIllusions`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_FORBID_ILLUSIONS = 378
+MODIFIER_PROPERTY_FORBID_ILLUSIONS = 381
 
 --- Method Name: `GetModifierPropertyManacostOverride`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_MANACOST_OVERRIDE = 379
+MODIFIER_PROPERTY_MANACOST_OVERRIDE = 382
 
 --- Method Name: `GetModifierPropertyRestorationAmplification`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_RESTORATION_AMPLIFICATION = 380
+MODIFIER_PROPERTY_RESTORATION_AMPLIFICATION = 383
 
 --- Method Name: `GetModifierPropertyRestorationAmplificationUnique`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_RESTORATION_AMPLIFICATION_UNIQUE = 381
+MODIFIER_PROPERTY_RESTORATION_AMPLIFICATION_UNIQUE = 384
 
 --- Method Name: `GetModifierPropertyHealingAmplificationUnique`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_HEAL_AMPLIFY_PERCENTAGE_SOURCE_UNIQUE = 382
+MODIFIER_PROPERTY_HEAL_AMPLIFY_PERCENTAGE_SOURCE_UNIQUE = 385
 
 --- Method Name: `GetModifierPropertyRedirectHealthGain`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_REDIRECT_HEALTH_GAIN = 383
+MODIFIER_PROPERTY_REDIRECT_HEALTH_GAIN = 386
 
 --- Method Name: `GetSuppressIncomingCrit`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_SUPPRESS_INCOMING_CRIT = 384
+MODIFIER_PROPERTY_SUPPRESS_INCOMING_CRIT = 387
 
 --- Method Name: `GetModifierPropertyUpgradeNeutralArtifacts`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_UPGRADE_NEUTRAL_ARTIFACTS = 385
+MODIFIER_PROPERTY_UPGRADE_NEUTRAL_ARTIFACTS = 388
 
 --- Method Name: `GetModifierPropertySuppressInvalidMoveAttackOrders`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_SUPPRESS_INVALID_MOVE_ATTACK_ORDERS = 386
+MODIFIER_PROPERTY_SUPPRESS_INVALID_MOVE_ATTACK_ORDERS = 389
 
 --- Method Name: `GetModifierPropertyConsumableUseSpeed`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_CONSUMABLE_USE_SPEED = 387
+MODIFIER_PROPERTY_CONSUMABLE_USE_SPEED = 390
 
 --- Method Name: `GetRequiredLevel`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_REQUIRED_LEVEL = 388
+MODIFIER_PROPERTY_REQUIRED_LEVEL = 391
 
 --- Method Name: `OnModifierRefreshed`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_MODIFIER_REFRESHED = 389
+MODIFIER_EVENT_ON_MODIFIER_REFRESHED = 392
 
 --- Method Name: `OnAbilitySwapped`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_ABILITY_SWAPPED = 390
+MODIFIER_EVENT_ON_ABILITY_SWAPPED = 393
 
 --- Method Name: `GetModifierOverrideCreepBounty`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_OVERRIDE_CREEP_BOUNTY = 391
+MODIFIER_PROPERTY_OVERRIDE_CREEP_BOUNTY = 394
 
 --- Method Name: `GetModifierOverrideBaseDamage`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_OVERRIDE_BASE_DAMAGE = 392
+MODIFIER_PROPERTY_OVERRIDE_BASE_DAMAGE = 395
 
 --- Method Name: `GetModifierOverrideUntargetableFrom`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_UNTARGETABLE_FROM = 393
+MODIFIER_PROPERTY_UNTARGETABLE_FROM = 396
 
 --- Method Name: `GetModifierOverrideUntargetableTo`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_UNTARGETABLE_TO = 394
+MODIFIER_PROPERTY_UNTARGETABLE_TO = 397
 
 --- Method Name: `GetModifierSuperIllusionWithItems`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_SUPER_ILLUSION_WITH_ITEMS = 395
+MODIFIER_PROPERTY_SUPER_ILLUSION_WITH_ITEMS = 398
 
 --- Method Name: `OnPurged`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_PURGE = 396
+MODIFIER_EVENT_ON_PURGE = 399
 
 --- Method Name: `OnIllusionCreated`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_EVENT_ON_ILLUSION_CREATED = 397
+MODIFIER_EVENT_ON_ILLUSION_CREATED = 400
 
 --- Method Name: `GetModifierHeroLevelScale`  
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_PROPERTY_HEROLEVELSCALE = 398
+MODIFIER_PROPERTY_HEROLEVELSCALE = 401
 
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
-MODIFIER_FUNCTION_LAST = 399
+MODIFIER_FUNCTION_LAST = 412
 
 --- Enum: `modifierfunction`  
 --- Env: `server` or `client`
 MODIFIER_FUNCTION_INVALID = 65535
+
+--- OnCustom1  
+--- Enum: `modifierfunction`  
+--- Env: `server` or `client`
+MODIFIER_EVENT_ON_CUSTOM1 = 406
+
+--- OnCustom2  
+--- Enum: `modifierfunction`  
+--- Env: `server` or `client`
+MODIFIER_EVENT_ON_CUSTOM2 = 407
+
+--- OnCustom3  
+--- Enum: `modifierfunction`  
+--- Env: `server` or `client`
+MODIFIER_EVENT_ON_CUSTOM3 = 408
+
+--- OnDamageHPLossSelf  
+--- Enum: `modifierfunction`  
+--- Env: `server` or `client`
+MODIFIER_EVENT_ON_DAMAGE_HP_LOSS_SELF = 411
+
+--- OnTreePlanted  
+--- Enum: `modifierfunction`  
+--- Env: `server` or `client`
+MODIFIER_EVENT_ON_TREE_PLANTED = 410
+
+--- GetModifierConstantCasttime  
+--- Enum: `modifierfunction`  
+--- Env: `server` or `client`
+MODIFIER_PROPERTY_CASTTIME_CONSTANT = 132
+
+--- GetModifierPropertyCustom1  
+--- Enum: `modifierfunction`  
+--- Env: `server` or `client`
+MODIFIER_PROPERTY_CUSTOM1 = 403
+
+--- GetModifierPropertyCustom2  
+--- Enum: `modifierfunction`  
+--- Env: `server` or `client`
+MODIFIER_PROPERTY_CUSTOM2 = 404
+
+--- GetModifierPropertyCustom3  
+--- Enum: `modifierfunction`  
+--- Env: `server` or `client`
+MODIFIER_PROPERTY_CUSTOM3 = 405
+
+--- GetModifierPropertyIgnoreForceTarget  
+--- Enum: `modifierfunction`  
+--- Env: `server` or `client`
+MODIFIER_PROPERTY_IGNORE_FORCE_ATTACK_TARGET = 409
+
+--- GetModifierMinAttackRange  
+--- Enum: `modifierfunction`  
+--- Env: `server` or `client`
+MODIFIER_PROPERTY_MIN_ATTACK_RANGE = 119
+
+--- GetModifierReplaceAttack  
+--- Enum: `modifierfunction`  
+--- Env: `server` or `client`
+MODIFIER_PROPERTY_REPLACE_ATTACK = 402
+
+--- GetModifierSpellAmplify_PercentageUnique_2  
+--- Enum: `modifierfunction`  
+--- Env: `server` or `client`
+MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE_UNIQUE_2 = 49
 
 --- Enum: `modifierpriority`  
 --- Env: `server` or `client`
@@ -11143,6 +11265,10 @@ MODIFIER_STATE_NEUTRALS_DONT_ATTACK = 63
 --- Enum: `modifierstate`  
 --- Env: `server` or `client`
 MODIFIER_STATE_LAST = 64
+
+--- Enum: `modifierstate`  
+--- Env: `server` or `client`
+MODIFIER_STATE_ATTACK_SELF = 62
 
 --- Enum: `ParticleAttachment_t`  
 --- Env: `server` or `client`

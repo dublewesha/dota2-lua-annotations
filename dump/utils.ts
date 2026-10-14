@@ -1,6 +1,6 @@
 import { Availability, FunctionParameter, Type } from '@moddota/dota-data/files/vscripts/api';
 import apiTypes from '@moddota/dota-data/files/vscripts/api-types';
-import enums from '@moddota/dota-data/files/vscripts/enums';
+import { enums } from './game_api';
 
 export function availableAnnotation(a: Availability) {
     return `--- Env: ${a === 'both' ? '`server` or `client`' : 'only in `' + a + '`'}`;

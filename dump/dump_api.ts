@@ -1,11 +1,9 @@
-import apiList, {
-    ClassMember,
+import type {
     ClassMethod,
     Field,
     FunctionDeclaration,
-    FunctionParameter,
-    Type,
 } from '@moddota/dota-data/files/vscripts/api';
+import { api as apiList } from './game_api';
 import { writeFile } from 'fs/promises';
 import { join } from 'path';
 import { defaultReturn } from './default_return';

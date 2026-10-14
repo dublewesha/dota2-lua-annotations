@@ -3,7 +3,7 @@
 ---@class CDOTA_BaseNPC_Hero : CDOTA_BaseNPC
 _G.CDOTA_BaseNPC_Hero = {}
 
----   
+--- Params: Float XP, Bool applyBotDifficultyScaling, Bool IncrementalTotal (default true, unused), Int CloneCount (default 0)  
 --- Env: only in `server`
 ---@param xp float
 ---@param reason EDOTA_ModifyXP_Reason
@@ -227,7 +227,7 @@ function CDOTA_BaseNPC_Hero:GetPhysicalArmorBaseValue() end
 ---@return PlayerID
 function CDOTA_BaseNPC_Hero:GetPlayerID() end
 
----   
+--- 0 = strength, 1 = agility, 2 = intelligence.  
 --- Env: only in `server`
 ---@return Attributes
 function CDOTA_BaseNPC_Hero:GetPrimaryAttribute() end
@@ -293,7 +293,7 @@ function CDOTA_BaseNPC_Hero:HasFlyingVision() end
 ---@return bool
 function CDOTA_BaseNPC_Hero:HasOwnerAbandoned() end
 
----   
+--- Args: const char* pItemName, bool bIncludeStashCombines, bool bAllowSelling  
 --- Env: only in `server`
 ---@param itemName string
 ---@param includeStashCombines bool
@@ -370,7 +370,7 @@ function CDOTA_BaseNPC_Hero:IsReincarnating() end
 ---@return bool
 function CDOTA_BaseNPC_Hero:IsStashEnabled() end
 
----   
+--- Args: Hero, Inflictor  
 --- Env: only in `server`
 ---@param hero CDOTA_BaseNPC_Hero
 ---@param inflictor CDOTABaseAbility|nil
@@ -530,7 +530,7 @@ function CDOTA_BaseNPC_Hero:SetTimeUntilRespawn(time) end
 ---@return bool
 function CDOTA_BaseNPC_Hero:ShouldDoFlyHeightVisual() end
 
----   
+--- Args: int nGold, int nReason  
 --- Env: only in `server`
 ---@param cost int
 ---@param reason EDOTA_ModifyGold_Reason

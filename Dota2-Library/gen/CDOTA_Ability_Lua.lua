@@ -390,3 +390,13 @@ function CDOTA_Ability_Lua:Precache(context) end
 ---@return nil
 function CDOTA_Ability_Lua:Spawn() end
 
+--- Other ability gained a level.  
+--- Env: only in `server`
+---@return nil
+function CDOTA_Ability_Lua:OnOtherAbilityUpgraded() end
+
+--- Refreshes ability values, if any  
+--- Env: only in `server`
+---@return nil
+function CDOTA_Ability_Lua:RefreshAbilityValues() end
+

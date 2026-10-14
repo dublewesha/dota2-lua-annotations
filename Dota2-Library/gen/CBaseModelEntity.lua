@@ -129,7 +129,7 @@ function CBaseModelEntity:SetSingleMeshGroup(meshGroupName) end
 ---@return nil
 function CBaseModelEntity:SetSize(mins, maxs) end
 
----   
+--- Set skin (int).  
 --- Env: only in `server`
 ---@param skin int
 ---@return nil

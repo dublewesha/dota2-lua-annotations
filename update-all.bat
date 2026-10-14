@@ -41,6 +41,12 @@ call pnpm update --latest || exit /b 1
 
 echo.
 echo [3/6] Regenerating Dota 2 Lua annotations...
+echo Fetching the current API from the running game ^(optional^)...
+call pnpm fetch-api
+if errorlevel 1 (
+    echo Game API not fetched, using the saved dump in dump\game.
+    echo To refresh it: start Dota 2 or Workshop Tools, load a map, close VConsole2 and run this script again.
+)
 call pnpm dump || exit /b 1
 
 echo.

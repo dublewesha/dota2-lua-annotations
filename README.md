@@ -25,11 +25,27 @@ The script will:
 
 -   install `pnpm` if it is missing (user-level, no admin rights needed);
 -   update dependencies, including `@moddota/dota-data` with the current API dump;
+-   fetch the current API straight from the running game (optional, see below);
 -   regenerate the Lua annotations in `Dota2-Library/gen`;
 -   compile and package the extension into `dota2-lua-annotations-latest.vsix`;
 -   install `sumneko.lua` and the packaged extension into VS Code.
 
 Re-run the script whenever you want to refresh the annotations after a Dota 2 update.
+
+### API from the game
+
+`@moddota/dota-data` is updated rarely, so new functions and parameters appear in the
+game long before they get there. The script can take them straight from your Dota 2:
+
+1. Start Dota 2 or Workshop Tools and **load a map** (for example, your addon).
+2. **Close VConsole2**: the game serves only one console client at a time.
+3. Run `update-all.bat` (or `pnpm fetch-api`).
+
+The script connects to the game console (`127.0.0.1:29000`), runs `script_help2` and
+`cl_script_help2` and saves the output to `dump/game`. During generation this dump is
+merged over dota-data: missing functions and parameters are added, empty descriptions
+are filled, enum values are taken from the game. Types still come from dota-data.
+If the game is not running, the last saved dump from `dump/game` is used.
 
 > NOTE: This extension is force `Lua.runtime.version` to `LuaJIT`,
 > recommend using `VSCode Profiles`.
@@ -58,6 +74,7 @@ end
 
 ```
 pnpm install
+pnpm fetch-api # save script_help2 output from the running game to dump/game
 pnpm dump      # regenerate Dota2-Library/gen
 pnpm compile   # build src -> out
 pnpm exec vsce package --out dota2-lua-annotations-latest.vsix

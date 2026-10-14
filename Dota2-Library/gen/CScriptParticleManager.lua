@@ -75,7 +75,7 @@ function CScriptParticleManager:SetParticleControl(particle, controlPoint, value
 ---@return nil
 function CScriptParticleManager:SetParticleControlEnt(particle, controlPoint, unit, particleAttach, attachment, offset, lockOrientation) end
 
----   
+--- (int iIndex, int iPoint, Vector vecPosition)  
 --- Env: `server` or `client`
 ---@param particle ParticleID
 ---@param controlPoint int
@@ -111,7 +111,7 @@ function CScriptParticleManager:SetParticleControlOrientation(particle, controlP
 ---@return nil
 function CScriptParticleManager:SetParticleControlOrientationFLU(particle, controlPoint, arg3, arg4, arg5) end
 
----   
+--- (int nFXIndex, int nPoint, vOrigin, qAngles)  
 --- Env: `server` or `client`
 ---@param fxIndex int
 ---@param point int
@@ -120,7 +120,7 @@ function CScriptParticleManager:SetParticleControlOrientationFLU(particle, contr
 ---@return nil
 function CScriptParticleManager:SetParticleControlTransform(fxIndex, point, origin, qAngles) end
 
----   
+--- (int nFXIndex, int nPoint, vOrigin, vForward)  
 --- Env: `server` or `client`
 ---@param fxIndex int
 ---@param point int
@@ -129,7 +129,7 @@ function CScriptParticleManager:SetParticleControlTransform(fxIndex, point, orig
 ---@return nil
 function CScriptParticleManager:SetParticleControlTransformForward(fxIndex, point, origin, forward) end
 
----   
+--- int nfxindex, int nPoint, int nPoint2, float flRadius  
 --- Env: `server` or `client`
 ---@param particle ParticleID
 ---@param controlPoint int
@@ -138,7 +138,7 @@ function CScriptParticleManager:SetParticleControlTransformForward(fxIndex, poin
 ---@return nil
 function CScriptParticleManager:SetParticleFoWProperties(particle, controlPoint, controlPoint2, radius) end
 
----   
+--- int nfxindex, bool bCheckFoW  
 --- Env: `server` or `client`
 ---@param particle ParticleID
 ---@param checkFoW bool

@@ -780,3 +780,8 @@ function CDOTABaseAbility:UpgradeAbility(supressSpeech) end
 ---@return nil
 function CDOTABaseAbility:UseResources(mana, useHealth, gold, cooldown) end
 
+---   
+--- Env: only in `server`
+---@return nil
+function CDOTABaseAbility:RefreshAbilityValues() end
+

@@ -23,7 +23,7 @@ function AngleDiff(arg1, arg2) end
 ---@return Vector
 function AnglesToVector(arg1) end
 
----   
+--- AppendToLogFile is deprecated. Print to the console for logging instead.  
 --- Env: `server` or `client`
 ---@deprecated
 ---@param arg1 string
@@ -79,7 +79,7 @@ function CancelEntityIOEvents(arg1) end
 ---@return nil
 function CenterCameraOnUnit(playerId, unit) end
 
----   
+--- ( teamNumber )  
 --- Env: only in `server`
 ---@param team DOTATeam_t
 ---@return nil
@@ -436,7 +436,7 @@ function DestroyDamageInfo(damageInfo) end
 ---@return nil
 function DisconnectClient(arg1, arg2) end
 
----   
+--- (hAttacker, hTarget, hAbility, fDamage, fRadius, effectName)  
 --- Env: only in `server`
 ---@param attacker CDOTA_BaseNPC
 ---@param target CDOTA_BaseNPC
@@ -753,20 +753,20 @@ function GetActiveSpawnGroupHandle() end
 ---@return Vector
 function GetClearSpaceForUnit(arg1, arg2) end
 
----   
+--- ( version )  
 --- Env: only in `server`
 ---@deprecated
 ---@param version string
 ---@return string
 function GetDedicatedServerKey(version) end
 
----   
+--- ( version )  
 --- Env: only in `server`
 ---@param version string
 ---@return string
 function GetDedicatedServerKeyV2(version) end
 
----   
+--- ( version )  
 --- Env: only in `server`
 ---@param version string
 ---@return string
@@ -822,7 +822,7 @@ function GetItemDefQuantity(arg1, arg2) end
 ---@return CDOTAPlayerController
 function GetListenServerHost() end
 
----   
+--- ( )  
 --- Env: only in `server`
 ---@return table
 function GetLobbyEventGameDetails() end
@@ -908,13 +908,13 @@ function GetTargetAOELocation(arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
 ---@return Vector
 function GetTargetLinearLocation(arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
 
----   
+--- ( int teamID )  
 --- Env: only in `server`
 ---@param team DOTATeam_t
 ---@return int
 function GetTeamHeroKills(team) end
 
----   
+--- ( int teamID )  
 --- Env: only in `server`
 ---@param team DOTATeam_t
 ---@return string
@@ -964,7 +964,7 @@ function GetXPNeededToReachNextLevel(level) end
 ---@return nil
 function HeroMaxLevel(arg1) end
 
----   
+--- InitLogFile is deprecated. Print to the console for logging instead.  
 --- Env: `server` or `client`
 ---@deprecated
 ---@param arg1 string
@@ -1294,7 +1294,7 @@ function ResolveNPCPositions(location, radius) end
 ---@return bool
 function RollPercentage(successPercentage) end
 
----   
+--- ( chance, pseudo random id, unit.  
 --- Env: only in `server`
 ---@param chance uint
 ---@param pseudoRandomId PseudoRandom
@@ -1376,7 +1376,7 @@ function Script_RandomFloat(arg1, arg2) end
 ---@return float
 function Script_RemapValClamped(arg1, arg2, arg3, arg4, arg5) end
 
----   
+--- ( DOTAPlayer sendToPlayer, int iMessageType, Entity targetEntity, int iValue, DOTAPlayer sourcePlayer ) - sendToPlayer and sourcePlayer can be nil - iMessageType is one of OVERHEAD_ALERT_*  
 --- Env: only in `server`
 ---@param sendToPlayer CDOTAPlayerController|nil
 ---@param messageType DOTA_OVERHEAD_ALERT
@@ -1444,7 +1444,7 @@ function SetQuestPhase(arg1) end
 ---@return nil
 function SetRenderingEnabled(arg1, arg2) end
 
----   
+--- ( teamNumber, r, g, b )  
 --- Env: only in `server`
 ---@param team DOTATeam_t
 ---@param r int
@@ -1489,7 +1489,7 @@ function ShowGenericPopupToPlayer(arg1, arg2, arg3, arg4, arg5, arg6) end
 ---@return nil
 function ShowMessage(arg1) end
 
----   
+--- (VectorWS vOrigin, float flRadius )  
 --- Env: only in `server`
 ---@param origin Vector
 ---@param radius float
@@ -1657,19 +1657,19 @@ function StopSoundOn(arg1, arg2) end
 ---@return float
 function Time() end
 
----   
+--- Pass table - Inputs: start, end, ent, (optional mins, maxs) -- outputs: pos, fraction, hit, startsolid, normal  
 --- Env: `server` or `client`
 ---@param query TraceCollideableInputs
 ---@return bool
 function TraceCollideable(query) end
 
----   
+--- Pass table - Inputs: start, end, min, max, mask, ignore  -- outputs: pos, fraction, hit, enthit, startsolid  
 --- Env: `server` or `client`
 ---@param query TraceHullInputs
 ---@return bool
 function TraceHull(query) end
 
----   
+--- Pass table - Inputs: startpos, endpos, mask, ignore  -- outputs: pos, fraction, hit, enthit, startsolid  
 --- Env: `server` or `client`
 ---@param query TraceLineInputs
 ---@return bool
@@ -1697,7 +1697,7 @@ function UnloadSpawnGroup(arg1) end
 ---@return nil
 function UnloadSpawnGroupByHandle(handle) end
 
----   
+--- ( hEventPointData )  
 --- Env: only in `server`
 ---@param eventPointData handle
 ---@return nil

@@ -85,7 +85,7 @@ function CBaseEntity:EyePosition() end
 ---@return CBaseEntity
 function CBaseEntity:FirstMoveChild() end
 
----   
+--- hEntity to follow, bool bBoneMerge  
 --- Env: only in `server`
 ---@param entity CBaseEntity
 ---@param boneMerge bool
